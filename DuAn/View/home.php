@@ -1,6 +1,4 @@
-  <?php
-    include 'header.php';
-  ?>
+
   <!-- BANNER STRAT -->
   <section>
     <div class="banner">
@@ -77,7 +75,7 @@
   <!-- CONTAIN START -->
 
   <!-- Category-service-block start -->
-  <section class="container">
+  <!-- <section class="container">
     <div class="category-service-block align-center pt-65">
       <div class="row">
         <div class="col-xs-12">
@@ -121,7 +119,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- Category-service-block end -->
 
   <!-- Sub-banner Block Start -->
@@ -202,13 +200,13 @@
           <div class="col-xs-12">
             <div class="heading-part align-center mb-40">
               <h2 class="main_title">Featured Products</h2>
-              <div id="tabs" class="category-bar mb-20">
+              <!-- <div id="tabs" class="category-bar mb-20">
                 <ul class="tab-stap">
                   <li><a class="tab-step1 selected" title="step1">Best Seller</a></li>
                   <li><a class="tab-step2" title="step2">New Products</a></li>
                   <li><a class="tab-step3" title="step3">Special Products</a></li>
                 </ul>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -710,6 +708,7 @@
         <div class="row">
           <div class="product-slider-main position-r">
             <div class="owl-carousel pro_cat_slider">
+              <!-- Start new 1 product -->
               <div class="item">
                 <div class="product-item">
                   <div class="product-image">
@@ -748,6 +747,7 @@
                   </div>
                 </div>
               </div>
+              <!-- End new 1 product -->
               <div class="item">
                 <div class="product-item">
                   <div class="product-image">
@@ -967,7 +967,7 @@
   <!--  New Products Slider Block End  -->
 
   <!-- Blog strat -->
-  <section class="container">
+  <!-- <section class="container">
     <div class="pb-85">
       <div class="blog-main">
         <div class="owl-slider">
@@ -1066,11 +1066,11 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- Blog end -->
 
   <!-- Brand logo block Start  -->
-  <section class="container">
+  <!-- <section class="container">
     <div class="pb-85 brand-main">
       <div class="row">
         <div class="col-md-12">
@@ -1088,10 +1088,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- Brand logo block End  -->
 
   <!-- CONTAINER END -->
-  <?php
-    include 'footer.php';
-  ?>
