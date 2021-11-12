@@ -165,13 +165,13 @@
   </div>
   <!-- FOOTER END --> 
 </div>
-<script src="js/jquery-1.12.3.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/fotorama.js"></script>
-<script src="js/jquery.magnific-popup.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/custom.js"></script>
+<script src="./View/js/jquery-1.12.3.min.js"></script>
+<script src="./View/js/bootstrap.min.js"></script>
+<script src="./View/js/jquery-ui.js"></script>
+<script src="./View/js/fotorama.js"></script>
+<script src="./View/js/jquery.magnific-popup.js"></script>
+<script src="./View/js/owl.carousel.min.js"></script>
+<script src="./View/js/custom.js"></script>
 
 <script>
   /* ------------ Newslater-popup JS Start ------------- */
