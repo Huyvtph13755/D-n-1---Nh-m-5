@@ -33,6 +33,7 @@
             </div>
             <div class="col-md-7 col-sm-7">
                 <div class="row">
+                    <form action="abc.php" method="get">
                     <div class="col-xs-12">
                         <div class="product-detail-main">
                             <div class="product-item-details">
@@ -74,9 +75,7 @@
                                     <div class="bottom-detail cart-button">
                                         <ul>
                                             <li class="pro-cart-icon">
-                                                <form>
-                                                    <button title="Add to Cart" class="btn-black"><span></span>Thêm vào giỏ hàng</button>
-                                                </form>
+                                                    <button title="Add to Cart" type="submit" class="btn-black"><span></span>Thêm vào giỏ hàng</button>
                                             </li>
                                         </ul>
                                     </div>
@@ -84,6 +83,7 @@
                             </div>
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -106,9 +106,8 @@
                             <ul>
                                 <li>
                                     <div class="items-Description selected">
-                                        <div class="Description"> <strong>The standard Lorem Ipsum passage, used since the 1500s</strong><br />
-                                            <p>Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets</p>
-                                            <p>Tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                        <div class="Description">
+                                            <p><?= $load_one['decription'] ?></p>
                                         </div>
                                     </div>
                                 </li>
@@ -477,6 +476,6 @@
         let b = String(document.getElementById("b").value);
         let arr = a.split(' ')
         let arrb = b.split(' ')
-        hp.value = (Number(arr[0]) + Number(arrb[0])).toLocaleString();
+        hp.value = (Number(arr[0]) + Number(arrb[0])).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
     }
 </script>
