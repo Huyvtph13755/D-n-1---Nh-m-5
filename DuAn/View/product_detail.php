@@ -36,28 +36,29 @@
                     <div class="col-xs-12">
                         <div class="product-detail-main">
                             <div class="product-item-details">
-                                <h1 class="product-item-name">Cross Colours Camo Print Tank half mengo</h1>
+                                <h1 class="product-item-name"><?= $load_one['name_product'] ?></h1>
                                 <div class="price-box">
                                     <br>
-                                    <span class="price">$80.00</span>
+                                    <input style="border: none; outline: none; background-color:white; font-size:2em; font-weight: bold; width: 180px" type="text" name="hp" id="hp" onchange="load(this)" disabled value="<?= number_format($getMinPr['pr']) ?>">
+                                    VND
                                 </div>
                                 <br>
-                                <p>Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada </p>
+                                <p><?= $load_one['sub_decription'] ?></p>
                                 <div class="product-size select-arrow mb-20 mt-30">
                                     <label>Màu sắc</label>
-                                    <select class="selectpicker form-control" id="select-by-size">
-                                        <option selected="selected" value="#">S</option>
-                                        <option value="#">M</option>
-                                        <option value="#">L</option>
+                                    <select class="selectpicker form-control" id="a" name="a" onchange="load(this)">
+                                        <?php foreach ($f_cl as $index => $c) : ?>
+                                            <option value="<?= $c['price'] ?> <?= $c['color_id'] ?>"><?= $c['name_color'] ?></option value>
+                                        <?php endforeach ?>
                                     </select>
                                 </div>
                                 <div class="product-color select-arrow mb-20">
                                     <label>Gói bảo hành</label>
-                                    <select class="selectpicker form-control" id="select-by-color">
-                                        <option selected="selected" value="#">Blue</option>
-                                        <option value="#">Green</option>
-                                        <option value="#">Orange</option>
-                                        <option value="#">White</option>
+                                    <select class="selectpicker form-control" id="b" name="b" onchange="load(this)">
+                                        <option selected="selected" value="0">Chọn gói bảo hành</option>
+                                        <?php foreach ($wa as $index => $b) : ?>
+                                            <option value="<?= $b['price'] ?> <?= $b['warranty_id'] ?>"><?= $b['name_warranty'] ?></option value>
+                                        <?php endforeach ?>
                                     </select>
                                 </div>
                                 <br>
@@ -464,3 +465,18 @@
     </div>
 </section>
 <!-- CONTAINER END -->
+<script>
+    function load(radio) {
+        const numberFormat = new Intl.NumberFormat('vi-VN', {
+            style: 'currency',
+            currency: 'VND',
+        });
+
+        var hp = document.getElementById("hp");
+        let a = String(document.getElementById("a").value);
+        let b = String(document.getElementById("b").value);
+        let arr = a.split(' ')
+        let arrb = b.split(' ')
+        hp.value = (Number(arr[0]) + Number(arrb[0])).toLocaleString();
+    }
+</script>

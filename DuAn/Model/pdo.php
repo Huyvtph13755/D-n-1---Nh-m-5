@@ -1,7 +1,7 @@
 <?php
 function exeQuery($sqlQuery, $getAll = true){
     $host = "127.0.0.1";
-    $dbname = "project";
+    $dbname = "duan1";
     $dbusername = "root";
     $dbpassword = "";
     $connect = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", 
