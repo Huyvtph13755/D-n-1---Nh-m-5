@@ -13,4 +13,5 @@ function product_detail($id){
 }
 echo "product_detail"
 echo "hoang";
+echo "a";
 // End code của Huy
