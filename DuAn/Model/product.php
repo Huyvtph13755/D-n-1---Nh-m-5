@@ -12,6 +12,7 @@ function product_detail($id){
     return $s;
 }
 echo "afc";
+echo "bca";
 echo "abc";
 // End code của Huy
 
