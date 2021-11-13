@@ -12,5 +12,7 @@ function getMinPrice($id){
     $clr = exeQuery($colors, false);
     return $clr;
 }
+// Huyvtabc
 // End code của Huy
+
 ?>
