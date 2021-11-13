@@ -11,6 +11,11 @@ function product_detail($id){
     $s = exeQuery($sql, false);
     return $s;
 }
+function sql(){
+    $sql = "SELECT * FROM category WHERE category_id";
+    $s = exeQuery($sql, true);
+    return $s;
+}
 // End code của Huy
 
 
