@@ -21,22 +21,27 @@
         <div class="col-xs-12">
           <div class="row">
             <div class="col-lg-6 col-md-8 col-sm-8 col-lg-offset-3 col-sm-offset-2">
-              <form class="main-form full">
+            <form action="index.php?act=login" method="post">
                 <div class="row">
                   <div class="col-xs-12 mb-20">
                     <div class="heading-part heading-bg">
                       <h2 class="heading">Đăng nhập</h2>
                     </div>
+                    <?php
+                    if(isset($_SESSION['fullname'])){
+                        extract($_SESSION['fullname']);
+                    }
+                    ?>
                   </div>
                   <div class="col-xs-12">
                     <div class="input-box">
-                      <label for="login-email">Email</label>
+                      <label for="login-email">Email</label><br>
                       <input id="login-email" type="email" required="" placeholder="Email Address">
                     </div>
                   </div>
                   <div class="col-xs-12">
                     <div class="input-box">
-                      <label for="login-pass">Mật khẩu</label>
+                      <label for="login-pass">Mật khẩu</label><br>
                       <input id="login-pass" type="password" required="" placeholder="Enter your Password">
                     </div>
                   </div>
@@ -55,6 +60,11 @@
                   </div>
                 </div>
               </form>
+              <?php
+                    if(isset($thongbao)&&($thongbao!="")){
+                        echo $thongbao;
+                    }
+                ?>
             </div>
           </div>
         </div>
