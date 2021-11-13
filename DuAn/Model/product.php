@@ -17,6 +17,7 @@ function sql(){
     $s = exeQuery($sql, true);
     return $s;
 }
+echo "Product";
 // End code của Huy
 
 
