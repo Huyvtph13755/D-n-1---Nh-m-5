@@ -11,6 +11,5 @@ function product_detail($id){
     $s = exeQuery($sql, false);
     return $s;
 }
-$sql = "SELECT * FROM product WHERE product_id = $id";
-
+echo "product_detail";
 // End code của Huy
