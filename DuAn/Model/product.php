@@ -11,6 +11,5 @@ function product_detail($id){
     $s = exeQuery($sql, false);
     return $s;
 }
-$abc = 'acb';
-
+echo "Product Details";
 // End code của Huy
