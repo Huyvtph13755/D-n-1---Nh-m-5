@@ -11,8 +11,6 @@ function product_detail($id){
     $s = exeQuery($sql, false);
     return $s;
 }
-echo "bca";
-echo "abc";
 // End code của Huy
 
 
