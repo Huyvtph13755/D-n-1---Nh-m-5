@@ -23,4 +23,5 @@
         $sql="update user set fullname='".$fullname."', password='".$password."', email='".$email."', tell='".$tell."', address='".$address."' where user_id=".$user_id;
         return exeQuery($sql);
     }
+    echo "anbn";
 ?>
