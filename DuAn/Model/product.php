@@ -12,9 +12,7 @@ function product_detail($id){
     return $s;
 }
 echo "product_detail";
-<<<<<<< Updated upstream
 echo "huy";
 echo "a";
-=======
->>>>>>> Stashed changes
+echo "c";
 // End code của Huy
