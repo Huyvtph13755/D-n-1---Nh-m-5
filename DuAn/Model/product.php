@@ -12,4 +12,5 @@ function product_detail($id){
     return $s;
 }
 echo "product_detail";
+echo "product_detail1";
 // End code của Huy
