@@ -12,6 +12,11 @@ function product_detail($id){
     return $s;
 }
 echo "Hoàng";
+function sql(){
+    $sql = "SELECT * FROM category WHERE category_id";
+    $s = exeQuery($sql, true);
+    return $s;
+}
 // End code của Huy
 
 
