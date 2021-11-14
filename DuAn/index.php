@@ -22,6 +22,12 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include 'View/cart.php';
             break;
         case 'register':
+            if(isset($_POST['register'])){
+                $fullname=$_POST['fullname'];
+                $email=$_POST['email'];
+                $password=$_POST['password'];
+                insert_user($fullname, $email, $password);
+            }
             include 'View/register.php';
             break;
         case 'user_profile':

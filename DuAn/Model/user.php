@@ -5,8 +5,8 @@
         return $s;
     }
     function insert_user($fullname, $email, $password){
-        $sql="insert into user(fullname, email, password) values('$fullname', '$email', '$password')";
-        return exeQuery($sql);
+        $sql="insert into user(fullname, email, password, address, contract_number, role) values('$fullname', '$email', '$password', '', '', '')";
+        return exeQuery($sql, false);
 
     }
     function checkuser($fullname, $password){
@@ -24,3 +24,4 @@
         return exeQuery($sql);
     }
 ?>
+<!-- Phần đăng ký tài khoản -->

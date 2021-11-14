@@ -55,7 +55,7 @@
                   <div class="col-xs-12">
                     <div class="new-account align-center mt-20">
                       <span>Bạn chưa có tài khoản?</span>
-                      <a class="link" title="Register with Streetwear" href="register.html">Tạo tài khoản</a>
+                      <a class="link" title="Register with Streetwear" href="index.php?act=register">Tạo tài khoản</a>
                     </div>
                   </div>
                 </div>
