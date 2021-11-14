@@ -1,18 +1,18 @@
 <!-- BANNER START -->
 <div class="banner inner-banner">
-    <div class="container">
-      <div class="bread-crumb mtb-60 center-xs">
-        <div class="page-title">Đăng nhập</div>
-        <div class="bread-crumb-inner right-side float-none-xs">
-          <ul>
-            <li><a href="index.html">Trang chủ</a><i class="fa fa-angle-right"></i></li>
-            <li><span>Đăng nhập</span></li>
-          </ul>
-        </div>
+  <div class="container">
+    <div class="bread-crumb mtb-60 center-xs">
+      <div class="page-title">Đăng nhập</div>
+      <div class="bread-crumb-inner right-side float-none-xs">
+        <ul>
+          <li><a href="index.html">Trang chủ</a><i class="fa fa-angle-right"></i></li>
+          <li><span>Đăng nhập</span></li>
+        </ul>
       </div>
     </div>
   </div>
-  <!-- BANNER END --> 
+</div>
+<!-- BANNER END -->
 
   <!-- CONTAIN START -->
   <section class="container">
@@ -76,9 +76,11 @@
                   <div class="col-xs-12">
                   <input type="checkbox" name="" id=""><strong>Ghi nhớ tài khoản</strong> <button name="login" type="submit" class="btn-black right-side">Đăng nhập</button>
                   </div>
-                  <div class="col-xs-12">
-                    <a title="Forgot Password" class="forgot-password mtb-20" href="#">Quên mật khẩu?</a>
-                    <hr>
+                </div>
+                <div class="col-xs-12">
+                  <div class="input-box">
+                    <label for="login-pass">Mật khẩu</label>
+                    <input id="login-pass" type="password" required="" name="password" placeholder="Enter your Password">
                   </div>
                   </div>
                   <div class="col-xs-12">
@@ -103,5 +105,6 @@
         </div>
       </div>
     </div>
-  </section>
-  <!-- CONTAINER END --> 
+  </div>
+</section>
+<!-- CONTAINER END -->

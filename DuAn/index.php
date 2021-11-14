@@ -22,10 +22,10 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include 'View/cart.php';
             break;
         case 'register':
-            if(isset($_POST['register'])){
-                $fullname=$_POST['fullname'];
-                $email=$_POST['email'];
-                $password=$_POST['password'];
+            if (isset($_POST['register'])) {
+                $fullname = $_POST['fullname'];
+                $email = $_POST['email'];
+                $password = $_POST['password'];
                 insert_user($fullname, $email, $password);
                 $thongbao="Đã đăng ký thành công!";
                 }

@@ -13,11 +13,6 @@
         $s=exeQuery($sql, false);
         return $s;
     }
-    // function checkemail($email){
-    //     $sql = "select*from user where email='".$email."'";
-    //     $s=exeQuery_one($sql, false);
-    //     return $s;
-    // }
     function update_user($user_id,$fullname, $password,$email,$contract_number,$address){
         $sql="update user set fullname='".$fullname."', password='".$password."', email='".$email."', contract_number='".$contract_number."', address='".$address."' where user_id=".$user_id;
         return exeQuery($sql, true);
