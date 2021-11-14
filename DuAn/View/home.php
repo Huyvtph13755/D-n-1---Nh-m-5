@@ -218,7 +218,7 @@
                   <div id="data-step1" class="items-step1 selected product-slider-main position-r" data-temp="tabdata">
                   <div class="col-md-3 col-xs-6 plr-20 mb-20">
                       <?php
-                      foreach ($nwpro as $product) {
+                      foreach ($load_four as $product) {
                         extract($product);
                         $linkpro = "index.php?act=product&product_id".$product_id;
                         $image = $image_product_path . $image_product;
