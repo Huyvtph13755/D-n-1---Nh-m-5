@@ -37,14 +37,13 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include 'View/user_profile.php';
             break;
         case 'login':
-            if(isset($_POST['login'])&&($_POST['login'])){
+            if(isset($_POST['login'])){
                 $email=$_POST['email'];
                 $password=$_POST['password'];
                 $checkuser=checkuser($email, $password);
                 if(is_array($checkuser)){
                     $_SESSION['email']=$checkuser;
                     $thongbao="Bạn đã đăng nhập thành công!";
-                    header('Location: index.php');
                 }else{
                     $thongbao="Tài khoản không tồn tại. Vui lòng kiểm tra lại hoặc đăng ký!";
                 } 

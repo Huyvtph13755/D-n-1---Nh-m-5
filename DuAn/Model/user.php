@@ -1,6 +1,6 @@
 <?php
     function loadall_user(){
-        $sql = "select*from user order by user_id desc";
+        $sql = "select*from user order by id desc";
         $s=exeQuery($sql, true);
         return $s;
     }
@@ -9,19 +9,14 @@
         return exeQuery($sql, false);
 
     }
-    function checkuser($fullname, $password){
-        $sql = "select*from user where fullname='".$fullname."' AND password='".$password."'";
+    function checkuser($email, $password){
+        $sql = "select*from user where email='".$email."' AND password='".$password."'";
         $s=exeQuery($sql, false);
         return $s;
     }
-    function checkemail($email){
-        $sql = "select*from user where email='".$email."'";
-        $s=exeQuery($sql, false);
-        return $s;
-    }
-    function update_user($user_id,$fullname, $password,$email,$tell,$address){
-        $sql="update user set fullname='".$fullname."', password='".$password."', email='".$email."', tell='".$tell."', address='".$address."' where user_id=".$user_id;
-        return exeQuery($sql);
+    function update_user($user_id,$fullname, $password,$email,$contract_number,$address){
+        $sql="update user set fullname='".$fullname."', password='".$password."', email='".$email."', contract_number='".$contract_number."', address='".$address."' where user_id=".$user_id;
+        return exeQuery($sql, true);
     }
 ?>
 <!-- Phần đăng ký tài khoản -->
