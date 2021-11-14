@@ -216,6 +216,86 @@
               <ul>
                 <li>
                   <div id="data-step1" class="items-step1 selected product-slider-main position-r" data-temp="tabdata">
+                  <div class="col-md-3 col-xs-6 plr-20 mb-20">
+                      <?php
+                      foreach ($nwpro as $product) {
+                        extract($product);
+                        $linkpro = "index.php?act=product&product_id".$product_id;
+                        $image = $image_product_path . $image_product;
+                        echo '<div class="product-item">
+                                <div class="product-image">
+                                    <a href="'.$linkpro.'">
+                                     <img src="'.$image.'" alt="">
+                                    </a>
+                                  <div class="product-detail-inner">
+                                    <div class="detail-inner-left align-center">
+                                        <ul>
+                                        <li class="pro-cart-icon">
+                                          <form>
+                                            <button title="Add to Cart"><span></span></button>
+                                          </form>
+                                        </li>
+                                        </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="product-item-details">
+                                  <div class="product-item-name">
+                                    <a href="#">'.$name_product.'</a>
+                                  </div>
+                                  <div class="price-box">
+                                    <span class="price">$80.00</span>
+                                    <del class="price old-price">$100.00</del>
+                                  </div>
+                                  <div class="rating-summary-block">
+                                    <div title="53%" class="rating-result">
+                                      <span style="width:53%"></span>
+                                    </div>
+                                    <span class="label-review"><span>'.$view.'</span></span>
+                                  </div>
+                                </div>
+                              </div>';
+                      }
+                      ?>
+                  </div>
+                    <!-- <div class="col-md-3 col-xs-6 plr-20 mb-20">
+                      <div class="product-item">
+                        <div class="product-image">
+                          <div class="sale-label"><span>Sale</span></div>
+                          <a href="product-page.html">
+                            <img src="images/1.jpg" alt="Streetwear">
+                          </a>
+                          <div class="product-detail-inner">
+                            <div class="detail-inner-left align-center">
+                              <ul>
+                                <li class="pro-cart-icon">
+                                  <form>
+                                    <button title="Add to Cart"><span></span></button>
+                                  </form>
+                                </li>
+                                <li class="pro-wishlist-icon"><a href="#"></a></li>
+                                <li class="pro-compare-icon"><a href="#"></a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-item-details">
+                          <div class="product-item-name">
+                            <a href="product-page.html">Defyant Reversible Dot Shorts</a>
+                          </div>
+                          <div class="price-box">
+                            <span class="price">$80.00</span>
+                            <del class="price old-price">$100.00</del>
+                          </div>
+                          <div class="rating-summary-block">
+                            <div title="53%" class="rating-result">
+                              <span style="width:53%"></span>
+                            </div>
+                            <span class="label-review"><span>( 2 review )</span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <div class="col-md-3 col-xs-6 plr-20 mb-20">
                       <div class="product-item">
                         <div class="product-image">
@@ -362,7 +442,7 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                 </li>
                 <li>
