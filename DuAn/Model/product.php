@@ -11,6 +11,13 @@ function product_detail($id){
     $s = exeQuery($sql, false);
     return $s;
 }
+// lấy random 6 sản phẩm
+function getRanPr(){
+    $sql = "SELECT * FROM product ORDER BY RAND() LIMIT 6";
+    $s = exeQuery($sql, true);
+    return $s;
+}
+
 // End code của Huy
 
 

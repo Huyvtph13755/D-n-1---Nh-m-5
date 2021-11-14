@@ -16,6 +16,8 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $getMinPr = getMinPrice(1);
             $f_cl = full_color(1);
             $wa = full_warranty();
+            $gCmt = getAllCmt(1);
+            $ranPr = getRanPr(); 
             include 'View/product_detail.php';
             break;
         case 'cart':
