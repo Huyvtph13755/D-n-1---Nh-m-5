@@ -2,6 +2,7 @@
 function load4product(){
     $sql = "SELECT * FROM product ORDER BY view DESC LIMIT 0,9";
     $s = exeQuery($sql, true); //Truy vấn nhiều sp
+    return $s;
 }
 function load_name_subcategory($sub_id)
 {

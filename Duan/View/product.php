@@ -33,7 +33,7 @@
                       foreach ($listpro as $product) {
                         extract($product);
                         $linkpro = "index.php?act=product&product_id".$product_id;
-                        $image = $image_product_path . $image_product;
+                        $image = $img_path . $image_product;
                         echo '<div class="product-item">
                                 <div class="product-image">
                                     <a href="'.$linkpro.'">

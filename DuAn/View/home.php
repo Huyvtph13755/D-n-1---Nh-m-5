@@ -218,10 +218,10 @@
                   <div id="data-step1" class="items-step1 selected product-slider-main position-r" data-temp="tabdata">
                   <div class="col-md-3 col-xs-6 plr-20 mb-20">
                       <?php
-                      foreach ($load_four as $product) {
+                      foreach ($feature_pro as $product) {
                         extract($product);
                         $linkpro = "index.php?act=product&product_id".$product_id;
-                        $image = $image_product_path . $image_product;
+                        $image = $img_path . $image_product;
                         echo '<div class="product-item">
                                 <div class="product-image">
                                     <a href="'.$linkpro.'">

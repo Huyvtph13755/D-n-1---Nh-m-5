@@ -6,7 +6,9 @@ include "Model/color.php";
 include "Model/warranty.php";
 include "Model/comment.php";
 include "View/header.php";
-$load_four = load4product();
+
+$feature_pro = load4product();
+
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
