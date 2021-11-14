@@ -29,6 +29,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $email=$_POST['email'];
                 $password=$_POST['password'];
                 insert_user($fullname, $email, $password);
+                $notification = "Đăng ký thành công. Vui lòng đăng nhập để thực hiện các chức năng!";
             }
             include 'View/register.php';
             break;
