@@ -99,8 +99,8 @@
             <div class="col-md-4 col-sm-12">
               <div class="navbar-header float-none-sm">
                 <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"><i class="fa fa-bars"></i></button>
-                <a class="navbar-brand page-scroll" href="index.html">
-                  <img alt="Streetwear" src="./View/images/logo.png">
+                <a class="navbar-brand page-scroll" href="index.php">
+                  <img src="./View/images/logo.png" alt="">
                 </a>
               </div>
             </div>

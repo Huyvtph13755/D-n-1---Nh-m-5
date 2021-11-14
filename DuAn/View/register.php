@@ -21,7 +21,7 @@
       <div class="col-xs-12">
         <div class="row">
           <div class="col-lg-6 col-md-8 col-sm-8 col-lg-offset-3 col-sm-offset-2">
-            <form class="main-form full" action="index.php?act=register" method="post">
+            <form class="main-form full" style="margin: 80px 0;" action="index.php?act=register" method="post">
               <div class="row">
                 <div class="col-xs-12 mb-20">
                   <div class="heading-part heading-bg">

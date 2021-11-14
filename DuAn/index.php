@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 include "Model/pdo.php";
 include "Model/cart.php";
@@ -17,17 +18,17 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $f_cl = full_color(1);
             $wa = full_warranty();
             $gCmt = getAllCmt(1);
-            $ranPr = getRanPr(); 
+            $ranPr = getRanPr();
             include 'View/product_detail.php';
             break;
         case 'cart':
             include 'View/cart.php';
             break;
         case 'register':
-            if(isset($_POST['register'])){
-                $fullname=$_POST['fullname'];
-                $email=$_POST['email'];
-                $password=$_POST['password'];
+            if (isset($_POST['register'])) {
+                $fullname = $_POST['fullname'];
+                $email = $_POST['email'];
+                $password = md5($_POST['password']);
                 insert_user($fullname, $email, $password);
                 $notification = "Đăng ký thành công. Vui lòng đăng nhập để thực hiện các chức năng!";
             }
@@ -36,17 +37,21 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'user_profile':
             include 'View/user_profile.php';
             break;
+        case 'logout':
+            session_unset();
+            header('location: index.php');
+            break;
         case 'login':
-            if(isset($_POST['login'])){
-                $email=$_POST['email'];
-                $password=$_POST['password'];
-                $checkuser=checkuser($email, $password);
-                if(is_array($checkuser)){
-                    $_SESSION['email']=$checkuser;
-                    $thongbao="Bạn đã đăng nhập thành công!";
-                }else{
-                    $thongbao="Tài khoản không tồn tại. Vui lòng kiểm tra lại hoặc đăng ký!";
-                } 
+            if (isset($_POST['login'])) {
+                $email = $_POST['email'];
+                $password = md5($_POST['password']);
+                $checkuser = checkuser($email, $password);
+                if (is_array($checkuser)) {
+                    $_SESSION['email'] = $checkuser;
+                    $notification = "Bạn đã đăng nhập thành công!";
+                } else {
+                    $notification = "Tài khoản không tồn tại. Vui lòng kiểm tra lại hoặc đăng ký!";
+                }
             }
             include 'View/login.php';
             break;
@@ -58,3 +63,4 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     include 'View/home.php';
 }
 include 'View/footer.php';
+ob_end_flush();
