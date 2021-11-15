@@ -1,5 +1,5 @@
-<!-- FOOTER START -->
-<div class="footer">
+  <!-- FOOTER START -->
+  <div class="footer">
     <div class="footer-inner">
       <div class="footer-top ptb-40">
         <div class="container">
@@ -36,6 +36,64 @@
           </div>
         </div>
       </div>
+      <div class="footer-middle mtb-60" >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 f-col">
+              <div class="footer-static-block">
+                <span class="opener plus"></span>
+                <h3 class="title">Information</h3>
+                <ul class="footer-block-contant link">
+                  <li><a>About Us</a></li>
+                  <li><a>Delivery Information</a></li>
+                  <li><a>Privacy Policy</a></li>
+                  <li><a>Terms & Conditions</a></li>
+                  <li><a>Gift Certificates</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 f-col">
+              <div class="footer-static-block">
+                <span class="opener plus"></span>
+                <h3 class="title">Help</h3>
+                <ul class="footer-block-contant link">
+                  <li><a>About Us</a></li>
+                  <li><a>Delivery Information</a></li>
+                  <li><a>Privacy Policy</a></li>
+                  <li><a>Terms & Conditions</a></li>
+                  <li><a>Gift Certificates</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 f-col">
+              <div class="footer-static-block">
+                <span class="opener plus"></span>
+                <h3 class="title">Guidance</h3>
+                <ul class="footer-block-contant link">
+                  <li><a>About Us</a></li>
+                  <li><a>Delivery Information</a></li>
+                  <li><a>Privacy Policy</a></li>
+                  <li><a>Terms & Conditions</a></li>
+                  <li><a>Gift Certificates</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 f-col">
+              <div class="footer-static-block">
+                <span class="opener plus"></span>
+                <h3 class="title">Contact</h3>
+                <ul class="footer-block-contant address-footer">
+                  <li><p>Steetwear ltd</p></li>
+                  <li><p>600 Anton Boulevard Costa</p></li>
+                  <li><p>Mesa, California</p></li>
+                  <li><p><a>info@streetwear.com</a></p></li>
+                  <li><p>029-222-3255-222</p></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <hr>
       <div class="footer-bottom top">
         <div class="container">
@@ -52,7 +110,7 @@
             </ul>
           </div>
           <div class="col-sm-12 align-center">
-            <div class="copy-right center-xs">© 2021  All Rights Reserved. Design By <a href="#">Team 5</a></div>
+            <div class="copy-right center-xs">© 2017  All Rights Reserved. Design By <a href="#">Webcotheme</a></div>
           </div>
         </div>
       </div>
@@ -71,6 +129,20 @@
               </div>
             </div>
             <div class="col-sm-6">
+              <div class="newsletter">
+                <h3 class="title visible-lg">
+                  <span class="newsletter-icon"><img src="./View/images/newsletter-icon.png" alt="Streetwear"></span>
+                  Subscribe Here
+                </h3>
+                <div class="email-box-main right-side float-none-sm center-xs">
+                  <form>
+                    <div class="email-box">
+                      <input type="text" placeholder="Enter email....." class="input-text">
+                      <button class="btn btn-color">Go</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
             <div class="col-sm-3">
               <div class="footer_social pt-xs-15 center-xs mt-xs-15 right-side float-none-sm">

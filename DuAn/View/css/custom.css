@@ -95,7 +95,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: 9999;
-    background: url(../images/Preloader_2.html) center no-repeat #fff;
+    background: url(./View/images/Preloader_2.html) center no-repeat #fff;
 }
 
 .main {
@@ -251,7 +251,7 @@ h6 {
 }
 
 h2.main_title {
-    background: url("../images/title-icon.png") no-repeat scroll center bottom;
+    background: url("./View/images/title-icon.png") no-repeat scroll center bottom;
     padding-bottom: 20px;
    
 }
@@ -333,7 +333,7 @@ h2.main_title {
 
 /* - Form Style */ 
 select {
-    background: url(../images/select-icon.png) no-repeat scroll right 50% #fff !important;
+    background: url(./View/images/select-icon.png) no-repeat scroll right 50% #fff !important;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -607,7 +607,7 @@ select {
   position: relative;
 }
 #newslater-popup .newsletter-inner .email-btn {
-  background: transparent url("../images/sprite.png") no-repeat scroll -95px -806px;
+  background: transparent url("./View/images/sprite.png") no-repeat scroll -95px -806px;
   border: medium none;
   height: 14px;
   position: absolute;
@@ -678,7 +678,7 @@ _______________________________________________________*/
 }
 
 .top-link ul li a span {
-    background: url(../images/sprite.png) no-repeat scroll 0 0;
+    background: url(./View/images/sprite.png) no-repeat scroll 0 0;
     border: none;
     display: inline-block;
     height: 20px;
@@ -832,7 +832,7 @@ header {
 }
 
 .search-box .search-btn {
-    background: #ffd400 url("../images/sprite.png") no-repeat scroll -5px -85px;
+    background: #ffd400 url("./View/images/sprite.png") no-repeat scroll -5px -85px;
     border: medium none;
     border-radius: 100px;
     display: block;
@@ -844,7 +844,7 @@ header {
 }
 
 .top-search-bar .search-box a span {
-    background: url("../images/sprite.png") no-repeat scroll -16px -128px rgba(0, 0, 0, 0);
+    background: url("./View/images/sprite.png") no-repeat scroll -16px -128px rgba(0, 0, 0, 0);
     display: block;
     height: 20px;
     margin-top: 12px;
@@ -871,7 +871,7 @@ header {
 }*/
 
 .top-search-bar .search-box .close-btn span {
-    background: url("../images/sprite.png") no-repeat scroll -16px -159px rgba(0, 0, 0, 0);
+    background: url("./View/images/sprite.png") no-repeat scroll -16px -159px rgba(0, 0, 0, 0);
     display: block;
     height: 20px;
     width: 20px;
@@ -894,7 +894,7 @@ header {
 }
 
 .search-btn-icon button.search-btn {
-    background: url("../images/sprite.png") no-repeat scroll -5px -84px #0074cd;
+    background: url("./View/images/sprite.png") no-repeat scroll -5px -84px #0074cd;
     border: none;
     height: 42px;
     width: 42px;
@@ -914,7 +914,7 @@ header {
 } */
 
 .header-right-part ul li a span {
-    background: url("../images/sprite.png") no-repeat scroll 0 0 transparent;
+    background: url("./View/images/sprite.png") no-repeat scroll 0 0 transparent;
     height: 45px;
     width: 45px;
     display: inline-block;
@@ -963,7 +963,7 @@ header {
   z-index: 4;
 }
 .content-dropdown ul li a span {
-    background: transparent url("../images/sprite.png") no-repeat scroll 0 0;
+    background: transparent url("./View/images/sprite.png") no-repeat scroll 0 0;
     display: inline-block;
     height: 15px;
     width: 15px;
@@ -1347,7 +1347,7 @@ _______________________________________________________*/
 
 
 .banner .owl-buttons .owl-next, .banner .owl-buttons .owl-prev  {
-    background: url(../images/sprite.png) no-repeat scroll 0 0 !important;
+    background: url(./View/images/sprite.png) no-repeat scroll 0 0 !important;
     color: #2a2931;
     font-weight: bold;
     text-transform: uppercase;
@@ -1487,7 +1487,7 @@ _______________________________________________________*/
 }
 
 .inner-banner {
-    background: #fff url(../images/inner-banner.jpg) no-repeat scroll center center;
+    background: #fff url(./View/images/inner-banner.jpg) no-repeat scroll center center;
 /*    padding: 120px 0;*/
 }
 
@@ -1669,7 +1669,7 @@ span.sub-btn, span.sub-btn:hover {
     margin: 0 auto;
 }
 .category {
-    background: #f5f5f5 url("../images/category.png") no-repeat scroll 0 0;
+    background: #f5f5f5 url("./View/images/category.png") no-repeat scroll 0 0;
     cursor: pointer;
     border-radius: 50%;
     border-color: #f5f5f5;
@@ -1904,7 +1904,7 @@ span.sub-btn, span.sub-btn:hover {
 }*/
 
 .detail-inner-left ul li a {
-    background: url("../images/sprite.png") no-repeat scroll 0 0;
+    background: url("./View/images/sprite.png") no-repeat scroll 0 0;
     display: inline-block;
     height: 25px;
     width: 25px;
@@ -1943,7 +1943,7 @@ span.sub-btn, span.sub-btn:hover {
 }
 
 .detail-inner-left ul li button span, .cat-box-inner .cart-link button span {
-    background: url("../images/sprite.png") no-repeat scroll -11px -361px;
+    background: url("./View/images/sprite.png") no-repeat scroll -11px -361px;
     display: inline-block;
     margin-top: 5px;
 /*    margin-right: 10px;*/
@@ -2053,7 +2053,7 @@ span.sub-btn, span.sub-btn:hover {
 
 /* Slider Arrow Strat */
 .owl-slider .owl-prev, .owl-slider .owl-next, #brand-logo .owl-prev, #brand-logo .owl-next, .client-main .owl-prev, .client-main .owl-next {
-    background: url("../images/sprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    background: url("./View/images/sprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
     position: absolute;
     height: 36px;
     width: 36px;
@@ -2213,7 +2213,7 @@ span.sub-btn, span.sub-btn:hover {
 /* perellex-banner Start */
 
 .perellex-banner {
-    background: url("../images/parallax.jpg") no-repeat fixed top center;
+    background: url("./View/images/parallax.jpg") no-repeat fixed top center;
 }
 
 .perellex-delail .perellex-title {
@@ -2288,7 +2288,7 @@ span.sub-btn, span.sub-btn:hover {
 }
 
 .ser-feature-block .feature-box {
-    background: url("../images/shipping_icon.png") no-repeat scroll 0 0;
+    background: url("./View/images/shipping_icon.png") no-repeat scroll 0 0;
     padding-left: 61px;
     cursor: pointer;
     transition: all 0.4s ease 0s;
@@ -2419,7 +2419,7 @@ span.sub-btn, span.sub-btn:hover {
 }
 
 .bottom-detail ul li span {
-    background: url(../images/sprite.png) no-repeat scroll 0 0;
+    background: url(./View/images/sprite.png) no-repeat scroll 0 0;
     display: inline-block;
     height: 23px;
     width: 23px;
@@ -2506,7 +2506,7 @@ span.sub-btn, span.sub-btn:hover {
 }
 
 .newsletter-title .title span {
-    background: url("../images/title-icon.png") no-repeat scroll 0 0;
+    background: url("./View/images/title-icon.png") no-repeat scroll 0 0;
     width: 42px;
     height: 42px;
     display: inline-block;
@@ -2641,7 +2641,7 @@ span.sub-btn, span.sub-btn:hover {
 /* cat-box css Start */
 
 /*.heading-part span {
-    background: url("../images/title-icon.png") no-repeat scroll 0 0;
+    background: url("./View/images/title-icon.png") no-repeat scroll 0 0;
     width: 42px;
     height: 42px;
     display: inline-block;
@@ -3068,7 +3068,7 @@ span.sub-btn, span.sub-btn:hover {
 }
 
 .list-types-icon {
-    background: url(../images/grid-list.png) no-repeat scroll 0 0;
+    background: url(./View/images/grid-list.png) no-repeat scroll 0 0;
     border: 1px solid transparent;
     display: inline-block;
     height: 30px;
@@ -3197,7 +3197,7 @@ span.sub-btn, span.sub-btn:hover {
 }
 
 .fotorama__fullscreen-icon {
-    background: url(../images/sprite.png) no-repeat scroll -107px -289px #0074cd;
+    background: url(./View/images/sprite.png) no-repeat scroll -107px -289px #0074cd;
     height: 40px;
     width: 40px;
 }
@@ -3731,7 +3731,7 @@ table.table{
 }
 
 .account-sidebar .sub-title span {
-    background: url("../images/sprite.png") no-repeat scroll -96px -456px; 
+    background: url("./View/images/sprite.png") no-repeat scroll -96px -456px; 
     display: inline-block; 
     height: 21px; 
     margin-bottom: -5px; 
@@ -3828,7 +3828,7 @@ table.table{
 }
 
 .sidebar-box .search-box button.search-btn {
-    background: transparent url("../images/sprite.png") no-repeat scroll -11px -89px;
+    background: transparent url("./View/images/sprite.png") no-repeat scroll -11px -89px;
     position: absolute;
     right: 10px;
     top: 5px;
@@ -3990,7 +3990,7 @@ table.table{
     height: 27px;
     width: 27px;
     display: inline-block;
-    background: url(../images/sprite.png) no-repeat scroll 0 0;
+    background: url(./View/images/sprite.png) no-repeat scroll 0 0;
 }
 .contact-box span {
     display: inline-block;
@@ -4115,7 +4115,7 @@ ul.social-icon > li:last-child {
 }*/
 
 /*.footer-static-block .title span {
-    background: url("../images/title-icon.png") no-repeat scroll 0 0;
+    background: url("./View/images/title-icon.png") no-repeat scroll 0 0;
     display: inline-block;
     width: 42px;
     height: 42px;
@@ -4239,7 +4239,7 @@ ul.tagcloud li a:hover {
 }
 
 .payment ul li a {
-    background: url(../images/sprite.png) no-repeat scroll 0 0;
+    background: url(./View/images/sprite.png) no-repeat scroll 0 0;
     display: inline-block;
     height: 25px;
     width: 44px;

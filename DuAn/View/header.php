@@ -25,7 +25,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <!-- CSS
   ================================================== --> 
-  <link rel="stylesheet" href="">
 <link rel="stylesheet" type="text/css" href="./View/css/font-awesome.min.css"/>
 <link rel="stylesheet" type="text/css" href="./View/css/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="./View/css/jquery-ui.css">
@@ -36,7 +35,7 @@
 <link rel="stylesheet" type="text/css" href="./View/css/responsive.css">
 
 <link rel="shortcut icon" href="./View/images/favicon.html">
-<link rel="apple-touch-icon" href="./View/./View/images/apple-touch-icon.html">
+<link rel="apple-touch-icon" href="./View/images/apple-touch-icon.html">
 <link rel="apple-touch-icon" sizes="72x72" href="./View/images/apple-touch-icon-72x72.html">
 <link rel="apple-touch-icon" sizes="114x114" href="./View/images/apple-touch-icon-114x114.html">
 </head>
@@ -97,10 +96,10 @@
               </div>
             </div>
             <div class="col-md-4 col-sm-12">
-              <div class="navbar-header float-none-sm">
+              <div class="navbar-header float-none-sm" style="text-align: center;">
                 <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"><i class="fa fa-bars"></i></button>
-                <a class="navbar-brand page-scroll" href="index.php">
-                  <img src="./View/images/logo.png" alt="">
+                <a class="navbar-brand page-scroll" href="index.html">
+                  <img alt="Streetwear" src="./View/images/logo.png">
                 </a>
               </div>
             </div>
@@ -123,7 +122,7 @@
                     </a>
                     <div class="content-dropdown">
                       <ul>
-                        <li class="login-icon"><a href="index.php?act=login" title="Login"><span></span>Login</a></li>
+                        <li class="login-icon"><a href="login.html" title="Login"><span></span>Login</a></li>
                         <li class="account-icon"><a href="account.html" title="My Account"><span></span>My Account</a></li>
                         <li class="wishlist-icon"><a title="My Wishlist"><span></span>My Wishlist</a></li>
                       </ul>
