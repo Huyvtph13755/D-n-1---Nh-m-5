@@ -218,7 +218,7 @@
                      <div class="col-md-3 col-xs-6 plr-20 mb-20">
                        <div class="product-item" style="margin-bottom: 50px">
                          <div class="product-image">
-                           <a href="product-page.html">
+                           <a href="product-page.html">                     
                              <img src="./view/images/1.jpg" alt="Streetwear" href="">
                            </a>
                            <div class="product-detail-inner">
