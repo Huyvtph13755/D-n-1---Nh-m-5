@@ -25,19 +25,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <!-- CSS
   ================================================== --> 
-<link rel="stylesheet" type="text/css" href="View/css/font-awesome.min.css"/>
-<link rel="stylesheet" type="text/css" href="View/css/bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="View/css/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="View/css/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="View/css/fotorama.css">
-<link rel="stylesheet" type="text/css" href="View/css/magnific-popup.css">
-<link rel="stylesheet" type="text/css" href="View/css/custom.css">
-<link rel="stylesheet" type="text/css" href="View/css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="css/fotorama.css">
+<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
 
-<link rel="shortcut icon" href="View/images/favicon.html">
-<link rel="apple-touch-icon" href="View/images/apple-touch-icon.html">
-<link rel="apple-touch-icon" sizes="72x72" href="View/images/apple-touch-icon-72x72.html">
-<link rel="apple-touch-icon" sizes="114x114" href="View/images/apple-touch-icon-114x114.html">
+<link rel="shortcut icon" href="images/favicon.html">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.html">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.html">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.html">
 </head>
 <body>
 <div class="se-pre-con"></div>
@@ -47,7 +47,7 @@
       <div class="row m-0">
         <div class="col-sm-5 col-xs-0 hidden-xs p-0">
           <div class="nl-popup-image">
-            <img src="View/images/popup-image.jpg" alt="streetwear">
+            <img src="images/popup-image.jpg" alt="streetwear">
           </div>
         </div>
         <div class="col-sm-7 col-xs-12 p-0">
@@ -96,10 +96,10 @@
               </div>
             </div>
             <div class="col-md-4 col-sm-12">
-              <div class="navbar-header float-none-sm">
+              <div class="navbar-header float-none-sm" style="text-align: center;">
                 <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"><i class="fa fa-bars"></i></button>
                 <a class="navbar-brand page-scroll" href="index.html">
-                  <img alt="Streetwear" src="View/images/logo.png">
+                  <img alt="Streetwear" src="images/logo.png">
                 </a>
               </div>
             </div>
@@ -139,7 +139,7 @@
                     <div class="cart-dropdown header-link-dropdown">
                       <ul class="cart-list link-dropdown-list">
                         <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
-                          <div class="media"> <a class="pull-left"> <img alt="Streetwear" src="View/images/1.jpg"></a>
+                          <div class="media"> <a class="pull-left"> <img alt="Streetwear" src="images/1.jpg"></a>
                             <div class="media-body">
                               <span><a>Black African Print Skirt</a></span>
                               <p class="cart-price">$14.99</p>
@@ -152,7 +152,7 @@
                           </div>
                         </li>
                         <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
-                          <div class="media"> <a class="pull-left"> <img alt="Streetwear" src="View/images/2.jpg"></a>
+                          <div class="media"> <a class="pull-left"> <img alt="Streetwear" src="images/2.jpg"></a>
                             <div class="media-body">
                               <span><a>Black African Print Skirt</a></span>
                               <p class="cart-price">$14.99</p>
@@ -231,7 +231,7 @@
                 </div>
                 <div class="megamenu-inner-bottom mt-20 visible-lg visible-md">
                   <a href="shop.html">
-                    <img src="View/images/drop_banner2.jpg" alt="Streetwear">
+                    <img src="images/drop_banner2.jpg" alt="Streetwear">
                   </a>
                 </div>
               </div>
@@ -278,7 +278,7 @@
                       </div>
                       <div class="col-md-3 level2 visible-lg visible-md">
                         <a href="shop.html">
-                          <img src="View/images/drop_banner.jpg" alt="Streetwear">
+                          <img src="images/drop_banner.jpg" alt="Streetwear">
                         </a>
                       </div>
                     </div>
@@ -343,7 +343,7 @@
     <div class="banner">
       <div class="main-banner">
         <div class="banner-1"> 
-          <img src="View/images/banner1.jpg" alt="Streetwear"> 
+          <img src="images/banner1.jpg" alt="Streetwear"> 
           <div class="banner-detail">
             <div class="row">
               <div class="col-md-6 col-sm-6 col-xs-6"></div>
@@ -359,7 +359,7 @@
           </div>
         </div>
         <div class="banner-2"> 
-          <img src="View/images/banner2.jpg" alt="Streetwear">
+          <img src="images/banner2.jpg" alt="Streetwear">
           <div class="banner-detail">
             <div class="row">
               <div class="col-md-1 col-sm-1 col-xs-1"></div>
@@ -375,7 +375,7 @@
           </div>
         </div>
         <div class="banner-3"> 
-          <img src="View/images/banner3.jpg" alt="Streetwear">
+          <img src="images/banner3.jpg" alt="Streetwear">
           <div class="banner-detail">
             <div class="row">
               <div class="col-md-6 col-sm-6 col-xs-6"></div>
@@ -391,7 +391,7 @@
           </div>
         </div>
         <div class="banner-4"> 
-          <img src="View/images/banner4.jpg" alt="Streetwear">
+          <img src="images/banner4.jpg" alt="Streetwear">
           <div class="banner-detail">
             <div class="row">
               <div class="col-md-1 col-sm-1 col-xs-1"></div>
@@ -467,7 +467,7 @@
       <div class="row m-0">
         <div class="col-sm-6 p-0">
           <div class="sub-banner sub-banner1"> 
-            <a> <img src="View/images/sub-banner1.jpg" alt="Streetwear">
+            <a> <img src="images/sub-banner1.jpg" alt="Streetwear">
               <div class="sub-banner-detail">
                 <div class="sub-banner-title">Lenovo Vibe K5</div>
                 <div class="sub-banner-subtitle">
@@ -483,7 +483,7 @@
           <div class="row m-0">
             <div class="col-xs-6 p-0">
               <div class="sub-banner sub-banner2">
-                <a> <img src="View/images/sub-banner2.jpg" alt="Streetwear">
+                <a> <img src="images/sub-banner2.jpg" alt="Streetwear">
                   <div class="sub-banner-detail">
                     <div class="sub-banner-title">SAMSUNG</div>
                     <div class="sub-banner-subtitle">Galexy S6 Edge</div>
@@ -493,7 +493,7 @@
             </div>
             <div class="col-xs-6 p-0">
               <div class="sub-banner sub-banner3">
-                <a> <img src="View/images/sub-banner3.jpg" alt="Streetwear">
+                <a> <img src="images/sub-banner3.jpg" alt="Streetwear">
                   <div class="sub-banner-detail">
                     <div class="sub-banner-title">5 BEST TABLETS</div>
                     <div class="sub-banner-subtitle">up to 20% off</div>
@@ -505,7 +505,7 @@
           <div class="row m-0">
             <div class="col-xs-6 p-0">
               <div class="sub-banner sub-banner4"> 
-                <a href="shop.html"> <img src="View/images/sub-banner4.jpg" alt="Streetwear">
+                <a href="shop.html"> <img src="images/sub-banner4.jpg" alt="Streetwear">
                   <div class="sub-banner-detail">
                     <div class="sub-banner-title">Redmi 2 & Mi4</div>
                     <div class="sub-banner-btn"><span class="btn sub-btn">Shop Now</span></div>
@@ -515,7 +515,7 @@
             </div>
             <div class="col-xs-6 p-0">
               <div class="sub-banner sub-banner5"> 
-                <a> <img src="View/images/sub-banner5.jpg" alt="Streetwear">
+                <a> <img src="images/sub-banner5.jpg" alt="Streetwear">
                   <div class="sub-banner-detail">
                     <div class="sub-banner-title">Smart phones</div>
                     <div class="sub-banner-subtitle">Tablet PC</div>
@@ -559,7 +559,7 @@
                         <div class="product-image">
                           <div class="sale-label"><span>Sale</span></div>
                           <a href="product-page.html">
-                            <img src="View/images/1.jpg" alt="Streetwear">
+                            <img src="images/1.jpg" alt="Streetwear">
                           </a>
                           <div class="product-detail-inner">
                             <div class="detail-inner-left align-center">
@@ -596,7 +596,7 @@
                       <div class="product-item">
                         <div class="product-image">
                           <a href="product-page.html">
-                            <img src="View/images/2.jpg" alt="Streetwear">
+                            <img src="images/2.jpg" alt="Streetwear">
                           </a>
                           <div class="product-detail-inner">
                             <div class="detail-inner-left align-center">
@@ -632,7 +632,7 @@
                       <div class="product-item">
                         <div class="product-image">
                           <a href="product-page.html">
-                            <img src="View/images/3.jpg" alt="Streetwear">
+                            <img src="images/3.jpg" alt="Streetwear">
                           </a>
                           <div class="product-detail-inner">
                             <div class="detail-inner-left align-center">
@@ -668,7 +668,7 @@
                       <div class="product-item">
                         <div class="product-image">
                           <a href="product-page.html">
-                            <img src="View/images/4.jpg" alt="Streetwear">
+                            <img src="images/4.jpg" alt="Streetwear">
                           </a>
                           <div class="product-detail-inner">
                             <div class="detail-inner-left align-center">
@@ -710,7 +710,7 @@
                         <div class="product-image">
                           <div class="sale-label"><span>Sale</span></div>
                           <a href="product-page.html">
-                            <img src="View/images/9.jpg" alt="Streetwear">
+                            <img src="images/9.jpg" alt="Streetwear">
                           </a>
                           <div class="product-detail-inner">
                             <div class="detail-inner-left align-center">
@@ -747,7 +747,7 @@
                       <div class="product-item">
                         <div class="product-image">
                           <a href="product-page.html">
-                            <img src="View/images/10.jpg" alt="Streetwear">
+                            <img src="images/10.jpg" alt="Streetwear">
                           </a>
                           <div class="product-detail-inner">
                             <div class="detail-inner-left align-center">
@@ -783,7 +783,7 @@
                       <div class="product-item">
                         <div class="product-image">
                           <a href="product-page.html">
-                            <img src="View/images/11.jpg" alt="Streetwear">
+                            <img src="images/11.jpg" alt="Streetwear">
                           </a>
                           <div class="product-detail-inner">
                             <div class="detail-inner-left align-center">
@@ -819,7 +819,7 @@
                       <div class="product-item">
                         <div class="product-image">
                           <a href="product-page.html">
-                            <img src="View/images/12.jpg" alt="Streetwear">
+                            <img src="images/12.jpg" alt="Streetwear">
                           </a>
                           <div class="product-detail-inner">
                             <div class="detail-inner-left align-center">
@@ -861,7 +861,7 @@
                         <div class="product-image">
                           <div class="sale-label"><span>Sale</span></div>
                           <a href="product-page.html">
-                            <img src="View/images/3.jpg" alt="Streetwear">
+                            <img src="images/3.jpg" alt="Streetwear">
                           </a>
                           <div class="product-detail-inner">
                             <div class="detail-inner-left align-center">
@@ -898,7 +898,7 @@
                       <div class="product-item">
                         <div class="product-image">
                           <a href="product-page.html">
-                            <img src="View/images/4.jpg" alt="Streetwear">
+                            <img src="images/4.jpg" alt="Streetwear">
                           </a>
                           <div class="product-detail-inner">
                             <div class="detail-inner-left align-center">
@@ -934,7 +934,7 @@
                       <div class="product-item">
                         <div class="product-image">
                           <a href="product-page.html">
-                            <img src="View/images/5.jpg" alt="Streetwear">
+                            <img src="images/5.jpg" alt="Streetwear">
                           </a>
                           <div class="product-detail-inner">
                             <div class="detail-inner-left align-center">
@@ -970,7 +970,7 @@
                       <div class="product-item">
                         <div class="product-image">
                           <a href="product-page.html">
-                            <img src="View/images/6.jpg" alt="Streetwear">
+                            <img src="images/6.jpg" alt="Streetwear">
                           </a>
                           <div class="product-detail-inner">
                             <div class="detail-inner-left align-center">
@@ -1051,7 +1051,7 @@
                   <div class="product-image">
                     <div class="sale-label"><span>Sale</span></div>
                     <a href="product-page.html">
-                      <img src="View/images/1.jpg" alt="Streetwear">
+                      <img src="images/1.jpg" alt="Streetwear">
                     </a>
                     <div class="product-detail-inner">
                       <div class="detail-inner-left align-center">
@@ -1088,7 +1088,7 @@
                 <div class="product-item">
                   <div class="product-image">
                     <a href="product-page.html">
-                      <img src="View/images/2.jpg" alt="">
+                      <img src="images/2.jpg" alt="">
                     </a>
                     <div class="product-detail-inner">
                       <div class="detail-inner-left align-center">
@@ -1123,7 +1123,7 @@
                 <div class="product-item">
                   <div class="product-image">
                     <a href="product-page.html">
-                      <img src="View/images/3.jpg" alt="">
+                      <img src="images/3.jpg" alt="">
                     </a>
                     <div class="product-detail-inner">
                       <div class="detail-inner-left align-center">
@@ -1158,7 +1158,7 @@
                 <div class="product-item">
                   <div class="product-image">
                     <a href="product-page.html">
-                      <img src="View/images/4.jpg" alt="">
+                      <img src="images/4.jpg" alt="">
                     </a>
                     <div class="product-detail-inner">
                       <div class="detail-inner-left align-center">
@@ -1193,7 +1193,7 @@
                 <div class="product-item">
                   <div class="product-image">
                     <a href="product-page.html">
-                      <img src="View/images/5.jpg" alt="">
+                      <img src="images/5.jpg" alt="">
                     </a>
                     <div class="product-detail-inner">
                       <div class="detail-inner-left align-center">
@@ -1228,7 +1228,7 @@
                 <div class="product-item">
                   <div class="product-image">
                     <a href="product-page.html">
-                      <img src="View/images/6.jpg" alt="">
+                      <img src="images/6.jpg" alt="">
                     </a>
                     <div class="product-detail-inner">
                       <div class="detail-inner-left align-center">
@@ -1263,7 +1263,7 @@
                 <div class="product-item">
                   <div class="product-image">
                     <a href="product-page.html">
-                      <img src="View/images/7.jpg" alt="">
+                      <img src="images/7.jpg" alt="">
                     </a>
                     <div class="product-detail-inner">
                       <div class="detail-inner-left align-center">
@@ -1322,7 +1322,7 @@
                   </div>
                 </div>
                 <div class="blog-media col-sm-6 p-0">
-                  <img src="View/images/blog_img1.jpg" alt="Streetwear">
+                  <img src="images/blog_img1.jpg" alt="Streetwear">
                 </div>
               </div>
             </div>
@@ -1340,7 +1340,7 @@
                   </div>
                 </div>
                 <div class="blog-media col-sm-6 p-0">
-                  <img src="View/images/blog_img2.jpg" alt="Streetwear">
+                  <img src="images/blog_img2.jpg" alt="Streetwear">
                 </div>
               </div>
             </div>
@@ -1358,7 +1358,7 @@
                   </div>
                 </div>
                 <div class="blog-media col-sm-6 p-0">
-                  <img src="View/images/blog_img3.jpg" alt="Streetwear">
+                  <img src="images/blog_img3.jpg" alt="Streetwear">
                 </div>
               </div>
             </div>
@@ -1376,7 +1376,7 @@
                   </div>
                 </div>
                 <div class="blog-media col-sm-6 p-0">
-                  <img src="View/images/blog_img4.jpg" alt="Streetwear">
+                  <img src="images/blog_img4.jpg" alt="Streetwear">
                 </div>
               </div>
             </div>
@@ -1394,7 +1394,7 @@
                   </div>
                 </div>
                 <div class="blog-media col-sm-6 p-0">
-                  <img src="View/images/blog_img5.jpg" alt="Streetwear">
+                  <img src="images/blog_img5.jpg" alt="Streetwear">
                 </div>
               </div>
             </div>
@@ -1412,13 +1412,13 @@
         <div class="col-md-12">
           <div class="brand">
             <div id="brand-logo" class="owl-carousel align_center">
-              <div class="item"><a href="#"><img src="View/images/brand1.png" alt="#"></a></div>
-              <div class="item"><a href="#"><img src="View/images/brand2.png" alt="#"></a></div>
-              <div class="item"><a href="#"><img src="View/images/brand3.png" alt="#"></a></div>
-              <div class="item"><a href="#"><img src="View/images/brand4.png" alt="#"></a></div>
-              <div class="item"><a href="#"><img src="View/images/brand5.png" alt="#"></a></div>
-              <div class="item"><a href="#"><img src="View/images/brand6.png" alt="#"></a></div>
-              <div class="item"><a href="#"><img src="View/images/brand7.png" alt="#"></a></div>
+              <div class="item"><a href="#"><img src="images/brand1.png" alt="#"></a></div>
+              <div class="item"><a href="#"><img src="images/brand2.png" alt="#"></a></div>
+              <div class="item"><a href="#"><img src="images/brand3.png" alt="#"></a></div>
+              <div class="item"><a href="#"><img src="images/brand4.png" alt="#"></a></div>
+              <div class="item"><a href="#"><img src="images/brand5.png" alt="#"></a></div>
+              <div class="item"><a href="#"><img src="images/brand6.png" alt="#"></a></div>
+              <div class="item"><a href="#"><img src="images/brand7.png" alt="#"></a></div>
             </div>
           </div>
         </div>
@@ -1562,7 +1562,7 @@
             <div class="col-sm-6">
               <div class="newsletter">
                 <h3 class="title visible-lg">
-                  <span class="newsletter-icon"><img src="View/images/newsletter-icon.png" alt="Streetwear"></span>
+                  <span class="newsletter-icon"><img src="images/newsletter-icon.png" alt="Streetwear"></span>
                   Subscribe Here
                 </h3>
                 <div class="email-box-main right-side float-none-sm center-xs">
@@ -1596,13 +1596,13 @@
   </div>
   <!-- FOOTER END --> 
 </div>
-<script src="View/js/jquery-1.12.3.min.js"></script>
-<script src="View/js/bootstrap.min.js"></script>
-<script src="View/js/jquery-ui.js"></script>
-<script src="View/js/fotorama.js"></script>
-<script src="View/js/jquery.magnific-popup.js"></script>
-<script src="View/js/owl.carousel.min.js"></script>
-<script src="View/js/custom.js"></script>
+<script src="js/jquery-1.12.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/fotorama.js"></script>
+<script src="js/jquery.magnific-popup.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/custom.js"></script>
 
 <script>
   /* ------------ Newslater-popup JS Start ------------- */

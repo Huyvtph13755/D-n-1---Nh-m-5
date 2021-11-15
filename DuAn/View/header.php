@@ -25,19 +25,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <!-- CSS
   ================================================== --> 
-<link rel="stylesheet" type="text/css" href="View/css/font-awesome.min.css"/>
-<link rel="stylesheet" type="text/css" href="View/css/bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="View/css/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="View/css/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="View/css/fotorama.css">
-<link rel="stylesheet" type="text/css" href="View/css/magnific-popup.css">
-<link rel="stylesheet" type="text/css" href="View/css/custom.css">
-<link rel="stylesheet" type="text/css" href="View/css/responsive.css">
+<link rel="stylesheet" type="text/css" href="./View/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="./View/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="./View/css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="./View/css/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="./View/css/fotorama.css">
+<link rel="stylesheet" type="text/css" href="./View/css/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="./View/css/custom.css">
+<link rel="stylesheet" type="text/css" href="./View/css/responsive.css">
 
-<link rel="shortcut icon" href="View/images/favicon.html">
-<link rel="apple-touch-icon" href="View/images/apple-touch-icon.html">
-<link rel="apple-touch-icon" sizes="72x72" href="View/images/apple-touch-icon-72x72.html">
-<link rel="apple-touch-icon" sizes="114x114" href="View/images/apple-touch-icon-114x114.html">
+<link rel="shortcut icon" href="./View/images/favicon.html">
+<link rel="apple-touch-icon" href="./View/images/apple-touch-icon.html">
+<link rel="apple-touch-icon" sizes="72x72" href="./View/images/apple-touch-icon-72x72.html">
+<link rel="apple-touch-icon" sizes="114x114" href="./View/images/apple-touch-icon-114x114.html">
 </head>
 <body>
 <div class="se-pre-con"></div>
@@ -47,7 +47,7 @@
       <div class="row m-0">
         <div class="col-sm-5 col-xs-0 hidden-xs p-0">
           <div class="nl-popup-image">
-            <img src="View/images/popup-image.jpg" alt="streetwear">
+            <img src="./View/images/popup-image.jpg" alt="streetwear">
           </div>
         </div>
         <div class="col-sm-7 col-xs-12 p-0">
@@ -96,10 +96,10 @@
               </div>
             </div>
             <div class="col-md-4 col-sm-12">
-              <div class="navbar-header float-none-sm">
+              <div class="navbar-header float-none-sm" style="text-align: center;">
                 <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"><i class="fa fa-bars"></i></button>
                 <a class="navbar-brand page-scroll" href="index.html">
-                  <img alt="Streetwear" src="View/images/logo.png">
+                  <img alt="Streetwear" src="./View/images/logo.png">
                 </a>
               </div>
             </div>
@@ -139,7 +139,7 @@
                     <div class="cart-dropdown header-link-dropdown">
                       <ul class="cart-list link-dropdown-list">
                         <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
-                          <div class="media"> <a class="pull-left"> <img alt="Streetwear" src="View/images/1.jpg"></a>
+                          <div class="media"> <a class="pull-left"> <img alt="Streetwear" src="./View/images/1.jpg"></a>
                             <div class="media-body">
                               <span><a>Black African Print Skirt</a></span>
                               <p class="cart-price">$14.99</p>
@@ -152,7 +152,7 @@
                           </div>
                         </li>
                         <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
-                          <div class="media"> <a class="pull-left"> <img alt="Streetwear" src="View/images/2.jpg"></a>
+                          <div class="media"> <a class="pull-left"> <img alt="Streetwear" src="./View/images/2.jpg"></a>
                             <div class="media-body">
                               <span><a>Black African Print Skirt</a></span>
                               <p class="cart-price">$14.99</p>
@@ -231,7 +231,7 @@
                 </div>
                 <div class="megamenu-inner-bottom mt-20 visible-lg visible-md">
                   <a href="shop.html">
-                    <img src="View/images/drop_banner2.jpg" alt="Streetwear">
+                    <img src="./View/images/drop_banner2.jpg" alt="Streetwear">
                   </a>
                 </div>
               </div>
@@ -278,7 +278,7 @@
                       </div>
                       <div class="col-md-3 level2 visible-lg visible-md">
                         <a href="shop.html">
-                          <img src="View/images/drop_banner.jpg" alt="Streetwear">
+                          <img src="./View/images/drop_banner.jpg" alt="Streetwear">
                         </a>
                       </div>
                     </div>
