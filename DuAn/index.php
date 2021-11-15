@@ -7,7 +7,6 @@ include "Model/warranty.php";
 include "Model/comment.php";
 include "View/header.php";
 
-$feature_pro = load4product();
 
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
@@ -25,6 +24,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             } else {
                 $sub_id = 0;
             }
+            $feature_pro = load4product();
             $listpro = loadall_sanpham($sub_id = 0);
             $name_product = load_name_subcategory($sub_id);
             include 'View/product.php';
