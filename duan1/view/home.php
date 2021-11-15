@@ -219,7 +219,7 @@
                        <div class="product-item" style="margin-bottom: 50px">
                          <div class="product-image">
                            <a href="product-page.html">
-                             <img src="./view/images/1.jpg" alt="Streetwear">
+                             <img src="./view/images/1.jpg" alt="Streetwear" href="">
                            </a>
                            <div class="product-detail-inner">
                              <div class="detail-inner-left align-center">
