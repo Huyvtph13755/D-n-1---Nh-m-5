@@ -2,10 +2,10 @@
 ob_start();
 session_start();
 include "model/pdo.php";
-// include "model/cart.php";
+include "model/cart.php";
 include "model/product.php";
 include "model/color.php";
-// include "model/user.php";
+include "model/user.php";
 include "model/warranty.php";
 include "model/comment.php";
 include "view/header.php";
