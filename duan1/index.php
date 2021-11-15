@@ -9,6 +9,7 @@ include "model/user.php";
 include "model/warranty.php";
 include "model/comment.php";
 include "view/header.php";
+
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
@@ -22,15 +23,18 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include 'view/detailproduct.php';
             break;
         case 'home':
-            if (isset($_GET['sub_id']) && ($_GET['sub_id'] > 0)) {
-                $sub_id = $_GET['sub_id'];
-            } else {
-                $sub_id = 0;
-            }
-            $feature_pro = load4product();
-            $listpro = loadall_sanpham($sub_id = 0);
-            $name_product = load_name_subcategory($sub_id);
-            include 'View/product.php';
+            // if (isset($_GET['sub_id']) && ($_GET['sub_id'] > 0)) {
+            //     $sub_id = $_GET['sub_id'];
+            // } else {
+            //     $sub_id = 0;
+            // }
+            
+            // $listpro = loadall_sanpham($sub_id = 0);
+            // $name_product = load_name_subcategory($sub_id);
+            $feature_pro = load4Newproduct();
+            // var_dump($feature_pro);
+            // die;
+            include 'view/home.php';
             break;
         case 'cart':
             include 'view/cart.php';
