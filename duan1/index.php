@@ -28,10 +28,10 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             // } else {
             //     $sub_id = 0;
             // }
-            
+
             // $listpro = loadall_sanpham($sub_id = 0);
             // $name_product = load_name_subcategory($sub_id);
-            $feature_pro = load4Newproduct();
+            $feature_pro = load4product();
             // var_dump($feature_pro);
             // die;
             include 'view/home.php';
