@@ -1,5 +1,5 @@
-  <!-- FOOTER START -->
-  <div class="footer">
+<!-- FOOTER START -->
+<div class="footer">
     <div class="footer-inner">
       <div class="footer-top ptb-40">
         <div class="container">
@@ -131,7 +131,7 @@
             <div class="col-sm-6">
               <div class="newsletter">
                 <h3 class="title visible-lg">
-                  <span class="newsletter-icon"><img src="./View/images/newsletter-icon.png" alt="Streetwear"></span>
+                  <span class="newsletter-icon"><img src="View/images/newsletter-icon.png" alt="Streetwear"></span>
                   Subscribe Here
                 </h3>
                 <div class="email-box-main right-side float-none-sm center-xs">
@@ -165,13 +165,13 @@
   </div>
   <!-- FOOTER END --> 
 </div>
-<script src="./View/js/jquery-1.12.3.min.js"></script>
-<script src="./View/js/bootstrap.min.js"></script>
-<script src="./View/js/jquery-ui.js"></script>
-<script src="./View/js/fotorama.js"></script>
-<script src="./View/js/jquery.magnific-popup.js"></script>
-<script src="./View/js/owl.carousel.min.js"></script>
-<script src="./View/js/custom.js"></script>
+<script src="View/js/jquery-1.12.3.min.js"></script>
+<script src="View/js/bootstrap.min.js"></script>
+<script src="View/js/jquery-ui.js"></script>
+<script src="View/js/fotorama.js"></script>
+<script src="View/js/jquery.magnific-popup.js"></script>
+<script src="View/js/owl.carousel.min.js"></script>
+<script src="View/js/custom.js"></script>
 
 <script>
   /* ------------ Newslater-popup JS Start ------------- */
