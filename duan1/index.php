@@ -21,6 +21,17 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $ranPr = getRanPr();
             include 'view/detailproduct.php';
             break;
+        case 'home':
+            if (isset($_GET['sub_id']) && ($_GET['sub_id'] > 0)) {
+                $sub_id = $_GET['sub_id'];
+            } else {
+                $sub_id = 0;
+            }
+            $feature_pro = load4product();
+            $listpro = loadall_sanpham($sub_id = 0);
+            $name_product = load_name_subcategory($sub_id);
+            include 'View/product.php';
+            break;
         case 'cart':
             include 'view/cart.php';
             break;
