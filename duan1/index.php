@@ -9,7 +9,7 @@ include "model/user.php";
 include "model/warranty.php";
 include "model/comment.php";
 include "view/header.php";
-
+echo "Mydty";
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
