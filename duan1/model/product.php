@@ -1,7 +1,7 @@
 <?php
  
 function load4product(){
-    $sql = "SELECT * FROM product ORDER BY view DESC LIMIT 0,9";
+    $sql = "SELECT * FROM product ORDER BY view DESC LIMIT 0,8";
     $s = exeQuery($sql, true); //Truy vấn nhiều sp
     return $s;
 }

@@ -245,9 +245,7 @@
                        </div>
                      </div>
                    <?php endforeach ?>
-
-
-                   <!-- <div class="col-md-3 col-xs-6 plr-20 mb-20">
+                    <!-- <div class="col-md-3 col-xs-6 plr-20 mb-20">
                       <div class="product-item">
                         <div class="product-image">
                           <a href="product-page.html">
@@ -357,8 +355,8 @@
                       </div>
                     </div> -->
                  </div>
-                 <!-- </li>
-                <li>
+                 </li>
+                <!-- <li>
                   <div id="data-step2" class="items-step2 product-slider-main position-r" data-temp="tabdata">
                     <div class="col-md-3 col-xs-6 plr-20 mb-20">
                       <div class="product-item">
@@ -659,7 +657,7 @@
                       </div>
                     </div>
                   </div>
-                </li> -->
+                </li>   -->
              </ul>
            </div>
          </div>
