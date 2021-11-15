@@ -1,14 +1,14 @@
 <?php
 ob_start();
 session_start();
-include "Model/pdo.php";
-include "Model/cart.php";
-include "Model/product.php";
-include "Model/color.php";
-include "Model/user.php";
-include "Model/warranty.php";
-include "Model/comment.php";
-include "View/header.php";
+include "model/pdo.php";
+// include "model/cart.php";
+include "model/product.php";
+include "model/color.php";
+// include "model/user.php";
+include "model/warranty.php";
+include "model/comment.php";
+include "view/header.php";
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
@@ -19,10 +19,10 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $wa = full_warranty();
             $gCmt = getAllCmt(1);
             $ranPr = getRanPr();
-            include 'View/product_detail.php';
+            include 'view/detailproduct.php';
             break;
         case 'cart':
-            include 'View/cart.php';
+            include 'view/cart.php';
             break;
         case 'register':
             if (isset($_POST['register'])) {
@@ -32,10 +32,10 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 insert_user($fullname, $email, $password);
                 $notification = "Đăng ký thành công. Vui lòng đăng nhập để thực hiện các chức năng!";
             }
-            include 'View/register.php';
+            include 'view/register.php';
             break;
         case 'user_profile':
-            include 'View/user_profile.php';
+            include 'view/user_profile.php';
             break;
         case 'logout':
             session_unset();
@@ -53,14 +53,13 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                     $notification = "Tài khoản không tồn tại. Vui lòng kiểm tra lại hoặc đăng ký!";
                 }
             }
-            include 'View/login.php';
+            include 'view/login.php';
             break;
         default:
-            include 'View/home.php';
+            include 'view/home.php';
             break;
     }
 } else {
-    include 'View/home.php';
+    include 'view/home.php';
 }
-include 'View/footer.php';
-ob_end_flush();
+include 'view/footer.php';
