@@ -136,12 +136,12 @@
                                         <div class="main-form mt-30">
                                             <h4>Để lại bình luận</h4>
                                             <div class="row mt-30">
-                                                <form>
+                                                <form action="index.php?act=product_detail" method="post"> 
                                                     <div class="col-xs-12 mb-20">
-                                                        <textarea cols="30" rows="3" placeholder="Message" required></textarea>
+                                                        <textarea cols="30" rows="3" name="content" placeholder="Message" required></textarea>
                                                     </div>
                                                     <div class="col-xs-12">
-                                                        <button class="btn-black" name="submit" type="submit">Gửi</button>
+                                                        <button class="btn-black" name="product_detail" type="submit">Gửi</button>
                                                     </div>
                                                 </form>
                                             </div>

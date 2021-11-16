@@ -7,4 +7,8 @@ function getAllCmt($id){
     $s = exeQuery($sql, true);
     return $s;
 }
+function addCmt($product_id, $user_id, $content, $date_comment){
+    $sql = "INSERT INTO comment(product_id, user_id, content, date_comment) VALUE('$product_id' , '$user_id', '$content', '$date_comment')";
+    return exeQuery($sql, false);
+}
 // End code của Huy
