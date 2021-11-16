@@ -45,9 +45,8 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
 
             // $listpro = loadall_sanpham($sub_id = 0);
             // $name_product = load_name_subcategory($sub_id);
-            $feature_pro = load4product();
-            // var_dump($feature_pro);
-            // die;
+            $feature_pro = load4Feaproduct();
+            $new_pro = load4Newproduct();
             include 'view/home.php';
             break;
         case 'cart':

@@ -699,10 +699,10 @@
        <div class="row">
          <div class="product-slider-main position-r">
            <div class="owl-carousel pro_cat_slider">
+           <?php foreach ($new_pro as $index => $n) : ?>
              <div class="item">
                <div class="product-item">
                  <div class="product-image">
-                   <div class="sale-label"><span>Sale</span></div>
                    <a href="product-page.html">
                      <img src="./view/images/1.jpg" alt="Streetwear">
                    </a>
@@ -715,29 +715,23 @@
                            </form>
                          </li>
                          <li class="pro-wishlist-icon"><a href="#"></a></li>
-                         <li class="pro-compare-icon"><a href="#"></a></li>
                        </ul>
                      </div>
                    </div>
                  </div>
                  <div class="product-item-details">
                    <div class="product-item-name">
-                     <a href="product-page.html">Defyant Reversible Dot Shorts</a>
+                     <a href="product-page.html" style="font-size: 18px;"><?= $n['name_product'] ?></a>
                    </div>
                    <div class="price-box">
-                     <span class="price">$80.00</span>
-                     <del class="price old-price">$100.00</del>
-                   </div>
-                   <div class="rating-summary-block">
-                     <div title="53%" class="rating-result">
-                       <span style="width:53%"></span>
-                     </div>
-                     <span class="label-review"><span>( 2 review )</span></span>
-                   </div>
+                      <span class="price" style="font-weight: bold;"><?= number_format($n['price']) ?></span>
+                      <p class="price" style="font-size: 12px; color: #303030;">Màu sản phẩm: <?= $n['name_color'] ?></p>
+                   </div>             
                  </div>
                </div>
              </div>
-             <div class="item">
+             <?php endforeach ?>
+             <!-- <div class="item">
                <div class="product-item">
                  <div class="product-image">
                    <a href="product-page.html">
@@ -946,7 +940,7 @@
                    </div>
                  </div>
                </div>
-             </div>
+             </div> -->
            </div>
          </div>
        </div>

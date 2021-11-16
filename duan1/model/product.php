@@ -7,12 +7,16 @@ function load4product(){
 }
 // lấy 4 sp mới nhất
 
-function load4Newproduct(){
-    $sql = "SELECT  product.product_id, product.name_product, color.product_id, color.color_id, color.price, color.name_color FROM duan1.product, duan1.color WHERE product.product_id = color.product_id ORDER BY product.view DESC limit 5";
+function load4Feaproduct(){
+    $sql = "SELECT  product.product_id, product.name_product, color.product_id, color.color_id, color.price, color.name_color FROM duan1.product, duan1.color WHERE product.product_id = color.product_id ORDER BY product.view DESC limit 8";
     $s = exeQuery($sql, true);
     return $s; 
 }
-
+function load4Newproduct(){
+    $sql = "SELECT  product.product_id, product.name_product, color.product_id, color.color_id, color.price, color.name_color FROM duan1.product, duan1.color WHERE product.product_id = color.product_id ORDER BY product.post_date DESC limit 8";
+    $s = exeQuery($sql, true);
+    return $s; 
+}
 
 
 // function load_name_subcategory($sub_id)
