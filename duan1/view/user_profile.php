@@ -43,6 +43,11 @@
             </div>
           </div>
         </div>
+        <?php
+          if(isset($_SESSION['email'])&&(is_array($_SESSION['email']))){
+            extract($_SESSION['email']);
+          }
+        ?>
         <div class="col-md-9 col-sm-8">
           <div id="data-step1" class="account-content" data-temp="tabdata">
             <div class="row">
@@ -56,7 +61,7 @@
               <div class="row">
                 <div class="col-xs-12">
                   <div class="heading-part">
-                    <h3 class="sub-heading">Hello, Denial</h3>
+                    <h3 class="sub-heading">Hello,<?=$fullname?></h3>
                   </div>
                   <p>Subscribe to the Print Doodles mailing list to receive updates on new product, special offers and other discount information.<a class="account-link" id="subscribelink" href="#">Click Here</a></p>
                 </div>
@@ -84,16 +89,16 @@
                             <td>
                               <ul>
                                 <li class="inner-heading">
-                                  <b>Denial tom</b>
+                                  <b><?=$fullname?></b>
                                 </li>
                                 <li>
-                                  <p>Steetwear ltd</p>
+                                  <p>Email: <?=$email?></p>
                                 </li>
                                 <li>
-                                  <p>600 Anton Boulevard Costa</p>
+                                  <p>Số điện thoại: <?=$contract_number?></p>
                                 </li>
                                 <li>
-                                  <p>Mesa, California</p>
+                                  <p>Địa chỉ: <?=$address?></p>
                                 </li>
                               </ul>
                             </td>
@@ -117,7 +122,7 @@
               </div>
             </div>
             <div class="m-0">
-              <form class="main-form full">
+              <form class="main-form full" action="index.php?act=user_profile" method="post">
                 <div class="mb-20">
                   <div class="row">
                     <div class="col-xs-12 mb-20">
@@ -128,22 +133,22 @@
                     </div>
                     <div class="col-sm-6">
                       <div class="input-box">
-                        <input type="text" required="" placeholder="Full Name">
+                        <input type="text" required="" placeholder="Full Name" name="fullname" value="<?=$fullname?>" >
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="input-box">
-                        <input type="email" required="" placeholder="Email Address">
+                        <input type="email" required="" placeholder="Email Address" name="email" value="<?=$email?>">
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="input-box">
-                        <input type="text" required="" placeholder="Company">
+                        <input type="text" required="" placeholder="Company" name="address" value="<?=$address?>">
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="input-box">
-                        <input type="text" required="" placeholder="Contact Number">
+                        <input type="text" required="" placeholder="Contact Number" name="contract_number" value="<?=$contract_number?>">
                       </div>
                     </div>
                     <div class="col-sm-12">
@@ -157,7 +162,8 @@
                 <div class="">
                   <div class="row">                                         
                     <div class="col-sm-12">
-                      <a class="btn btn-black right-side">Thay đổi</a>
+                      <input type="hidden" name="user_id" value="<?=$user_id?>">
+                      <a class="btn btn-black right-side" name="user_profile">Thay đổi</a>
                     </div>
                   </div>
                 </div>

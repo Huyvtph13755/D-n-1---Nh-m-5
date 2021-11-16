@@ -122,8 +122,8 @@
                     </a>
                     <div class="content-dropdown">
                       <ul>
-                        <li class="login-icon"><a href="login.html" title="Login"><span></span>Login</a></li>
-                        <li class="account-icon"><a href="account.html" title="My Account"><span></span>My Account</a></li>
+                        <li class="login-icon"><a href="index.php?act=login" title="Login"><span></span>Login</a></li>
+                        <li class="account-icon"><a href="index.php?act=user_profile" title="My Account"><span></span>My Account</a></li>
                         <li class="wishlist-icon"><a title="My Wishlist"><span></span>My Wishlist</a></li>
                       </ul>
                     </div>

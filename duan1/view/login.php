@@ -37,7 +37,7 @@
                   </li>
                   <br>
                   <li>
-                    <a href="index.php" style="font-size: 18px; font-weight: bold;">Cập nhật tài khoản</a>
+                    <a href="index.php?act=user_profile" style="font-size: 18px; font-weight: bold;">Cập nhật tài khoản</a>
                   </li>
                   <br>
                   <li>

@@ -50,6 +50,16 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include 'view/register.php';
             break;
         case 'user_profile':
+            if(isset($_POST['user_profile'])){
+                $fullname=$_POST['fullname'];
+                $password=$_POST['password'];
+                $email=$_POST['email'];
+                $contract_number=$_POST['contract_number'];
+                $address=$_POST['address'];
+                $user_id=$_POST['user_id'];
+                update_user($user_id,$fullname, $password,$email,$contract_number,$address);
+                $_SESSION['email']=checkuser($email, $password);
+            }
             include 'view/user_profile.php';
             break;
         case 'logout':
