@@ -20,6 +20,20 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             $wa = full_warranty();
             $gCmt = getAllCmt(1);
             $ranPr = getRanPr();
+            
+            if (isset($_POST['product_detail'])) {
+                if (isset($_SESSION['email'])) {
+                    $user_id = $_SESSION['email']['user_id'];
+                    $content = $_POST['content'];
+                    date_default_timezone_set('Asia/Ho_Chi_Minh');
+                    $date = date('Y-m-d H:i:sa', time());
+                    $addCmt = addCmt(1, $user_id, $content, $date); 
+                    header('Location: index.php?act=product_detail&msg=Bình luận của bạn đang chờ phê duyệt!');  
+                }
+                else{
+                    header('Location: index.php?act=product_detail&msg=Bạn chưa đăng nhập nên chưa thể bình luận');
+                }
+            }
             include 'view/detailproduct.php';
             break;
         case 'home':
