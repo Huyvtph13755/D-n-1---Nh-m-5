@@ -69,7 +69,9 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include 'view/register.php';
             break;
         case 'user_profile':
-            if (isset($_POST['user_profile'])) { 
+            $id = $_SESSION['email']['user_id'];
+            $pf = checkuser2($id);
+            if (isset($_POST['user_profile'])) {
                 $fullname = $_POST['fullname'];
                 $contract_number = $_POST['contract_number'];
                 $address = $_POST['address'];
