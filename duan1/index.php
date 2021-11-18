@@ -9,31 +9,37 @@ include "model/user.php";
 include "model/warranty.php";
 include "model/comment.php";
 include "view/header.php";
-
+$feature_pro = load4Feaproduct();
+$new_pro = load4Newproduct();
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
         case 'product_detail':
-            $load_one = product_detail(1);
-            $getMinPr = getMinPrice(1);
-            $f_cl = full_color(1);
-            $wa = full_warranty();
-            $gCmt = getAllCmt(1);
-            $ranPr = getRanPr();
-            
-            if (isset($_POST['product_detail'])) {
-                if (isset($_SESSION['email'])) {
-                    $user_id = $_SESSION['email']['user_id'];
-                    $content = $_POST['content'];
-                    date_default_timezone_set('Asia/Ho_Chi_Minh');
-                    $date = date('Y-m-d H:i:sa', time());
-                    $addCmt = addCmt(1, $user_id, $content, $date); 
-                    header('Location: index.php?act=product_detail&msg=Bình luận của bạn đang chờ phê duyệt!');  
+            if (isset($_GET['product_id']) && $_GET['product_id'] > 0) {
+                $product_id = $_GET['product_id'];
+                $load_one = product_detail($product_id);
+                $getMinPr = getMinPrice($product_id);
+                $f_cl = full_color($product_id);
+                $wa = full_warranty();
+                $gCmt = getAllCmt($product_id);
+                $ranPr = getRanPr();
+                if (isset($_POST['product_detail'])) {
+                    if (isset($_SESSION['email'])) {
+                        $user_id = $_SESSION['email']['user_id'];
+                        $content = $_POST['content'];
+                        date_default_timezone_set('Asia/Ho_Chi_Minh');
+                        $date = date('Y-m-d H:i:sa', time());
+                        $addCmt = addCmt(1, $user_id, $content, $date);
+                        header('Location: index.php?act=product_detail&msg=Bình luận của bạn đang chờ phê duyệt!');
+                    } else {
+                        header('Location: index.php?act=product_detail&msg=Bạn chưa đăng nhập nên chưa thể bình luận');
+                    }
                 }
-                else{
-                    header('Location: index.php?act=product_detail&msg=Bạn chưa đăng nhập nên chưa thể bình luận');
-                }
+                updateView($product_id);
+            } else {
+                header('location: index.php');
             }
+
             include 'view/detailproduct.php';
             break;
         case 'home':
@@ -58,20 +64,20 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $email = $_POST['email'];
                 $password = md5($_POST['password']);
                 insert_user($fullname, $email, $password);
-                $notification = "Đăng ký thành công. Vui lòng đăng nhập để thực hiện các chức năng!";
+                header('location: index.php?act=login?msg=Đăng kí thành công');
             }
             include 'view/register.php';
             break;
         case 'user_profile':
-            if(isset($_POST['user_profile'])){
-                $fullname=$_POST['fullname'];
-                $password=$_POST['password'];
-                $email=$_POST['email'];
-                $contract_number=$_POST['contract_number'];
-                $address=$_POST['address'];
-                $user_id=$_POST['user_id'];
-                update_user($user_id,$fullname, $password,$email,$contract_number,$address);
-                $_SESSION['email']=checkuser($email, $password);
+            if (isset($_POST['user_profile'])) {
+                $fullname = $_POST['fullname'];
+                $contract_number = $_POST['contract_number'];
+                $address = $_POST['address'];
+                $user_id = $_POST['user_id'];
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+                update_user($user_id, $fullname, $contract_number, $address);
+                header('Location: index.php?act=user_profile&msg=Cập nhật thông tin thành công');
             }
             include 'view/user_profile.php';
             break;
@@ -86,9 +92,9 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $checkuser = checkuser($email, $password);
                 if (is_array($checkuser)) {
                     $_SESSION['email'] = $checkuser;
-                    $notification = "Bạn đã đăng nhập thành công!";
+                    header('location: index.php?Đăng nhập thành công');
                 } else {
-                    $notification = "Tài khoản không tồn tại. Vui lòng kiểm tra lại hoặc đăng ký!";
+                    $notification = "Email hoặc mật khẩu không chính xác. Vui lòng kiểm tra lại hoặc đăng ký!";
                 }
             }
             include 'view/login.php';

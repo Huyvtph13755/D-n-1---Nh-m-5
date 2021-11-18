@@ -7,8 +7,8 @@ function full_color($product_id){
     
 }
 // Lấy giá nhỏ nhất
-function getMinPrice($id){
-    $colors = "SELECT MIN(price) as pr FROM color WHERE product_id = 1";
+function getMinPrice($product_id){
+    $colors = "SELECT MIN(price) as pr FROM color WHERE product_id = $product_id";
     $clr = exeQuery($colors, false);
     return $clr;
 }
