@@ -69,15 +69,13 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include 'view/register.php';
             break;
         case 'user_profile':
-            if (isset($_POST['user_profile'])) {
+            if (isset($_POST['user_profile'])) { 
                 $fullname = $_POST['fullname'];
                 $contract_number = $_POST['contract_number'];
                 $address = $_POST['address'];
                 $user_id = $_POST['user_id'];
-                $email = $_POST['email'];
-                $password = $_POST['password'];
                 update_user($user_id, $fullname, $contract_number, $address);
-                header('Location: index.php?act=user_profile&msg=Cập nhật thông tin thành công');
+                header('Location: index.php?act=user_profile&msg=Cập nhật thành công');
             }
             include 'view/user_profile.php';
             break;

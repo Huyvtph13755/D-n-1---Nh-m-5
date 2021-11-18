@@ -18,8 +18,8 @@
         $sql="UPDATE user SET fullname = '$fullname', contract_number = '$contract_number', address = '$address' WHERE user_id = '$user_id'";
         return exeQuery($sql);
     }
-    function checkuser2($email){
-        $sql = "SELECT * FROM users WHERE email = '$email'";
+    function checkuser2($id){
+        $sql = "SELECT * FROM users WHERE user_id = '$id'";
         $s = exeQuery($sql,false);
         return $s;
     }

@@ -45,7 +45,6 @@
       </div>
       <?php
       if (isset($_SESSION['email']) && (is_array($_SESSION['email']))) {
-        extract($_SESSION['email']);
       }
       ?>
       <div class="col-md-9 col-sm-8">
@@ -61,7 +60,7 @@
             <div class="row">
               <div class="col-xs-12">
                 <div class="heading-part">
-                  <h3 class="sub-heading">Hello,<?= $fullname ?></h3>
+                  <h3 class="sub-heading">Hello,<?= $pf['fullname'] ?></h3>
                 </div>
                 <p>Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi. <a class="account-link" id="subscribelink" href="#">Bấm vào đây để xem shop</a></p>
               </div>
@@ -163,9 +162,7 @@
               <div class="">
                 <div class="row">
                   <div class="col-sm-12">
-                    <input type="hidden" name="email" value="<?= $email?>">
-                    <input type="hidden" name="user_id" value="<?= $user_id ?>">
-                    <input type="hidden" name="password" value="<?= $password ?>">
+                  <input type="hidden" name="user_id" value="<?= $user_id?>">
                     <button class="btn btn-black right-side" name="user_profile" type="submit">Thay đổi</button>
                   </div>
                 </div>
