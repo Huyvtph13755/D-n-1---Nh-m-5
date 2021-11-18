@@ -14,9 +14,14 @@
         $s=exeQuery($sql, false);
         return $s;
     }
-    function update_user($user_id,$fullname, $password,$email,$contract_number,$address){
-        $sql="update user set fullname='".$fullname."', password='".$password."', email='".$email."', contract_number='".$contract_number."', address='".$address."' where user_id=".$user_id;
-        return exeQuery($sql, true);
+    function update_user($user_id, $fullname, $contract_number, $address){
+        $sql="UPDATE user SET fullname = '$fullname', contract_number = '$contract_number', address = '$address' WHERE user_id = '$user_id'";
+        return exeQuery($sql);
+    }
+    function checkuser2($email){
+        $sql = "SELECT * FROM users WHERE email = '$email'";
+        $s = exeQuery($sql,false);
+        return $s;
     }
 ?>
 <!-- Phần đăng ký tài khoản -->

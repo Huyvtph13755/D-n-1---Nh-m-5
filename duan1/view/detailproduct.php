@@ -174,7 +174,7 @@
                             <div class="item" style="text-align:center;">
                                 <div class="product-item">
                                     <div class="product-image">
-                                        <a href="product-page.html">
+                                        <a href="index.php?act=product_detail&product_id=<?= $r['product_id'] ?>">
                                             <img src="./View/images/1.jpg" alt="Streetwear">
                                         </a>
                                         <div class="product-detail-inner">
@@ -189,10 +189,11 @@
                                     </div>
                                     <div class="product-item-details">
                                         <div class="product-item-name">
-                                            <a href="product-page.html"><?=$r['name_product']?></a>
+                                            <a href="index.php?act=product_detail&product_id=<?= $r['product_id'] ?>" style="font-size: 18px;"><?=$r['name_product']?></a>
                                         </div>
                                         <div class="price-box">
-                                            <span class="price"><?= number_format($getMinPr['pr']) ?> VND</span>
+                                            <span class="price" style="font-weight: bold;"><?= number_format($r['price']) ?> VND</span>
+                                            <p class="price" style="font-size: 12px; color: #303030;">Màu sản phẩm: <?= $r['name_color'] ?></p>
                                         </div>
                                     </div>
                                 </div>

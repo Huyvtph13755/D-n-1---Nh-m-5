@@ -21,43 +21,6 @@
       <div class="col-xs-12">
         <div class="row">
           <div class="col-lg-6 col-md-8 col-sm-8 col-lg-offset-3 col-sm-offset-2">
-            <?php
-            if (isset($_SESSION['email'])) {
-              extract($_SESSION['email']);
-            ?>
-              <div class="row" style="margin: 80px 0; border: 2px solid #f1f1f1; padding: 50px; border-radius:10px;">
-                <div class="col-xs-12 mb-20">
-                  <div class="heading-part heading-bg">
-                    <h2 class="heading">Xin chào <?= $fullname ?></h2>
-                  </div>
-                </div>
-                <div class="col-xs-12">
-                  <li>
-                    <a href="index.php" style="font-size: 18px; font-weight: bold;">Xem shop</a>
-                  </li>
-                  <br>
-                  <li>
-                    <a href="index.php?act=user_profile" style="font-size: 18px; font-weight: bold;">Cập nhật tài khoản</a>
-                  </li>
-                  <br>
-                  <li>
-                    <a href="index.php" style="font-size: 18px; font-weight: bold;">Đổi mật khẩu</a>
-                  </li>
-                  <br>
-                  <?php if ($role == 1) { ?>
-                    <li>
-                      <a href="admin/index.php" style="font-size: 18px; font-weight: bold;">Trang quản trị</a>
-                    </li>
-                    <br>
-                  <?php } ?>
-                  <li>
-                    <a href="index.php?act=logout" style="font-size: 18px; font-weight: bold;">Thoát</a>
-                  </li>
-                </div>
-              </div>
-            <?php
-            } else {
-            ?>
               <form action="index.php?act=login" style="margin: 80px 0;" class="main-form full" method="post">
                 <div class="row">
                   <div class="col-xs-12 mb-20">
@@ -97,7 +60,6 @@
                     <a class="link" title="Register with Streetwear" href="index.php?act=register">Tạo tài khoản</a>
                   </div>
                 </div>
-              <?php } ?>
               </form>
           </div>
         </div>
