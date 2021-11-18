@@ -44,8 +44,7 @@
         </div>
       </div>
       <?php
-      if (isset($_SESSION['email']) && (is_array($_SESSION['email']))) {
-      }
+
       ?>
       <div class="col-md-9 col-sm-8">
         <div id="data-step1" class="account-content" data-temp="tabdata">
@@ -60,9 +59,9 @@
             <div class="row">
               <div class="col-xs-12">
                 <div class="heading-part">
-                  <h3 class="sub-heading">Hello,<?= $pf['fullname'] ?></h3>
+                  <h3 class="sub-heading">Hello <?= $pf['fullname'] ?></h3>
                 </div>
-                <p>Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi. <a class="account-link" id="subscribelink" href="#">Bấm vào đây để xem shop</a></p>
+                <p>Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi. <a class="account-link" id="subscribelink" href="index.php">Bấm vào đây để xem shop</a></p>
               </div>
             </div>
           </div>
@@ -88,20 +87,20 @@
                           <td>
                             <ul>
                               <li class="inner-heading">
-                                <b><?= $fullname ?></b>
+                                <b><?= $pf['fullname'] ?></b>
                               </li>
                               <li>
-                                <p>Email: <?= $email ?></p>
+                                <p>Email: <?= $pf['email'] ?></p>
                               </li>
                               <li>
-                                <p>Số điện thoại: 0<?php if ($contract_number == 0) {
+                                <p>Số điện thoại: 0<?php if ($pf['contract_number'] == 0) {
                                                       echo "";
                                                     } else {
-                                                      echo $contract_number;
+                                                      echo $pf['contract_number'];
                                                     } ?></p>
                               </li>
                               <li>
-                                <p>Địa chỉ: <?= $address ?></p>
+                                <p>Địa chỉ: <?= $pf['address'] ?></p>
                               </li>
                             </ul>
                           </td>
@@ -136,24 +135,24 @@
                   </div>
                   <div class="col-sm-6">
                     <div class="input-box">
-                      <input type="text" required="" placeholder="Họ và tên" name="fullname" value="<?= $fullname ?>">
+                      <input type="text" required="" placeholder="Họ và tên" name="fullname" value="<?= $pf['fullname'] ?>">
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="input-box">
-                      <input type="email" required="" placeholder="Email" value="<?= $email ?>" disabled>
+                      <input type="email" required="" placeholder="Email" value="<?= $pf['email'] ?>" disabled>
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="input-box">
-                      <input type="text" required="" placeholder="Số điện thoại liên hệ" name="contract_number" value="0<?= $contract_number ?>">
+                      <input type="text" required="" placeholder="Số điện thoại liên hệ" name="contract_number" value="0<?= $pf['contract_number'] ?>">
                     </div>
                   </div>
                   <div class="col-sm-6">
                   </div>
                   <div class="col-sm-12">
                     <div class="input-box">
-                      <input type="text" required="" placeholder="Địa chỉ nhận hàng" name="address" value="<?= $address?>">
+                      <input type="text" required="" placeholder="Địa chỉ nhận hàng" name="address" value="<?= $pf['address'] ?>">
                       <span>Vui lòng cung cấp địa chỉ chi tiết!</span>
                     </div>
                   </div>
@@ -162,7 +161,7 @@
               <div class="">
                 <div class="row">
                   <div class="col-sm-12">
-                  <input type="hidden" name="user_id" value="<?= $user_id?>">
+                  <input type="hidden" name="user_id" value="<?= $pf['user_id'] ?>">
                     <button class="btn btn-black right-side" name="user_profile" type="submit">Thay đổi</button>
                   </div>
                 </div>

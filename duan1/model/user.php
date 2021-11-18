@@ -19,7 +19,7 @@
         return exeQuery($sql);
     }
     function checkuser2($id){
-        $sql = "SELECT * FROM users WHERE user_id = '$id'";
+        $sql = "SELECT * FROM user WHERE user_id = '$id'";
         $s = exeQuery($sql,false);
         return $s;
     }
