@@ -18,6 +18,17 @@
 <section class="container">
     <div class="pro-page pt-55">
         <div class="row">
+            <div>
+                <p class="notification" style="text-align: center; color: #005DA5; font-weight: bold;">
+                    <?php
+                    if (isset($_GET['msg'])) {
+                        $msg = $_GET['msg'];
+                        echo $msg;
+                    }
+                    ?>
+                </p>
+                <br>
+            </div>
             <div class="col-md-5 col-sm-5 mb-xs-30">
                 <div class="fotorama" data-nav="thumbs" data-allowfullscreen="native">
                     <a href="#"><img src="<?= CLIENT ?>images/1.jpg" alt="Streetwear"></a>
@@ -136,7 +147,7 @@
                                         <div class="main-form mt-30">
                                             <h4>Để lại bình luận</h4>
                                             <div class="row mt-30">
-                                                <form action="product_detail&product_id=<?= $_GET['product_id']?>" method="post"> 
+                                                <form action="product_detail&product_id=<?= $_GET['product_id'] ?>" method="post">
                                                     <div class="col-xs-12 mb-20">
                                                         <textarea cols="30" rows="3" name="content" placeholder="Message" required></textarea>
                                                     </div>
@@ -189,7 +200,7 @@
                                     </div>
                                     <div class="product-item-details">
                                         <div class="product-item-name">
-                                            <a href="index.php?act=product_detail&product_id=<?= $r['product_id'] ?>" style="font-size: 18px;"><?=$r['name_product']?></a>
+                                            <a href="index.php?act=product_detail&product_id=<?= $r['product_id'] ?>" style="font-size: 18px;"><?= $r['name_product'] ?></a>
                                         </div>
                                         <div class="price-box">
                                             <span class="price" style="font-weight: bold;"><?= number_format($r['price']) ?> VND</span>

@@ -29,6 +29,7 @@ switch ($url) {
         logout();
         break;
     default:
-        # code...
+        require_once './client/business/home.php';
+        getProduct();
         break;
 }
