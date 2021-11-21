@@ -29,6 +29,10 @@ switch ($url) {
         logout();
         break;
         // Huy
+    case 'add_product':
+        require_once './client/business/add_product.php';
+        add_product();
+        break;
     case 'cart':
         require_once './client/business/cart.php';
         cart();
