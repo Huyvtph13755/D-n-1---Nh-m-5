@@ -28,6 +28,42 @@ switch ($url) {
         require_once './client/business/login.php';
         logout();
         break;
+        // Huy
+    case 'cart':
+        require_once './client/business/cart.php';
+        cart();
+        break;
+        // Hoàng
+    case 'payment':
+        require_once './client/business/payment.php';
+        payment();
+        break;
+        // HOàng
+    case 'status':
+        require_once './client/business/status.php';
+        status();
+        break;
+        // Hoàng
+    case 'forgot_password':
+        require_once './client/business/forgot_password.php';
+        forgot_password();
+        break;
+        // Vân Anh
+    case 'change_password':
+        require_once './client/business/change_password.php';
+        change_password();
+        break;
+        // Trà My
+    case 'shop':
+        require_once './client/business/shop.php';
+        shop();
+        break;
+        // Vân anh
+    case 'del_product_in_cart':
+        require_once './client/business/del_product_in_cart.php';
+        del_product_in_cart();
+        break;
+
     default:
         require_once './client/business/home.php';
         getProduct();
