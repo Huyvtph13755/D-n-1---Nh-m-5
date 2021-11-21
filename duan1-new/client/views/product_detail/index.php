@@ -44,11 +44,12 @@
             </div>
             <div class="col-md-7 col-sm-7">
                 <div class="row">
-                    <form action="abc.php" method="get">
+                    <form action="product_detail&product_id=<?= $_GET['product_id'] ?>" method="post">
                         <div class="col-xs-12">
                             <div class="product-detail-main">
                                 <div class="product-item-details">
                                     <h1 class="product-item-name"><?= $s['name_product'] ?></h1>
+                                    <input type="hidden" name="product_id" value="<?=$_GET['product_id']?>">
                                     <div class="price-box">
                                         <br>
                                         <input style="border: none; outline: none; background-color:white; font-size:2em; font-weight: bold; width: 180px" type="text" name="hp" id="hp" onchange="load(this)" disabled value="<?= number_format($e['pr']) ?>">
@@ -67,7 +68,6 @@
                                     <div class="product-color select-arrow mb-20">
                                         <label>Gói bảo hành</label>
                                         <select class="selectpicker form-control" id="b" name="b" onchange="load(this)">
-                                            <option selected="selected" value="0">Chọn gói bảo hành</option>
                                             <?php foreach ($h as $index => $f) : ?>
                                                 <option value="<?= $f['price'] ?> <?= $f['warranty_id'] ?>"><?= $f['name_warranty'] ?></option value>
                                             <?php endforeach ?>
@@ -86,7 +86,7 @@
                                         <div class="bottom-detail cart-button">
                                             <ul>
                                                 <li class="pro-cart-icon">
-                                                    <button title="Add to Cart" type="submit" class="btn-black"><span></span>Thêm vào giỏ hàng</button>
+                                                    <button title="Add to Cart" type="submit" name="add_product" class="btn-black"><span></span>Thêm vào giỏ hàng</button>
                                                 </li>
                                             </ul>
                                         </div>
