@@ -4,6 +4,8 @@ function register(){
         $fullname = $_POST['fullname'];
         $email = $_POST['email'];
         $password = md5($_POST['password']);
+
+        // thêm tài khoản
         $sql="insert into user(fullname, email, password, address, contract_number, role) values('$fullname', '$email', '$password', '', '', '')";
         exeQuery($sql, false);
         header('location: register?msg=Đăng kí thành công');

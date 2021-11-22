@@ -114,7 +114,7 @@
                              <a style="font-size: 18px;" href="product_detail&product_id=<?= $f['product_id'] ?>"><?= $f['name_product'] ?></a>
                            </div>
                            <div class="price-box">
-                             <span class="price" style="font-weight: bold;"><?= number_format($f['price_default']) ?> VND</span>
+                             <span class="price" style="font-weight: bold;"><?= number_format($f['price_default']) ?> <u>đ</u></span>
                            </div>
                          </div>
                        </div>
@@ -188,7 +188,7 @@
                        <a href="product_detail&product_id=<?= $n['product_id'] ?>" style="font-size: 18px;"><?= $n['name_product'] ?></a>
                      </div>
                      <div class="price-box">
-                       <span class="price" style="font-weight: bold;"><?= number_format($n['price_default']) ?>VND</span>
+                       <span class="price" style="font-weight: bold;"><?= number_format($n['price_default']) ?> <u>đ</u></span>
                      </div>
                    </div>
                  </div>

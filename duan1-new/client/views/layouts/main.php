@@ -1,3 +1,10 @@
+<?php
+if (isset($_SESSION['email'])) {
+    $user_id = $_SESSION['email']['user_id'];
+    $sql112 = "SELECT COUNT(cart_id) AS sl FROM cart WHERE user_id = $user_id";
+    $x = exeQuery($sql112, false);
+}
+?>
 <!DOCTYPE html>
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html lang="en">
@@ -146,54 +153,26 @@
                                                 </ul>
                                             </div>
                                         </li>
-                                        <li class="cart-icon">
-                                            <a href="#">
+                                        <?php if (isset($_SESSION['email'])) {
+                                            echo "<li class='cart-icon'>
+                                            <a href='#'>
                                                 <span>
-                                                    <small class="cart-notification">2</small>
+                                                    <small class='cart-notification'>" . $x['sl'] . "</small>
                                                 </span>
-                                                <div class="header-right-text">Shopping Cart</div>
-                                                <div class="header-price">$ 354.32</div>
+                                                <div class='header-right-text'>Giỏ hàng</div>
+                                                <div class='header-price'>$ 354.32</div>
                                             </a>
-                                            <div class="cart-dropdown header-link-dropdown">
-                                                <ul class="cart-list link-dropdown-list">
-                                                    <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
-                                                        <div class="media"> <a class="pull-left"> <img alt="Streetwear" src="<?= CLIENT ?>images/1.jpg"></a>
-                                                            <div class="media-body">
-                                                                <span><a>Black African Print Skirt</a></span>
-                                                                <p class="cart-price">$14.99</p>
-                                                                <div class="product-qty">
-                                                                    <div class="custom-qty">
-                                                                        <input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
-                                                        <div class="media"> <a class="pull-left"> <img alt="Streetwear" src="<?= CLIENT ?>images/2.jpg"></a>
-                                                            <div class="media-body">
-                                                                <span><a>Black African Print Skirt</a></span>
-                                                                <p class="cart-price">$14.99</p>
-                                                                <div class="product-qty">
-                                                                    <div class="custom-qty">
-                                                                        <input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                <p class="cart-sub-totle">
-                                                    <span class="pull-left">Cart Subtotal</span>
-                                                    <span class="pull-right"><strong class="price-box">$29.98</strong></span>
-                                                </p>
-                                                <div class="clearfix"></div>
-                                                <div class="mt-20">
-                                                    <a href="cart.html" class="btn-color btn">Cart</a>
-                                                    <a href="checkout.html" class="btn-color btn right-side">Checkout</a>
+                                            <div class='cart-dropdown header-link-dropdown'>
+                                                <div class='clearfix'></div>
+                                                <div class='mt-20'>
+                                                    <a href='cart' class='btn-color btn'>Giỏ hàng</a>
+                                                    <a href='status' class='btn-color btn right-side'>Trạng thái</a>
                                                 </div>
                                             </div>
-                                        </li>
+                                        </li>";
+                                        }
+                                        ?>
+
                                     </ul>
                                 </div>
                             </div>

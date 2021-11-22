@@ -8,6 +8,8 @@ function profile(){
         $contract_number = $_POST['contract_number'];
         $address = $_POST['address'];
         $user_id = $_POST['user_id'];
+
+        // update thông tin tài khoản
         $sql="UPDATE user SET fullname = '$fullname', contract_number = '$contract_number', address = '$address' WHERE user_id = '$user_id'";
         exeQuery($sql);
         header('Location: user_profile?msg=Cập nhật thành công');

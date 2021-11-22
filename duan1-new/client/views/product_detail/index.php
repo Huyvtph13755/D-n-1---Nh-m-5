@@ -49,11 +49,12 @@
                             <div class="product-detail-main">
                                 <div class="product-item-details">
                                     <h1 class="product-item-name"><?= $s['name_product'] ?></h1>
-                                    <input type="hidden" name="product_id" value="<?=$_GET['product_id']?>">
+                                    <input type="hidden" name="product_id" value="<?= $_GET['product_id'] ?>">
                                     <div class="price-box">
                                         <br>
-                                        <input style="border: none; outline: none; background-color:white; font-size:2em; font-weight: bold; width: 180px" type="text" name="hp" id="hp" onchange="load(this)" disabled value="<?= number_format($s['price_default']) ?>">
-                                        VND
+                                        <input style="border: none; outline: none; background-color:white; font-size:2em; font-weight: bold; width: 170px" type="text" name="hp" id="hp" onchange="load(this)" disabled value="<?= number_format($s['price_default']) ?>">
+                                        <u>đ</u>
+                                        <input type="hidden" name="ap" id="ap" value="<?= $s['price_default'] ?>">
                                     </div>
                                     <br>
                                     <p><?= $s['sub_decription'] ?></p>
@@ -69,7 +70,11 @@
                                         <label>Gói bảo hành</label>
                                         <select class="selectpicker form-control" id="b" name="b" onchange="load(this)">
                                             <?php foreach ($h as $index => $f) : ?>
-                                                <option value="<?= $f['price'] ?> <?= $f['warranty_id'] ?>"><?= $f['name_warranty'] ?></option value>
+                                                <option value="<?= $f['price'] ?> <?= $f['warranty_id'] ?>"><?= $f['name_warranty'] ?><?php if ($f['warranty'] == 0) {
+                                                                                                                                            echo "";
+                                                                                                                                        } else {
+                                                                                                                                            echo " - " . $f['warranty'] . " tháng";
+                                                                                                                                        }   ?></option value>
                                             <?php endforeach ?>
                                         </select>
                                     </div>
@@ -185,8 +190,8 @@
                             <div class="item" style="text-align:center;">
                                 <div class="product-item">
                                     <div class="product-image">
-                                        <a href="index.php?act=product_detail&product_id=<?= $r['product_id'] ?>">
-                                            <img src="<?= CLIENT ?>images/1.jpg" alt="Streetwear">
+                                        <a href="product_detail&product_id=<?= $r['product_id'] ?>">
+                                            <img href="" src="<?= CLIENT ?>images/1.jpg" alt="Streetwear">
                                         </a>
                                         <div class="product-detail-inner">
                                             <div class="detail-inner-left align-center">
@@ -200,10 +205,10 @@
                                     </div>
                                     <div class="product-item-details">
                                         <div class="product-item-name">
-                                            <a href="index.php?act=product_detail&product_id=<?= $r['product_id'] ?>" style="font-size: 18px;"><?= $r['name_product'] ?></a>
+                                            <a href="product_detail&product_id=<?= $r['product_id'] ?>" style="font-size: 18px;"><?= $r['name_product'] ?></a>
                                         </div>
                                         <div class="price-box">
-                                            <span class="price" style="font-weight: bold;"><?= number_format($r['price_default']) ?> VND</span>
+                                            <span class="price" style="font-weight: bold;"><?= number_format($r['price_default']) ?> <u>đ</u></span>
                                         </div>
                                     </div>
                                 </div>
@@ -224,10 +229,11 @@
         });
 
         var hp = document.getElementById("hp");
+        var ap = document.getElementById("ap");
         let a = String(document.getElementById("a").value);
         let b = String(document.getElementById("b").value);
         let arr = a.split(' ')
         let arrb = b.split(' ')
-        hp.value = (Number(arr[0]) + Number(arrb[0])).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        hp.value = (Number(arr[0]) + Number(arrb[0]) + Number(ap.value)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
     }
 </script>

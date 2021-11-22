@@ -52,13 +52,14 @@ function product_detail()
                 $user_id = $_SESSION['email']['user_id'];
                 $a = $_POST['a'];
                 $b = $_POST['b'];
+                $ap = $_POST['ap'];
                 $quantity = $_POST['qty'];
                 $exp = explode(' ', $a);
                 $color_id = (int)$exp[1];
                 $exp2 = explode(' ', $b);
                 $warranty_id = (int)$exp2[1];
-                $price = ((int)$exp[0] + (int)$exp2[0])*$quantity;   
-                $sql = "INSERT INTO cart(user_id, product_id, color_id, warranty_id, quantity, price) VALUES('$user_id', '$product_id', '$color_id', '$warranty_id', '$quantity', '$price')";
+                $price = ( (int)$ap + (int)$exp[0] + (int)$exp2[0])*$quantity;   
+                $sql = "INSERT INTO cart(user_id, product_id, color_id, warranty_id, quantity, total_price) VALUES('$user_id', '$product_id', '$color_id', '$warranty_id', '$quantity', '$price')";
                 exeQuery($sql, false);
                 header('Location: ?msg=Thêm sản phẩm thành công');
             } else {
