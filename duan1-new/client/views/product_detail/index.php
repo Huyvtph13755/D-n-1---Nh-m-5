@@ -52,7 +52,7 @@
                                     <input type="hidden" name="product_id" value="<?=$_GET['product_id']?>">
                                     <div class="price-box">
                                         <br>
-                                        <input style="border: none; outline: none; background-color:white; font-size:2em; font-weight: bold; width: 180px" type="text" name="hp" id="hp" onchange="load(this)" disabled value="<?= number_format($e['pr']) ?>">
+                                        <input style="border: none; outline: none; background-color:white; font-size:2em; font-weight: bold; width: 180px" type="text" name="hp" id="hp" onchange="load(this)" disabled value="<?= number_format($s['price_default']) ?>">
                                         VND
                                     </div>
                                     <br>
@@ -61,7 +61,7 @@
                                         <label>Màu sắc</label>
                                         <select class="selectpicker form-control" id="a" name="a" onchange="load(this)">
                                             <?php foreach ($b as $index => $c) : ?>
-                                                <option value="<?= $c['price'] ?> <?= $c['color_id'] ?>"><?= $c['name_color'] ?></option value>
+                                                <option value="<?= $c['price_add'] ?> <?= $c['color_id'] ?>"><?= $c['name_color'] ?></option value>
                                             <?php endforeach ?>
                                         </select>
                                     </div>
@@ -203,8 +203,7 @@
                                             <a href="index.php?act=product_detail&product_id=<?= $r['product_id'] ?>" style="font-size: 18px;"><?= $r['name_product'] ?></a>
                                         </div>
                                         <div class="price-box">
-                                            <span class="price" style="font-weight: bold;"><?= number_format($r['price']) ?> VND</span>
-                                            <p class="price" style="font-size: 12px; color: #303030;">Màu sản phẩm: <?= $r['name_color'] ?></p>
+                                            <span class="price" style="font-weight: bold;"><?= number_format($r['price_default']) ?> VND</span>
                                         </div>
                                     </div>
                                 </div>
