@@ -38,19 +38,20 @@
                                     <tr>
                                        <td>
                                            <a href="product-page.html">
-                                               <div class="product-image"><img alt="Streetwear" src="images/1.jpg"></div>
+                                               <div class="product-image"><img alt="Streetwear" src="<?= CLIENT ?>images/1.jpg"></div>
                                            </a>
                                        </td>
                                        <td>
                                            <div class="product-title">
-                                               <a href="product-page.html"><?= $c['name_product']?></a>
+                                               <a href="#" style="font-size: 14px;"><?= $c['name_product']?></a> <br>
+                                               <a href="#" style="font-size: 12px; color: #303030;">Màu sắc: <?= $c['name_color']?></a>
                                            </div>
                                        </td>
                                        <td>
                                            <ul>
                                                <li>
                                                    <div class="base-price price-box">
-                                                       <span class="price"><?= $c['price']?></span>
+                                                       <span class="price" style="font-size: 14px; color: #878787;"><?= $c['price_default'] + $c['price_add']?> <u>đ</u></span>
                                                    </div>
                                                </li>
                                            </ul>
@@ -59,28 +60,26 @@
                                            <ul>
                                                <li>
                                                    <div class="base-price price-box">
-                                                       <span class="price">$80.00</span>
+                                                       <span class="price" style="font-size: 14px; color: #878787;"><?= $c['price']?> <u>đ</u></span> <br>
+                                                       <span class="price" style="font-size: 12px; color: #303030;">(<?= $c['name_warranty']?>)</span>
                                                    </div>
                                                </li>
                                            </ul>
                                        </td>
                                        <td>
                                            <div class="input-box">
-                                               <select data-id="100" class="quantity_cart" name="quantity_cart">
-                                                   <option selected="" value="1">1</option>
-                                                   <option value="2">2</option>
-                                                   <option value="3">3</option>
-                                                   <option value="4">4</option>
+                                               <select data-id="100" class="quantity_cart" name="quantity_cart" disabled>
+                                                   <option selected="" value="<?= $c['quantity']?>"><?= $c['quantity']?></option>
                                                </select>
                                            </div>
                                        </td>
                                        <td>
                                            <div class="total-price price-box">
-                                               <span class="price">$80.00</span>
+                                               <span class="price" style="font-size: 14px; color: #878787;"><?= $c['total_price']?> <u>đ</u></span>
                                            </div>
                                        </td>
                                        <td>
-                                           <i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i>
+                                           <a href="del_product_in_cart?cart_id=<?= $c['cart_id']?>"><i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i></a>
                                        </td>
                                    </tr> 
                                    <?php endforeach ?>
@@ -95,7 +94,7 @@
                <div class="row">
                    <div class="col-sm-6">
                        <div class="mt-30">
-                           <a href="shop.html" class="btn btn-black"><span><i class="fa fa-angle-left"></i></span>Continue Shopping</a>
+                           <a href="home" class="btn btn-black"><span><i class="fa fa-angle-left"></i></span>Tiếp tục mua sắm</a>
                        </div>
                    </div>
                    <div class="col-sm-6">
@@ -116,16 +115,16 @@
                                <table class="table">
                                    <thead>
                                        <tr>
-                                           <th colspan="2">Cart Total</th>
+                                           <th colspan="2">Tổng</th>
                                        </tr>
                                    </thead>
                                    <tbody>
 
                                        <tr>
-                                           <td><b>Amount Payable</b></td>
+                                           <td><b>Số tiền phải trả</b></td>
                                            <td>
                                                <div class="price-box">
-                                                   <span class="price"><b>$160.00</b></span>
+                                                   <span class="price"><b><?= $b['total']?> <u>đ</u></b></span>
                                                </div>
                                            </td>
                                        </tr>
@@ -141,7 +140,7 @@
                <div class="row">
                    <div class="col-xs-12">
                        <div class="right-side float-none-xs">
-                           <a href="checkout.html" class="btn btn-black">Proceed to checkout<span><i class="fa fa-angle-right"></i></span></a>
+                           <a href="checkout.html" class="btn btn-black">Thanh toán<span><i class="fa fa-angle-right"></i></span></a>
                        </div>
                    </div>
                </div>
