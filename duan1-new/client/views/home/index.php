@@ -80,7 +80,7 @@
        <div class="row">
          <div class="col-xs-12">
            <div class="heading-part align-center mb-40">
-             <h2 class="main_title">Featured Products</h2>
+             <h2 class="main_title">Sản phẩm tiêu biểu</h2>
            </div>
          </div>
        </div>
@@ -114,8 +114,7 @@
                              <a style="font-size: 18px;" href="product_detail&product_id=<?= $f['product_id'] ?>"><?= $f['name_product'] ?></a>
                            </div>
                            <div class="price-box">
-                             <span class="price" style="font-weight: bold;"><?= number_format($f['price']) ?></span>
-                             <p class="price" style="font-size: 12px; color: #303030;">Màu sản phẩm: <?= $f['name_color'] ?></p>
+                             <span class="price" style="font-weight: bold;"><?= number_format($f['price_default']) ?> VND</span>
                            </div>
                          </div>
                        </div>
@@ -157,7 +156,7 @@
        <div class="row">
          <div class="col-xs-12">
            <div class="heading-part align-center mb-40">
-             <h2 class="main_title">New Products</h2>
+             <h2 class="main_title">Sản phẩm mới</h2>
            </div>
          </div>
        </div>
@@ -189,8 +188,7 @@
                        <a href="product_detail&product_id=<?= $n['product_id'] ?>" style="font-size: 18px;"><?= $n['name_product'] ?></a>
                      </div>
                      <div class="price-box">
-                       <span class="price" style="font-weight: bold;"><?= number_format($n['price']) ?></span>
-                       <p class="price" style="font-size: 12px; color: #303030;">Màu sản phẩm: <?= $n['name_color'] ?></p>
+                       <span class="price" style="font-weight: bold;"><?= number_format($n['price_default']) ?>VND</span>
                      </div>
                    </div>
                  </div>

@@ -2,11 +2,11 @@
    <div class="banner inner-banner">
        <div class="container">
            <div class="bread-crumb mtb-60 center-xs">
-               <div class="page-title">Women</div>
+               <div class="page-title">Giỏ hàng</div>
                <div class="bread-crumb-inner right-side float-none-xs">
                    <ul>
-                       <li><a href="index.html">Home</a><i class="fa fa-angle-right"></i></li>
-                       <li><span>Women</span></li>
+                       <li><a href="index.html">Trang chủ</a><i class="fa fa-angle-right"></i></li>
+                       <li><span>Giỏ hàng</span></li>
                    </ul>
                </div>
            </div>
@@ -34,7 +34,8 @@
                                    </tr>
                                </thead>
                                <tbody>
-                                   <tr>
+                                   <?php foreach ($a as $index => $c) : ?>
+                                    <tr>
                                        <td>
                                            <a href="product-page.html">
                                                <div class="product-image"><img alt="Streetwear" src="images/1.jpg"></div>
@@ -42,14 +43,14 @@
                                        </td>
                                        <td>
                                            <div class="product-title">
-                                               <a href="product-page.html">Cross Colours Camo Print Tank half mengo</a>
+                                               <a href="product-page.html"><?= $c['name_product']?></a>
                                            </div>
                                        </td>
                                        <td>
                                            <ul>
                                                <li>
                                                    <div class="base-price price-box">
-                                                       <span class="price">$80.00</span>
+                                                       <span class="price"><?= $c['price']?></span>
                                                    </div>
                                                </li>
                                            </ul>
@@ -81,46 +82,9 @@
                                        <td>
                                            <i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i>
                                        </td>
-                                   </tr>
-                                   <tr>
-                                       <td>
-                                           <a href="product-page.html">
-                                               <div class="product-image"><img alt="Streetwear" src="images/2.jpg"></div>
-                                           </a>
-                                       </td>
-                                       <td>
-                                           <div class="product-title">
-                                               <a href="product-page.html">Defyant Reversible Dot Shorts</a>
-                                           </div>
-                                       </td>
-                                       <td>
-                                           <ul>
-                                               <li>
-                                                   <div class="base-price price-box">
-                                                       <span class="price">$80.00</span>
-                                                   </div>
-                                               </li>
-                                           </ul>
-                                       </td>
-                                       <td>
-                                           <div class="input-box">
-                                               <select data-id="100" class="quantity_cart" name="quantity_cart">
-                                                   <option selected="" value="1">1</option>
-                                                   <option value="2">2</option>
-                                                   <option value="3">3</option>
-                                                   <option value="4">4</option>
-                                               </select>
-                                           </div>
-                                       </td>
-                                       <td>
-                                           <div class="total-price price-box">
-                                               <span class="price">$80.00</span>
-                                           </div>
-                                       </td>
-                                       <td>
-                                           <i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i>
-                                       </td>
-                                   </tr>
+                                   </tr> 
+                                   <?php endforeach ?>
+                                   
                                </tbody>
                            </table>
                        </div>
