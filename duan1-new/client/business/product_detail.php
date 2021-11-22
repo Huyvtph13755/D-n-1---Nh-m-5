@@ -61,7 +61,7 @@ function product_detail()
                 $price = ( (int)$ap + (int)$exp[0] + (int)$exp2[0])*$quantity;   
                 $sql = "INSERT INTO cart(user_id, product_id, color_id, warranty_id, quantity, total_price) VALUES('$user_id', '$product_id', '$color_id', '$warranty_id', '$quantity', '$price')";
                 exeQuery($sql, false);
-                header('Location: ?msg=Thêm sản phẩm thành công');
+                header('Location: ?msg=Sản phẩm đã được thêm vào giỏ hàng');
             } else {
                 header('Location: ?msg=Bạn chưa đăng nhập');
             }

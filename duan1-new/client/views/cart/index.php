@@ -121,7 +121,7 @@
                                    <tbody>
 
                                        <tr>
-                                           <td><b>Số tiền phải trả</b></td>
+                                           <td><b>Số tiền phải trả:</b></td>
                                            <td>
                                                <div class="price-box">
                                                    <span class="price"><b><?= $b['total']?> <u>đ</u></b></span>
