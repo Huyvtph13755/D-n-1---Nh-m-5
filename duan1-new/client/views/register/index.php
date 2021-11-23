@@ -43,24 +43,36 @@
                                     <div class="input-box">
                                         <label for="l-name">Họ Và Tên</label>
                                         <input type="text" id="l-nSame" required="" name="fullname" placeholder="Nhập tên">
+                                        <?php if (isset($_GET['fullname-err'])) : ?>
+                                            <span style="font-size:12px ;color: red; padding-left: 10px;" class="fullname"><?= $_GET['fullname-err']; ?></span>
+                                        <?php endif ?>
                                     </div>
                                 </div>
                                 <div class="col-xs-12">
                                     <div class="input-box">
                                         <label for="login-email">Email </label>
                                         <input id="login-email" type="email" required="" name="email" placeholder="Nhập email">
+                                        <?php if (isset($_GET['email-err'])) : ?>
+                                            <span style="font-size:12px ;color: red; padding-left: 10px;" class="email"><?= $_GET['email-err']; ?></span>
+                                        <?php endif ?>
                                     </div>
                                 </div>
                                 <div class="col-xs-12">
                                     <div class="input-box">
                                         <label for="login-pass">Mật khẩu</label>
                                         <input id="login-pass" type="password" required="" name="password" placeholder="Nhập mật khẩu">
+                                        <?php if (isset($_GET['password-err'])) : ?>
+                                            <span style="font-size:12px ;color: red; padding-left: 10px;" class="password"><?= $_GET['password-err']; ?></span>
+                                        <?php endif ?>
                                     </div>
                                 </div>
                                 <div class="col-xs-12">
                                     <div class="input-box">
                                         <label for="re-enter-pass">Nhập lại mật khẩu</label>
-                                        <input id="re-enter-pass" type="password" required="" placeholder="Nhập lại mật khẩu">
+                                        <input id="re-enter-pass" type="password" required="" name="repass" placeholder="Nhập lại mật khẩu">
+                                        <?php if (isset($_GET['repass-err'])) : ?>
+                                            <span style="font-size:12px ;color: red; padding-left: 10px;" class="repass"><?= $_GET['repass-err']; ?></span>
+                                        <?php endif ?>
                                     </div>
                                 </div>
                                 <div class="col-xs-12">

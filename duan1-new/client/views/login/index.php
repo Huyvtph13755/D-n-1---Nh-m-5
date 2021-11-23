@@ -43,12 +43,18 @@
                                     <div class="input-box">
                                         <label for="login-email">Email</label><br>
                                         <input id="login-email" type="email" name="email" required="" placeholder="Email Address">
+                                        <?php if (isset($_GET['email-err'])) : ?>
+                                            <span style="font-size:12px ;color: red; padding-left: 10px;" class="email"><?= $_GET['email-err']; ?></span>
+                                        <?php endif ?>
                                     </div>
                                 </div>
                                 <div class="col-xs-12">
                                     <div class="input-box">
                                         <label for="login-pass">Mật khẩu</label><br>
                                         <input id="login-pass" type="password" name="password" required="" placeholder="Enter your Password">
+                                        <?php if (isset($_GET['password-err'])) : ?>
+                                            <span style="font-size:12px ;color: red; padding-left: 10px;" class="password"><?= $_GET['password-err']; ?></span>
+                                        <?php endif ?>
                                     </div>
                                 </div>
                                 <div class="col-xs-12">

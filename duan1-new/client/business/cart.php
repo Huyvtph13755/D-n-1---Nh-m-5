@@ -4,11 +4,11 @@ function cart(){
         $user_id = $_SESSION['email']['user_id'];
 
         // lấy dữ liệu từ giỏ hàng
-        $sql = "SELECT cart.cart_id, product.name_product, product.price_default, color.price_add, color.name_color, warranty.price, cart.quantity, cart.total_price, warranty.name_warranty
+        $sql = "SELECT cart.cart_id, product.name_product, product.price_default, product.warranty, color.price_add, color.name_color, warranty.price, cart.quantity, cart.total_price, warranty.name_warranty, warranty.warranty_w
         FROM (((duan1.cart
         INNER JOIN duan1.product ON cart.product_id = product.product_id)
         INNER JOIN duan1.color ON cart.color_id = color.color_id)
-        INNER JOIN duan1.warranty ON cart.warranty_id = warranty.warranty_id) WHERE cart.user_id = '$user_id'
+        INNER JOIN duan1.warranty ON cart.warranty_id = warranty.warranty_id) WHERE cart.user_id = '$user_id' ORDER BY cart_id DESC
         ";
         $a = exeQuery($sql, true);
 
