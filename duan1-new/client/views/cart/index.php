@@ -35,55 +35,59 @@
                                </thead>
                                <tbody>
                                    <?php foreach ($a as $index => $c) : ?>
-                                    <tr>
-                                       <td>
-                                           <a href="product-page.html">
-                                               <div class="product-image"><img alt="Streetwear" src="<?= CLIENT ?>images/1.jpg"></div>
-                                           </a>
-                                       </td>
-                                       <td>
-                                           <div class="product-title">
-                                               <a href="#" style="font-size: 14px;"><?= $c['name_product']?></a> <br>
-                                               <a href="#" style="font-size: 12px; color: #303030;">Màu sắc: <?= $c['name_color']?></a>
-                                           </div>
-                                       </td>
-                                       <td>
-                                           <ul>
-                                               <li>
-                                                   <div class="base-price price-box">
-                                                       <span class="price" style="font-size: 14px; color: #878787;"><?= $c['price_default'] + $c['price_add']?> <u>đ</u></span>
-                                                   </div>
-                                               </li>
-                                           </ul>
-                                       </td>
-                                       <td>
-                                           <ul>
-                                               <li>
-                                                   <div class="base-price price-box">
-                                                       <span class="price" style="font-size: 14px; color: #878787;"><?= $c['price']?> <u>đ</u></span> <br>
-                                                       <span class="price" style="font-size: 12px; color: #303030;">(<?= $c['name_warranty']?>)</span>
-                                                   </div>
-                                               </li>
-                                           </ul>
-                                       </td>
-                                       <td>
-                                           <div class="input-box">
-                                               <select data-id="100" class="quantity_cart" name="quantity_cart" disabled>
-                                                   <option selected="" value="<?= $c['quantity']?>"><?= $c['quantity']?></option>
-                                               </select>
-                                           </div>
-                                       </td>
-                                       <td>
-                                           <div class="total-price price-box">
-                                               <span class="price" style="font-size: 14px; color: #878787;"><?= $c['total_price']?> <u>đ</u></span>
-                                           </div>
-                                       </td>
-                                       <td>
-                                           <a href="del_product_in_cart?cart_id=<?= $c['cart_id']?>"><i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i></a>
-                                       </td>
-                                   </tr> 
+                                       <tr>
+                                           <td>
+                                               <a href="product-page.html">
+                                                   <div class="product-image"><img alt="Streetwear" src="<?= CLIENT ?>images/1.jpg"></div>
+                                               </a>
+                                           </td>
+                                           <td>
+                                               <div class="product-title">
+                                                   <a href="#" style="font-size: 14px;"><?= $c['name_product'] ?></a> <br>
+                                                   <a href="#" style="font-size: 12px; color: #303030;">Màu sắc: <?= $c['name_color'] ?></a>
+                                               </div>
+                                           </td>
+                                           <td>
+                                               <ul>
+                                                   <li>
+                                                       <div class="base-price price-box">
+                                                           <span class="price" style="font-size: 14px; color: #878787;"><?= $c['price_default'] + $c['price_add'] ?> <u>đ</u></span>
+                                                       </div>
+                                                   </li>
+                                               </ul>
+                                           </td>
+                                           <td>
+                                               <ul>
+                                                   <li>
+                                                       <div class="base-price price-box">
+                                                           <span class="price" style="font-size: 14px; color: #878787;"><?= $c['price'] ?> <u>đ</u></span> <br>
+                                                           <span class="price" style="font-size: 12px; color: #303030;">(<?= $c['name_warranty'] ?><?php if ($c['warranty_w'] == 0) {
+                                                                                                                                                        echo " - " . $c['warranty'] . " tháng";
+                                                                                                                                                    } else {
+                                                                                                                                                        echo " - " . $c['warranty'] + $c['warranty_w'] . " tháng";
+                                                                                                                                                    }   ?>)</span>
+                                                       </div>
+                                                   </li>
+                                               </ul>
+                                           </td>
+                                           <td>
+                                               <div class="input-box">
+                                                   <select data-id="100" class="quantity_cart" name="quantity_cart" disabled>
+                                                       <option selected="" value="<?= $c['quantity'] ?>"><?= $c['quantity'] ?></option>
+                                                   </select>
+                                               </div>
+                                           </td>
+                                           <td>
+                                               <div class="total-price price-box">
+                                                   <span class="price" style="font-size: 14px; color: #878787;"><?= $c['total_price'] ?> <u>đ</u></span>
+                                               </div>
+                                           </td>
+                                           <td>
+                                               <a href="del_product_in_cart?cart_id=<?= $c['cart_id'] ?>"><i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i></a>
+                                           </td>
+                                       </tr>
                                    <?php endforeach ?>
-                                   
+
                                </tbody>
                            </table>
                        </div>
@@ -124,7 +128,7 @@
                                            <td><b>Số tiền phải trả:</b></td>
                                            <td>
                                                <div class="price-box">
-                                                   <span class="price"><b><?= $b['total']?> <u>đ</u></b></span>
+                                                   <span class="price"><b><?= $b['total'] ?> <u>đ</u></b></span>
                                                </div>
                                            </td>
                                        </tr>

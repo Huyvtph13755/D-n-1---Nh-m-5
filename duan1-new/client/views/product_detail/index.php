@@ -70,10 +70,10 @@
                                         <label>Gói bảo hành</label>
                                         <select class="selectpicker form-control" id="b" name="b" onchange="load(this)">
                                             <?php foreach ($h as $index => $f) : ?>
-                                                <option value="<?= $f['price'] ?> <?= $f['warranty_id'] ?>"><?= $f['name_warranty'] ?><?php if ($f['warranty'] == 0) {
+                                                <option value="<?= $f['price'] ?> <?= $f['warranty_id'] ?>"><?= $f['name_warranty'] ?><?php if ($f['warranty_w'] == 0) {
                                                                                                                                             echo "";
                                                                                                                                         } else {
-                                                                                                                                            echo " - " . $f['warranty'] . " tháng";
+                                                                                                                                            echo " - " . $f['warranty_w'] . " tháng";
                                                                                                                                         }   ?></option value>
                                             <?php endforeach ?>
                                         </select>
