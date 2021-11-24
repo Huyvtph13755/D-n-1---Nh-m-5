@@ -56,6 +56,7 @@
                                             <span style="font-size:12px ;color: red; padding-left: 10px;" class="password"><?= $_GET['password-err']; ?></span>
                                         <?php endif ?>
                                     </div>
+                                    <a href="forgot_password" class="link" style="padding-left: 10px;">Quên mật khẩu?</a>
                                 </div>
                                 <div class="col-xs-12">
                                     <button name="login" type="submit" class="btn-black right-side">Đăng nhập</button>

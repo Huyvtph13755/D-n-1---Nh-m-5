@@ -63,7 +63,59 @@ switch ($url) {
         require_once './client/business/del_product_in_cart.php';
         del_product_in_cart();
         break;
-
+        // admin
+    case 'cp-admin':
+        require_once './admin/business/dashboard.php';
+        dashboard_index();
+        break;
+    case 'cp-admin/danh-muc':
+        require_once './admin/business/category.php';
+        cate_index();
+        break;
+    case 'cp-admin/product':
+        require_once './admin/business/product.php';
+        product_index();
+        break;
+    case 'cp-admin/product/creat-new-product':
+        require_once './admin/business/product.php';
+        creat_new_product();
+        break;
+    case 'cp-admin/product/update-product':
+        require_once './admin/business/product.php';
+        update_product();
+        break;
+    case 'cp-admin/product/creat-new-color':
+        require_once './admin/business/product.php';
+        creat_new_color();
+        break;
+    case 'cp-admin/product/update-color':
+        require_once './admin/business/product.php';
+        update_color();
+        break;
+    case 'cp-admin/product/detail-product':
+        require_once './admin/business/product.php';
+        detail_product();
+        break;
+    case 'cp-admin/danh-muc/xoa':
+        require_once './admin/business/category.php';
+        cate_remove();
+        break;
+    case 'cp-admin/danh-muc/tao-moi':
+        require_once './admin/business/category.php';
+        cate_add_form();
+        break;
+    case 'cp-admin/danh-muc/luu-tao-moi':
+        require_once './admin/business/category.php';
+        cate_save_add();
+        break;
+    case 'upload-img-form':
+        require_once './client/business/homepage.php';
+        img_upload_form();
+        break;
+    case 'save-upload-image':
+        require_once './client/business/homepage.php';
+        save_image();
+        break;
     default:
         require_once './client/business/home.php';
         getProduct();
