@@ -202,26 +202,4 @@
  </section>
  <!--  New Products Slider Block End  -->
 
- <!-- Brand logo block Start  -->
- <section class="container">
-   <div class="pb-85 brand-main">
-     <div class="row">
-       <div class="col-md-12">
-         <div class="brand">
-           <div id="brand-logo" class="owl-carousel align_center">
-             <div class="item"><a href="#"><img src="<?= CLIENT ?>images/brand1.png" alt="#"></a></div>
-             <div class="item"><a href="#"><img src="<?= CLIENT ?>images/brand2.png" alt="#"></a></div>
-             <div class="item"><a href="#"><img src="<?= CLIENT ?>images/brand3.png" alt="#"></a></div>
-             <div class="item"><a href="#"><img src="<?= CLIENT ?>images/brand4.png" alt="#"></a></div>
-             <div class="item"><a href="#"><img src="<?= CLIENT ?>images/brand5.png" alt="#"></a></div>
-             <div class="item"><a href="#"><img src="<?= CLIENT ?>images/brand6.png" alt="#"></a></div>
-             <div class="item"><a href="#"><img src="<?= CLIENT ?>images/brand7.png" alt="#"></a></div>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </section>
- <!-- Brand logo block End  -->
-
  <!-- CONTAINER END -->
