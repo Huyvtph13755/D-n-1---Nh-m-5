@@ -194,7 +194,7 @@
             <div class="col-md-4 col-xs-6 plr-20">
               <div class="product-item">
                 <div class="product-image">
-                  <a href="product-page.html">
+                  <a href="product_detail&product_id=<?= $i['product_id'] ?>">
                     <img src="<?= CLIENT ?>images/1.jpg" alt="Streetwear">
                   </a>
                   <div class="product-detail-inner">
@@ -211,7 +211,7 @@
                 </div>
                 <div class="product-item-details">
                   <div class="product-item-name">
-                    <a href="product-page.html"><?= $i['name_product']?></a>
+                  <a style="font-size: 18px;" href="product_detail&product_id=<?= $i['product_id'] ?>"><?= $i['name_product'] ?></a>
                   </div>
                   <div class="price-box">
                   <span class="price" style="font-weight: bold;"><?= number_format($i['price_default']) ?> <u>đ</u></span>
