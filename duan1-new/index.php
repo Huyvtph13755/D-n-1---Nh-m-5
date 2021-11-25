@@ -60,7 +60,7 @@ switch ($url) {
         break;
         // Vân anh
     case 'del_product_in_cart':
-        require_once './client/business/del_product_in_cart.php';
+        require_once './client/business/cart.php';
         del_product_in_cart();
         break;
         // admin
