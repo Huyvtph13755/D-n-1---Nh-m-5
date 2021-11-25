@@ -177,28 +177,38 @@
               </div>
             </div>
           </div>
-          <form class="main-form full">
+          <form class="main-form full" action="<?= BASE_URL ?>change_password" method="POST">
             <div class="row">
               <div class="col-xs-12">
                 <div class="input-box">
-                  <label for="old-pass">Old-Password</label>
-                  <input type="password" placeholder="Old Password" required="" id="old-pass">
+                  <label for="old-pass">Mật khẩu cũ</label>
+                  <input type="password" placeholder="Nhập mật khẩu cũ" required="" name="old_pass">
+                  <?php if (isset($_GET['old_pass-err'])) : ?>
+                    <span style="font-size:12px ;color: red; padding-left: 10px;" class="old_pass"><?= $_GET['old_pass-err']; ?></span>
+                  <?php endif ?>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="input-box">
-                  <label for="login-pass">Password</label>
-                  <input type="password" placeholder="Enter your Password" required="" id="login-pass">
+                  <label for="login-pass">Mật khẩu mới</label>
+                  <input type="password" placeholder="Nhập mật khẩu mới" required="" name="login_pass">
+                  <?php if (isset($_GET['login_pass-err'])) : ?>
+                    <span style="font-size:12px ;color: red; padding-left: 10px;" class="login_pass"><?= $_GET['login_pass-err']; ?></span>
+                  <?php endif ?>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="input-box">
-                  <label for="re-enter-pass">Re-enter Password</label>
-                  <input type="password" placeholder="Re-enter your Password" required="" id="re-enter-pass">
+                  <label for="re-enter-pass">Nhập lại mật khẩu</label>
+                  <input type="password" placeholder="Nhập lại mật khẩu" required="" name="re_enter_pass">
+                  <?php if (isset($_GET['re_enter_pass-err'])) : ?>
+                    <span style="font-size:12px ;color: red; padding-left: 10px;" class="re_enter_pass"><?= $_GET['re_enter_pass-err']; ?></span>
+                  <?php endif ?>
                 </div>
               </div>
               <div class="col-xs-12">
-                <button class="btn-black" type="submit" name="submit">Thay đổi</button>
+              <input type="hidden" name="user_id" value="<?= $s['user_id'] ?>">
+                <button class="btn-black" type="submit" name="change_password">Thay đổi</button>
               </div>
             </div>
           </form>
@@ -208,3 +218,4 @@
   </div>
 </section>
 <!-- CONTAINER END -->
+<!-- abdjshadkjhsalkd -->
