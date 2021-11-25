@@ -1,9 +1,11 @@
 <?php
 if (isset($_SESSION['email'])) {
     $user_id = $_SESSION['email']['user_id'];
-    $sql112 = "SELECT COUNT(cart_id) AS sl FROM cart WHERE user_id = $user_id";
+    $sql112 = "SELECT COUNT(cart_id) AS sl, SUM(total_price) AS total2 FROM cart WHERE user_id = $user_id";
     $x = exeQuery($sql112, false);
 }
+$sql13 = "SELECT * FROM category";
+$get_cate = exeQuery($sql13, true);
 ?>
 <!DOCTYPE html>
 <!--[if (gte IE 9)|!(IE)]><!-->
@@ -159,10 +161,14 @@ if (isset($_SESSION['email'])) {
                                                 <span>
                                                     <small class='cart-notification'>" . $x['sl'] . "</small>
                                                 </span>
-                                                <div class='header-right-text'>Giỏ hàng</div>
-                                                <div class='header-price'>$ 354.32</div>
+                                                <div class='header-right-text'>Giỏ hàng</div>    
                                             </a>
                                             <div class='cart-dropdown header-link-dropdown'>
+                                                <p class='cart-sub-totle'>
+                                                <span class='pull-left'>Tổng tiền:</span>
+                                                <span class='pull-right'><strong class='price-box'>" . $x['total2'] . " <u>đ</u></strong></span>
+                                                </p>
+                                             <div class='clearfix'></div>
                                                 <div class='clearfix'></div>
                                                 <div class='mt-20'>
                                                     <a href='cart' class='btn-color btn'>Giỏ hàng</a>
@@ -184,150 +190,10 @@ if (isset($_SESSION['email'])) {
                 <div class="container">
                     <div id="menu" class="navbar-collapse collapse left-side align-center">
                         <ul class="nav navbar-nav">
-                            <li class="level"><a href="shop.html" class="page-scroll">Today's Deals</a></li>
-                            <li class="level dropdown">
-                                <span class="opener plus"></span>
-                                <a href="shop.html" class="page-scroll">Women</a>
-                                <div class="megamenu mobile-sub-menu">
-                                    <div class="megamenu-inner-top">
-                                        <ul class="sub-menu-level1">
-                                            <li class="level2">
-                                                <a href="shop.html"><span>Women Clothings</span></a>
-                                                <ul class="sub-menu-level2">
-                                                    <li class="level3"><a href="shop.html">Dresses</a></li>
-                                                    <li class="level3"><a href="shop.html">Sport Jeans</a></li>
-                                                    <li class="level3"><a href="shop.html">Skirts</a></li>
-                                                    <li class="level3"><a href="shop.html">Tops</a></li>
-                                                    <li class="level3"><a href="shop.html">Sleepwear</a></li>
-                                                    <li class="level3"><a href="shop.html">Jeans</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="level2">
-                                                <a href="shop.html"><span>Women Fashion</span></a>
-                                                <ul class="sub-menu-level2 ">
-                                                    <li class="level3"><a href="shop.html">Blazer & Coat</a></li>
-                                                    <li class="level3"><a href="shop.html">Sport Shoes</a></li>
-                                                    <li class="level3"><a href="shop.html">Phone Cases</a></li>
-                                                    <li class="level3"><a href="shop.html">Trousers</a></li>
-                                                    <li class="level3"><a href="shop.html">Purse</a></li>
-                                                    <li class="level3"><a href="shop.html">Wallets</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="level2">
-                                                <a href="shop.html"><span>Women Fashion</span></a>
-                                                <ul class="sub-menu-level2 ">
-                                                    <li class="level3"><a href="shop.html">Blazer & Coat</a></li>
-                                                    <li class="level3"><a href="shop.html">Sport Shoes</a></li>
-                                                    <li class="level3"><a href="shop.html">Phone Cases</a></li>
-                                                    <li class="level3"><a href="shop.html">Trousers</a></li>
-                                                    <li class="level3"><a href="shop.html">Purse</a></li>
-                                                    <li class="level3"><a href="shop.html">Wallets</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="megamenu-inner-bottom mt-20 visible-lg visible-md">
-                                        <a href="shop.html">
-                                            <img src="<?= CLIENT ?>images/drop_banner2.jpg" alt="Streetwear">
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="level dropdown">
-                                <span class="opener plus"></span>
-                                <a href="shop.html" class="page-scroll">Men</a>
-                                <div class="megamenu full mobile-sub-menu">
-                                    <div class="megamenu-inner">
-                                        <div class="megamenu-inner-top">
-                                            <div class="row">
-                                                <div class="col-md-3 level2">
-                                                    <a href="shop.html"><span>Men Fashion</span></a>
-                                                    <ul class="sub-menu-level2 ">
-                                                        <li class="level3"><a href="shop.html">Blazer & Coat</a></li>
-                                                        <li class="level3"><a href="shop.html">Sport Shoes</a></li>
-                                                        <li class="level3"><a href="shop.html">Phone Cases</a></li>
-                                                        <li class="level3"><a href="shop.html">Trousers</a></li>
-                                                        <li class="level3"><a href="shop.html">Purse</a></li>
-                                                        <li class="level3"><a href="shop.html">Wallets</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-3 level2">
-                                                    <a href="shop.html"><span>Juniors kid</span></a>
-                                                    <ul class="sub-menu-level2 ">
-                                                        <li class="level3"><a href="shop.html">Blazer & Coat</a></li>
-                                                        <li class="level3"><a href="shop.html">Sport Shoes</a></li>
-                                                        <li class="level3"><a href="shop.html">Phone Cases</a></li>
-                                                        <li class="level3"><a href="shop.html">Trousers</a></li>
-                                                        <li class="level3"><a href="shop.html">Purse</a></li>
-                                                        <li class="level3"><a href="shop.html">Wallets</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-3 level2">
-                                                    <a href="shop.html"><span>Men Clothings</span></a>
-                                                    <ul class="sub-menu-level2 ">
-                                                        <li class="level3"><a href="shop.html">Blazer & Coat</a></li>
-                                                        <li class="level3"><a href="shop.html">Chinos & Trousers</a></li>
-                                                        <li class="level3"><a href="shop.html">Underwear</a></li>
-                                                        <li class="level3"><a href="shop.html">Trousers</a></li>
-                                                        <li class="level3"><a href="shop.html">Purse</a></li>
-                                                        <li class="level3"><a href="shop.html">Wallets</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-3 level2 visible-lg visible-md">
-                                                    <a href="shop.html">
-                                                        <img src="<?= CLIENT ?>images/drop_banner.jpg" alt="Streetwear">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="level"><a href="shop.html" class="page-scroll">Juniors</a></li>
-                            <li class="level dropdown">
-                                <span class="opener plus"></span>
-                                <a href="shop.html" class="page-scroll">Kids</a>
-                                <div class="megamenu mobile-sub-menu">
-                                    <div class="megamenu-inner-top">
-                                        <ul class="sub-menu-level1">
-                                            <li class="level2">
-                                                <a href="shop.html"><span>Kids Fashion</span></a>
-                                                <ul class="sub-menu-level2 ">
-                                                    <li class="level3"><a href="shop.html">Blazer & Coat</a></li>
-                                                    <li class="level3"><a href="shop.html">Sport Shoes</a></li>
-                                                    <li class="level3"><a href="shop.html">Phone Cases</a></li>
-                                                    <li class="level3"><a href="shop.html">Trousers</a></li>
-                                                    <li class="level3"><a href="shop.html">Purse</a></li>
-                                                    <li class="level3"><a href="shop.html">Wallets</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="level"><a href="shop.html" class="page-scroll">Baby</a></li>
-                            <li class="level"><a href="shop.html" class="page-scroll">Cloths</a></li>
-                            <li class="level dropdown">
-                                <span class="opener plus"></span>
-                                <a class="page-scroll">Pages</a>
-                                <div class="megamenu mobile-sub-menu">
-                                    <div class="megamenu-inner-top">
-                                        <ul class="sub-menu-level1">
-                                            <li class="level2">
-                                                <ul class="sub-menu-level2 ">
-                                                    <li class="level3"><a href="about.html">About Us</a></li>
-                                                    <li class="level3"><a href="account.html">Account</a></li>
-                                                    <li class="level3"><a href="checkout.html">Checkout</a></li>
-                                                    <li class="level3"><a href="contact.html">Contact</a></li>
-                                                    <li class="level3"><a href="404.html">404 Error</a></li>
-                                                    <li class="level3"><a href="blog.html">Blog</a></li>
-                                                    <li class="level3"><a href="single-blog.html">Single Blog</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
+                            <li class="level"><a href="home" class="page-scroll">Trang chủ</a></li>
+                            <?php foreach ($get_cate as $index => $j) : ?>
+                                <li class="level"><a href="shop?category_id=<?= $j['category_id'] ?>" class="page-scroll"><?= $j['name_category'] ?></a></li>
+                            <?php endforeach ?>
                         </ul>
                     </div>
                 </div>
@@ -348,24 +214,24 @@ if (isset($_SESSION['email'])) {
                                 <div class="col-sm-4">
                                     <div class="ser-feature-block">
                                         <div class="feature-box feature1">
-                                            <div class="ser-title">Free Shipping</div>
-                                            <div class="ser-subtitle">Shipping in World for orders over $99</div>
+                                            <div class="ser-title">Miễn phí giao hàng</div>
+                                            <div class="ser-subtitle">Cho đơn trên 5 triệu đồng</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="ser-feature-block">
                                         <div class="feature-box feature2">
-                                            <div class="ser-title">Special Gift</div>
-                                            <div class="ser-subtitle">Give the perfect gift to your loved ones</div>
+                                            <div class="ser-title">Tri ân khách hàng</div>
+                                            <div class="ser-subtitle">Nhiều ưu đãi lớn</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="ser-feature-block">
                                         <div class="feature-box feature3">
-                                            <div class="ser-title">Money Back</div>
-                                            <div class="ser-subtitle">Not receiving an item applied to reward</div>
+                                            <div class="ser-title">Đổi trả sản phẩm</div>
+                                            <div class="ser-subtitle">Trong vòng 15 ngày</div>
                                         </div>
                                     </div>
                                 </div>
@@ -374,7 +240,7 @@ if (isset($_SESSION['email'])) {
                         </div>
                     </div>
                 </div>
-                <div class="footer-middle mtb-60">
+                <!-- <div class="footer-middle mtb-60">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-3 f-col">
@@ -441,20 +307,15 @@ if (isset($_SESSION['email'])) {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <hr>
                 <div class="footer-bottom top">
                     <div class="container">
                         <div class="site-link align-center col-sm-12">
                             <ul>
-                                <li><a>Cycling</a>|</li>
-                                <li><a>Running</a>|</li>
-                                <li><a>Swimming</a>|</li>
-                                <li><a>Football</a>|</li>
-                                <li><a>Golf</a>|</li>
-                                <li><a>Tools</a>|</li>
-                                <li><a>Bedding</a>|</li>
-                                <li><a>Food</a></li>
+                                <?php foreach ($get_cate as $index => $j) : ?>
+                                    <li><a href="shop?category_id=<?= $j['category_id'] ?>"><?= $j['name_category'] ?></a></li>
+                                <?php endforeach ?>
                             </ul>
                         </div>
                         <div class="col-sm-12 align-center">
@@ -477,20 +338,6 @@ if (isset($_SESSION['email'])) {
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <div class="newsletter">
-                                    <h3 class="title visible-lg">
-                                        <span class="newsletter-icon"><img src="<?= CLIENT ?>images/newsletter-icon.png" alt="Streetwear"></span>
-                                        Subscribe Here
-                                    </h3>
-                                    <div class="email-box-main right-side float-none-sm center-xs">
-                                        <form>
-                                            <div class="email-box">
-                                                <input type="text" placeholder="Enter email....." class="input-text">
-                                                <button class="btn btn-color">Go</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
                             </div>
                             <div class="col-sm-3">
                                 <div class="footer_social pt-xs-15 center-xs mt-xs-15 right-side float-none-sm">
