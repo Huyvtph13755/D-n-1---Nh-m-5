@@ -26,4 +26,11 @@ function cart(){
     
 }
 
+function del_product_in_cart(){
+    $cart_id = $_GET['cart_id'];
+    $sql112= "DELETE FROM cart WHERE cart_id = '$cart_id'";
+    exeQuery($sql112);
+    // client_render('cart/index.php?msg=bạn đã xóa thành công');
+    header('Location:cart?msg=bạn đã xóa thành công ');
+}
 ?>
