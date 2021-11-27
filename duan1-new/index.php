@@ -128,10 +128,10 @@ switch ($url) {
         require_once './admin/business/product.php';
         creat_new_product();
         break;
-        case 'cp-admin/product/save-creat-new-product':
-            require_once './admin/business/product.php';
-            save_creat_new_product();
-            break;
+    case 'cp-admin/product/save-creat-new-product':
+        require_once './admin/business/product.php';
+        save_creat_new_product();
+        break;
     case 'cp-admin/product/update-product':
         require_once './admin/business/product.php';
         update_product();
