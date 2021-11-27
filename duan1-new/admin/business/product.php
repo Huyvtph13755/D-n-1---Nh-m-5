@@ -100,3 +100,7 @@ function save_creat_new_product()
     exeQuery($sql01, false);
     header("location: " . ADMIN_URL . 'product');
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
