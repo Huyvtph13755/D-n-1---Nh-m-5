@@ -39,7 +39,7 @@
                                     <a name="update-product" href="<?= ADMIN_URL . 'product/update-product?product_id=' . $item['product_id'] . '&subcategory_id=' . $item['subcategory_id'] ?> " class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'product/del_product?product_id=' . $item['product_id'] ?>', '<?= $item['name_product'] ?>')" class="btn btn-sm btn-danger">
+                                    <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'product/del-product?product_id=' . $item['product_id'] ?>', '<?= $item['name_product'] ?>')" class="btn btn-sm btn-danger">
                                         <i class="fas fa-trash"></i>
                                     </a>
                                 </td>

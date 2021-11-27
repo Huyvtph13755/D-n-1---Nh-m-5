@@ -155,6 +155,14 @@ switch ($url) {
         require_once './admin/business/product.php';
         update_color();
         break;
+    case 'cp-admin/product/del-color':
+        require_once './admin/business/product.php';
+        del_color();
+        break;
+    case 'cp-admin/product/del-product':
+        require_once './admin/business/product.php';
+        del_product();
+        break;
     case 'cp-admin/product/save-update-color':
         require_once './admin/business/product.php';
         save_update_color();

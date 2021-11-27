@@ -37,6 +37,12 @@ function update_product()
     $detail_pro = exeQuery($sql3, false);
     admin_render('product/update-product.php', compact('detail_pro', 'subcate'), 'admin-assets/custom/category_add.js');
 }
+function del_product(){
+    $product_id = $_GET['product_id'];
+    $sql3 = "DELETE FROM product WHERE product_id = '$product_id'";
+    exeQuery($sql3);
+    header("location:" . ADMIN_URL . 'product?msg=Xóa thành công');
+}
 function save_update_product()
 {
     $product_id = $_POST['product_id'];
@@ -104,6 +110,13 @@ function update_color()
     $sql5 = "SELECT * FROM color WHERE color_id = '$color_id'";
     $upc = exeQuery($sql5, false);
     admin_render('product/update-color.php', compact('upc'), 'admin-assets/custom/category_add.js');
+}
+function del_color(){
+    $product_id = $_GET['product_id'];
+    $color_id = $_GET['color_id'];
+    $sql3 = "DELETE FROM color WHERE color_id = '$color_id'";
+    exeQuery($sql3);
+    header("location:" . ADMIN_URL . 'product/detail-product?product_id=' . $product_id);
 }
 function save_update_color()
 {
