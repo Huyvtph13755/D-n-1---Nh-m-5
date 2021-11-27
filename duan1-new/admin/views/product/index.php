@@ -13,7 +13,7 @@
                 </form>
             </div>
             <div class="card-body">
-                <table class="table tabl-stripped">
+                <table class="table tabl-stripped" style="text-align: center;">
                     <thead>
                         <th>STT</th>
                         <th>Tên danh mục</th>

@@ -9,19 +9,13 @@
                     <div class="col-6 offset-3">
                         <div class="form-group">
                           <label for="">Tên danh mục</label>
-                          <input type="text" name="name" class="form-control" placeholder="" aria-describedby="helpId">
-                        </div>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" id="show_menu" name="show_menu" value="1" type="checkbox">
-                                <label class="form-check-label" for="show_menu">Hiển thị menu</label>
-                            </div>
+                          <input type="text" name="name_category" class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">
-                            <a href="<?= ADMIN_URL . 'danh-muc'?>" class="btn btn-sm btn-danger">Hủy</a>
+                            <a href="<?= ADMIN_URL . 'category' ?> " class="btn btn-sm btn-danger" style="width: 50%; font-weight: bold;" >Hủy</a>
                             &nbsp;
-                            <button type="submit" class="btn btn-sm btn-primary">Lưu</button>
+                            <button type="submit" style="width: 50%; font-weight: bold;" class="btn btn-sm btn-primary">Tạo mới</button>
                         </div>
                     </div>
                 </form>

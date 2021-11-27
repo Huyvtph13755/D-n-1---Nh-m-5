@@ -47,7 +47,7 @@
                 <h3 class="card-title">Thêm màu sắc mới cho sản phẩm</h3>
             </div>
             <div class="card-body">
-                <table class="table tabl-stripped">
+                <table class="table tabl-stripped" style="text-align: center;">
                     <thead>
                         <th>STT</th>
                         <th>Tên màu sắc</th>

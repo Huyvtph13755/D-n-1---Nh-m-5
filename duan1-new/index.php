@@ -68,9 +68,57 @@ switch ($url) {
         require_once './admin/business/dashboard.php';
         dashboard_index();
         break;
-    case 'cp-admin/danh-muc':
+    case 'cp-admin/category':
         require_once './admin/business/category.php';
         cate_index();
+        break;
+    case 'cp-admin/category/detail-category':
+        require_once './admin/business/category.php';
+        detail_category();
+        break;
+    case 'cp-admin/category/creat-new-category':
+        require_once './admin/business/category.php';
+        creat_new_category();
+        break;
+    case 'cp-admin/category/update-category':
+        require_once './admin/business/category.php';
+        update_category();
+        break;
+    case 'cp-admin/category/creat-new-subcategory':
+        require_once './admin/business/category.php';
+        creat_new_subcategory();
+        break;
+    case 'cp-admin/category/update-subcategory':
+        require_once './admin/business/category.php';
+        update_subcategory();
+        break;
+    case 'cp-admin/warranty':
+        require_once './admin/business/warranty.php';
+        warr_index();
+        break;
+    case 'cp-admin/warranty/creat-new-warranty':
+        require_once './admin/business/warranty.php';
+        creat_new_warranty();
+        break;
+    case 'cp-admin/warranty/update-warranty':
+        require_once './admin/business/warranty.php';
+        update_warranty();
+        break;
+    case 'cp-admin/comment':
+        require_once './admin/business/comment.php';
+        comment_index();
+        break;
+    case 'cp-admin/comment/detail-comment':
+        require_once './admin/business/comment.php';
+        detail_comment();
+        break;
+    case 'cp-admin/user':
+        require_once './admin/business/user.php';
+        user_index();
+        break;
+    case 'cp-admin/user/update-user':
+        require_once './admin/business/user.php';
+        update_user();
         break;
     case 'cp-admin/product':
         require_once './admin/business/product.php';
