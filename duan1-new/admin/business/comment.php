@@ -16,3 +16,24 @@ function detail_comment(){
     $d_product =  exeQuery($sql3, false);
     admin_render('comment/detail-comment.php', compact('detail_comment', 'd_product'),'admin-assets/custom/category_index.js');
 }
+function change_comment(){
+    $comment_id = $_GET['comment_id'];
+    $status = $_GET['status'];
+    $product_id = $_GET['product_id'];
+    if($status == 1){
+        $sql14 = "UPDATE comment SET status = '0' WHERE comment_id = '$comment_id'";
+        exeQuery($sql14);
+        header("location:" . ADMIN_URL . 'comment/detail-comment?product_id=' . $product_id);
+    }elseif($status == 0){
+        $sql15 = "UPDATE comment SET status = '1' WHERE comment_id = '$comment_id'";
+        exeQuery($sql15);
+        header("location:" . ADMIN_URL . 'comment/detail-comment?product_id=' . $product_id);
+    }
+}
+function del_comment(){
+    $product_id = $_GET['product_id'];
+    $comment_id = $_GET['comment_id'];
+    $sql16 = "DELETE FROM comment WHERE comment_id='$comment_id'";
+    exeQuery($sql16);
+    header("location:" . ADMIN_URL . 'comment/detail-comment?product_id=' . $product_id);
+}
