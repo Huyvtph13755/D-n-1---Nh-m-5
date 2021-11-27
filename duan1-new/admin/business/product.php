@@ -106,7 +106,8 @@ function update_color()
     admin_render('product/update-color.php', compact('upc'), 'admin-assets/custom/category_add.js');
 }
 function save_update_color()
-{
+{   
+    $product_id = $_POST['product_id'];
     $color_id = $_POST['color_id'];
     $image_color = $_FILES['image_color'];
     $name_color = $_POST['name_color'];
@@ -123,7 +124,7 @@ function save_update_color()
                         quantity = '$quantity'
                     WHERE color_id= '$color_id'";
         exeQuery($sql8);
-        header("location:" . ADMIN_URL . 'product');
+        header("location:" . ADMIN_URL . 'product/detail-product?product_id=' . $product_id);
     } else {
         $sql9 = " UPDATE color
                     SET name_color = '$name_color',
@@ -131,7 +132,7 @@ function save_update_color()
                         quantity = '$quantity'
                     WHERE color_id= '$color_id'";
         exeQuery($sql9);
-        header("location:" . ADMIN_URL . 'product');
+        header("location:" . ADMIN_URL . 'product/detail-product?product_id=' . $product_id);
     }
 }
 

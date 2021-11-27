@@ -8,6 +8,7 @@
                 <form action="<?= ADMIN_URL . 'product/save-update-color' ?>" method="post" enctype="multipart/form-data">
                     <div class="col-6 offset-3">
                         <input type="hidden" value="<?= $_GET['color_id'] ?>" name="color_id">
+                        <input type="hidden" value="<?= $_GET['product_id'] ?>" name="product_id">
                         <?php if ($upc['image_color'] != "") : ?>
                             <div>
                                 <img style="width:120px; heigh:100px" src="<?= ADMIN . $upc['image_color'] ?>" alt="">
@@ -20,10 +21,6 @@
                         <div class="form-group">
                             <label for="">Ảnh: </label><br>
                             <input type="file" name="image_color">
-                        </div>
-                        <div class="form-group">
-                          <label for="">Giá thêm (đồng): </label>
-                          <input type="number" value="<?= $upc['price_add']?>" name="price_add" class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                             <label for="">Giá thêm (đồng): </label>
