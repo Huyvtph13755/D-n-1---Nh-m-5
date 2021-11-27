@@ -26,10 +26,10 @@
                     </thead>
                     <tbody>
                         <?php foreach ($pro as $index => $item) : ?>
-                            <tr>
+                            <tr style="justify-content: center;">
                                 <td><?= $index + 1 ?></td>
                                 <td><?= $item['name_subcategory'] ?></td>
-                                <td><?= $item['image_product'] ?></td>
+                                <td><img style="width:120px; heigh:100px" src="<?= ADMIN . $item['image_product'] ?>" alt=""></td>
                                 <td><?= $item['name_product'] ?></td>
                                 <td><?= $item['price_default'] ?></td>
                                 <td>
