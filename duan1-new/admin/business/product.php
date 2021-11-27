@@ -106,7 +106,7 @@ function update_color()
     admin_render('product/update-color.php', compact('upc'), 'admin-assets/custom/category_add.js');
 }
 function save_update_color()
-{   
+{
     $product_id = $_POST['product_id'];
     $color_id = $_POST['color_id'];
     $image_color = $_FILES['image_color'];
@@ -169,4 +169,23 @@ function save_creat_new_product()
                     values('$name_product', '$filename', '$warranty', '$sub_decription', '$decription','$price_default','$subcategory_id', '$view', '$date')";
     exeQuery($sql01, false);
     header("location: " . ADMIN_URL . 'product');
+}
+function save_creat_new_color()
+{
+    $name_color = $_POST['name_color'];
+    $product_id = $_POST['product_id'];
+    $image_color = $_FILES['image_color'];
+    $price_add = $_POST['price_add'];
+    $quantity = $_POST['quantity'];
+    // var_dump($image_product);
+    // die;
+    if ($image_color['size'] > 0) {
+        $filename = uniqid() . '-' . $image_color['name'];
+        move_uploaded_file($image_color['tmp_name'], './public/uploads/' . $filename);
+        $filename = $filename;
+    }
+    $sql012 = "INSERT INTO color (name_color,product_id, image_color, price_add, quantity)
+                    values('$name_color', '$product_id','$filename', '$price_add', '$quantity')";
+    exeQuery($sql012);
+    header("location:" . ADMIN_URL . 'product/detail-product?product_id=' . $product_id);
 }
