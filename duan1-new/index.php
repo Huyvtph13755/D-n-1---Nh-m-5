@@ -136,6 +136,10 @@ switch ($url) {
         require_once './admin/business/product.php';
         update_product();
         break;
+    case 'cp-admin/product/save-update-product':
+        require_once './admin/business/product.php';
+        save_update_product();
+        break;
     case 'cp-admin/product/creat-new-color':
         require_once './admin/business/product.php';
         creat_new_color();
@@ -143,6 +147,10 @@ switch ($url) {
     case 'cp-admin/product/update-color':
         require_once './admin/business/product.php';
         update_color();
+        break;
+    case 'cp-admin/product/save-update-color':
+        require_once './admin/business/product.php';
+        save_update_color();
         break;
     case 'cp-admin/product/detail-product':
         require_once './admin/business/product.php';
