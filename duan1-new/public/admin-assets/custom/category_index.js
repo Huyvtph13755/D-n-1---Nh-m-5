@@ -14,7 +14,7 @@ function confirm_remove(url, name){
 }
 function confirm_lock(url, name){
     Swal.fire({
-        title: `Bạn có thực sự muốn khóa tài khoản "${name}"?`,
+        title: `Bạn có thực sự thay đổi trạng thái tài khoản "${name}"?`,
         // showDenyButton: true,
         showCancelButton: true,
         confirmButtonText: 'Đồng ý',

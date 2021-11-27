@@ -40,10 +40,10 @@
                                     ?>
                                 </td>
                                 <td>
-                                    <a href="<?= ADMIN_URL . 'comment/change-comment?comment_id=' . $i['comment_id'] ?> " class="btn btn-sm btn-success">
+                                    <a href="<?= ADMIN_URL . 'comment/change-comment?comment_id=' . $i['comment_id'] . '&status=' . $i['status'] . '&product_id=' . $_GET['product_id'] ?> " class="btn btn-sm btn-success">
                                         <i class="fas fa-exchange-alt"></i> Thay đổi trạng thái
                                     </a>
-                                    <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'comment/del_comment?comment_id=' . $i['comment_id'] ?>', '<?= 'Bình luận ' . $index + 1 ?>')" class="btn btn-sm btn-danger">
+                                    <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'comment/del-comment?comment_id=' . $i['comment_id'] . '&product_id=' . $_GET['product_id'] ?>', '<?= 'Bình luận ' . $index + 1 ?>')" class="btn btn-sm btn-danger">
                                         <i class="fas fa-trash"></i>
                                     </a>
                                 </td>
