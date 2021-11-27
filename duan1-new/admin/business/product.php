@@ -72,7 +72,7 @@ function update_color(){
 function del_color(){
     $color_id = $_GET['color_id'];
     $sql3 = "DELETE FROM color WHERE color_id = '$color_id'";
-    admin_render('product/del-color.php', compact('product_id'), 'admin-assets/custom/category_index.js');
+    admin_render('product/del-color.php', compact('color_id'), 'admin-assets/custom/category_index.js');
 }
 // function cate_save_add(){
 //     $name = $_POST['name'];
