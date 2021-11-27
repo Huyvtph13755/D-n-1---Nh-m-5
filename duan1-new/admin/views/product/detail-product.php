@@ -51,6 +51,7 @@
                     <thead>
                         <th>STT</th>
                         <th>Tên màu sắc</th>
+                        <th>Ảnh</th>
                         <th>Giá thêm (đồng)</th>
                         <th>Số lượng</th>
                         <th>
@@ -62,6 +63,7 @@
                             <tr>
                                 <td><?= $index + 1 ?></td>
                                 <td><?= $i['name_color'] ?></td>
+                                <td><img style="width:120px; heigh:100px" src="<?= ADMIN . $i['image_color'] ?>" alt=""></td>
                                 <td><?= $i['price_add'] ?></td>
                                 <td><?= $i['quantity'] ?></td>
                                 <td>
@@ -75,6 +77,7 @@
                             </tr>
                         <?php endforeach ?>
                     </tbody>
+                    <br><br>
                 </table>
             </div>
 
