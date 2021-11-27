@@ -12,6 +12,10 @@
                             <input type="text" name="name_color" class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
+                            <label for="">Ảnh: </label><br>
+                            <input type="file" name="image_color">
+                        </div>
+                        <div class="form-group">
                           <label for="">Giá thêm (đồng): </label>
                           <input type="number" name="price_add" class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
