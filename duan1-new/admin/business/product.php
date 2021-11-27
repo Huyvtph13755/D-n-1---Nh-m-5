@@ -142,3 +142,31 @@ function save_update_color()
 //     exeQuery($sql);
 //     header("location: " . ADMIN_URL . 'danh-muc');
 // }
+
+
+// lưu tạo mới product
+function save_creat_new_product()
+{
+    $name_product = $_POST['name_product'];
+    $subcategory_id = $_POST['subcategory_id'];
+    $image_product = $_FILES['image_product'];
+    $warranty = $_POST['warranty'];
+    $price_default = $_POST['price_default'];
+    $sub_decription = $_POST['sub_decription'];
+    date_default_timezone_set('Asia/Ho_Chi_Minh');
+    $date = date('Y-m-d H:i:sa', time());
+    $decription = $_POST['decription'];
+    $view = 0;
+    // var_dump($image_product);
+    // die;
+    if ($image_product['size'] > 0) {
+        $filename = uniqid() . '-' . $image_product['name'];
+        move_uploaded_file($image_product['tmp_name'], './public/uploads/' . $filename);
+        $filename = $filename;
+    }
+    $sql01 = "INSERT INTO product (name_product, image_product, warranty, sub_decription, decription, price_default, subcategory_id, view, post_date)
+                    values('$name_product', '$filename', '$warranty', '$sub_decription', '$decription','$price_default','$subcategory_id', '$view', '$date')";
+    exeQuery($sql01, false);
+    header("location: " . ADMIN_URL . 'product');
+}
+
