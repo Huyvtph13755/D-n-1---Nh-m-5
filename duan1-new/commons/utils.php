@@ -3,10 +3,9 @@
 const BASE_URL = "http://localhost/DuAn1-Nhom5/duan1-new/";
 const ADMIN_URL = BASE_URL . 'cp-admin/';
 const ADMIN_ASSET = BASE_URL . 'public/admin-assets/';
+const ADMIN = BASE_URL . 'public/uploads/';
 const CLIENT = BASE_URL . 'public/';
 // const CLIENT_URL = BASE_URL . '';
-
-
 
 
 function client_render($view, $data = []){
@@ -20,5 +19,4 @@ function admin_render($view, $data = [], $jsFile = null){
     $view = './admin/views/' . $view;
     include_once "./admin/views/layouts/main.php";
 }
-
 ?>

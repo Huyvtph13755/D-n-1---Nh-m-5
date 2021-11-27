@@ -34,20 +34,7 @@ switch ($url) {
         cart();
         break;
         // Hoàng
-    case 'payment':
-        require_once './client/business/payment.php';
-        payment();
-        break;
-        // HOàng
-    case 'status':
-        require_once './client/business/status.php';
-        status();
-        break;
-        // Hoàng
-    case 'forgot_password':
-        require_once './client/business/forgot_password.php';
-        forgot_password();
-        break;
+
         // Vân Anh
     case 'change_password':
         require_once './client/business/change_password.php';
@@ -112,6 +99,14 @@ switch ($url) {
         require_once './admin/business/comment.php';
         detail_comment();
         break;
+    case 'cp-admin/comment/change-comment':
+        require_once './admin/business/comment.php';
+        change_comment();
+        break;
+    case 'cp-admin/comment/del-comment':
+        require_once './admin/business/comment.php';
+        del_comment();
+        break;
     case 'cp-admin/user':
         require_once './admin/business/user.php';
         user_index();
@@ -119,6 +114,14 @@ switch ($url) {
     case 'cp-admin/user/update-user':
         require_once './admin/business/user.php';
         update_user();
+        break;
+    case 'cp-admin/user/creat-new-user-admin':
+        require_once './admin/business/user.php';
+        creat_user_admin();
+        break;
+    case 'cp-admin/user/save-creat-new-user':
+        require_once './admin/business/user.php';
+        save_creat_user_admin();
         break;
     case 'cp-admin/product':
         require_once './admin/business/product.php';
@@ -128,9 +131,21 @@ switch ($url) {
         require_once './admin/business/product.php';
         creat_new_product();
         break;
+    case 'cp-admin/product/save-creat-new-product':
+        require_once './admin/business/product.php';
+        save_creat_new_product();
+        break;
+    case 'cp-admin/product/save-creat-new-color':
+        require_once './admin/business/product.php';
+        save_creat_new_color();
+        break;
     case 'cp-admin/product/update-product':
         require_once './admin/business/product.php';
         update_product();
+        break;
+    case 'cp-admin/product/save-update-product':
+        require_once './admin/business/product.php';
+        save_update_product();
         break;
     case 'cp-admin/product/creat-new-color':
         require_once './admin/business/product.php';
@@ -140,30 +155,23 @@ switch ($url) {
         require_once './admin/business/product.php';
         update_color();
         break;
+    case 'cp-admin/product/save-update-color':
+        require_once './admin/business/product.php';
+        save_update_color();
+        break;
     case 'cp-admin/product/detail-product':
         require_once './admin/business/product.php';
         detail_product();
         break;
-    case 'cp-admin/danh-muc/xoa':
-        require_once './admin/business/category.php';
-        cate_remove();
+    case 'cp-admin/user/save-update-user':
+        require_once './admin/business/user.php';
+        save_update_user();
         break;
-    case 'cp-admin/danh-muc/tao-moi':
-        require_once './admin/business/category.php';
-        cate_add_form();
+    case 'cp-admin/user/lock-user':
+        require_once './admin/business/user.php';
+        lock_user();
         break;
-    case 'cp-admin/danh-muc/luu-tao-moi':
-        require_once './admin/business/category.php';
-        cate_save_add();
-        break;
-    case 'upload-img-form':
-        require_once './client/business/homepage.php';
-        img_upload_form();
-        break;
-    case 'save-upload-image':
-        require_once './client/business/homepage.php';
-        save_image();
-        break;
+
     default:
         require_once './client/business/home.php';
         getProduct();

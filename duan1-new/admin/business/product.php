@@ -41,6 +41,44 @@ function del_product(){
     $product_id = $_GET['product_id'];
     $sql3 = "DELETE FROM product WHERE product_id = '$product_id'";
     admin_render('product/del-product.php', compact('product_id'), 'admin-assets/custom/category_index.js');
+function save_update_product()
+{
+    $product_id = $_POST['product_id'];
+    $subcategory_id = $_POST['subcategory_id'];
+    $image_product = $_FILES['image_product'];
+    $name_product = $_POST['name_product'];
+    $price_default = $_POST['price_default'];
+    $warranty = $_POST['warranty'];
+    $sub_decription = $_POST['sub_decription'];
+    $decription = $_POST['decription'];
+
+    if ($image_product['size'] > 0) {
+        $filename = uniqid() . '-' . $image_product['name'];
+        move_uploaded_file($image_product['tmp_name'], './public/uploads/' . $filename);
+        $filename = $filename;
+        $sql5 = "UPDATE product 
+        SET subcategory_id = '$subcategory_id',
+            image_product = '$filename',
+            name_product = '$name_product',
+            price_default = '$price_default',
+            warranty = '$warranty',
+            decription = '$decription',
+            sub_decription = '$sub_decription'
+            WHERE product_id = '$product_id'";
+        exeQuery($sql5);
+        header("location: " . ADMIN_URL . 'product?msg=Cập nhật thành công');
+    } else {
+        $sql6 = "UPDATE product 
+        SET subcategory_id = '$subcategory_id',
+            name_product = '$name_product',
+            price_default = '$price_default',
+            warranty = '$warranty',
+            decription = '$decription',
+            sub_decription = '$sub_decription'
+            WHERE product_id = '$product_id'";
+        exeQuery($sql6);
+        header("location: " . ADMIN_URL . 'product?msg=Cập nhật thành công');
+    }
 }
 
 function detail_product()
@@ -60,10 +98,12 @@ function detail_product()
     admin_render('product/detail-product.php', compact('pro', 'keyword', 'color'), 'admin-assets/custom/category_index.js');
 }
 
-function creat_new_color(){
+function creat_new_color()
+{
     admin_render('product/creat-new-color.php', [], 'admin-assets/custom/category_add.js');
 }
-function update_color(){
+function update_color()
+{
     $color_id = $_GET['color_id'];
     $sql5 = "SELECT * FROM color WHERE color_id = '$color_id'";
     $upc = exeQuery($sql5, false);
@@ -74,6 +114,37 @@ function del_color(){
     $sql3 = "DELETE FROM color WHERE color_id = '$color_id'";
     admin_render('product/del-color.php', compact('color_id'), 'admin-assets/custom/category_index.js');
 }
+function save_update_color()
+{
+    $product_id = $_POST['product_id'];
+    $color_id = $_POST['color_id'];
+    $image_color = $_FILES['image_color'];
+    $name_color = $_POST['name_color'];
+    $price_add = $_POST['price_add'];
+    $quantity = $_POST['quantity'];
+    if ($image_color['size'] > 0) {
+        $filename = uniqid() . '-' . $image_color['name'];
+        move_uploaded_file($image_color['tmp_name'], './public/uploads/' . $filename);
+        $filename = $filename;
+        $sql8 = " UPDATE color
+                    SET image_color = '$filename',
+                        name_color = '$name_color',
+                        price_add ='$price_add',
+                        quantity = '$quantity'
+                    WHERE color_id= '$color_id'";
+        exeQuery($sql8);
+        header("location:" . ADMIN_URL . 'product/detail-product?product_id=' . $product_id);
+    } else {
+        $sql9 = " UPDATE color
+                    SET name_color = '$name_color',
+                        price_add ='$price_add',
+                        quantity = '$quantity'
+                    WHERE color_id= '$color_id'";
+        exeQuery($sql9);
+        header("location:" . ADMIN_URL . 'product/detail-product?product_id=' . $product_id);
+    }
+}
+
 // function cate_save_add(){
 //     $name = $_POST['name'];
 //     $show_menu = isset($_POST['show_menu']) ? 1 : 0;
@@ -81,3 +152,49 @@ function del_color(){
 //     exeQuery($sql);
 //     header("location: " . ADMIN_URL . 'danh-muc');
 // }
+
+
+// lưu tạo mới product
+function save_creat_new_product()
+{
+    $name_product = $_POST['name_product'];
+    $subcategory_id = $_POST['subcategory_id'];
+    $image_product = $_FILES['image_product'];
+    $warranty = $_POST['warranty'];
+    $price_default = $_POST['price_default'];
+    $sub_decription = $_POST['sub_decription'];
+    date_default_timezone_set('Asia/Ho_Chi_Minh');
+    $date = date('Y-m-d H:i:sa', time());
+    $decription = $_POST['decription'];
+    $view = 0;
+    // var_dump($image_product);
+    // die;
+    if ($image_product['size'] > 0) {
+        $filename = uniqid() . '-' . $image_product['name'];
+        move_uploaded_file($image_product['tmp_name'], './public/uploads/' . $filename);
+        $filename = $filename;
+    }
+    $sql01 = "INSERT INTO product (name_product, image_product, warranty, sub_decription, decription, price_default, subcategory_id, view, post_date)
+                    values('$name_product', '$filename', '$warranty', '$sub_decription', '$decription','$price_default','$subcategory_id', '$view', '$date')";
+    exeQuery($sql01, false);
+    header("location: " . ADMIN_URL . 'product');
+}
+function save_creat_new_color()
+{
+    $name_color = $_POST['name_color'];
+    $product_id = $_POST['product_id'];
+    $image_color = $_FILES['image_color'];
+    $price_add = $_POST['price_add'];
+    $quantity = $_POST['quantity'];
+    // var_dump($image_product);
+    // die;
+    if ($image_color['size'] > 0) {
+        $filename = uniqid() . '-' . $image_color['name'];
+        move_uploaded_file($image_color['tmp_name'], './public/uploads/' . $filename);
+        $filename = $filename;
+    }
+    $sql012 = "INSERT INTO color (name_color,product_id, image_color, price_add, quantity)
+                    values('$name_color', '$product_id','$filename', '$price_add', '$quantity')";
+    exeQuery($sql012);
+    header("location:" . ADMIN_URL . 'product/detail-product?product_id=' . $product_id);
+}

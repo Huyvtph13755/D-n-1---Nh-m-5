@@ -5,8 +5,10 @@
                 <h3 class="card-title">Cập nhật tài khoản Admin</h3>
             </div>
             <div class="card-body">
-                <form action="<?= ADMIN_URL . 'danh-muc/luu-tao-moi' ?>" method="post">
+                <form action="<?= ADMIN_URL . 'user/save-update-user' ?>" method="post">
                     <div class="col-6 offset-3">
+                        <input type="hidden" value="<?= $_GET['user_id'] ?>" name="user_id">
+                        <input type="hidden" value="<?= $_GET['role'] ?>" name="role">
                         <div class="form-group">
                             <label for="">Email</label>
                             <input type="text" value="<?= $detail_user['email'] ?>" name="email" disabled class="form-control" placeholder="" aria-describedby="helpId">
@@ -21,7 +23,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Số điện thoại</label>
-                            <input type="text" value="<?php if($detail_user['contract_number']>0){echo "0".$detail_user['contract_number'];}else{echo "";}  ?>" name="contract_number" class="form-control" placeholder="" aria-describedby="helpId">
+                            <input name="contract_number" disabled type="number" value="<?php if($detail_user['contract_number']>0){echo "0".$detail_user['contract_number'];}else{echo "";}  ?>" class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">

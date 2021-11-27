@@ -64,7 +64,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?= ADMIN_URL . 'category/tao-moi' ?>" class="nav-link">
+              <a href="<?= ADMIN_URL . 'category/creat-new-category' ?>" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Tạo mới danh mục</p>
               </a>

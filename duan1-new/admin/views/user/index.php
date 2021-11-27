@@ -18,10 +18,13 @@
                         <th>STT</th>
                         <th>Họ và tên</th>
                         <th>Email</th>
-                        <th style="width: 30%;">Địa chỉ</th>
+                        <th style="width: 20%;">Địa chỉ</th>
                         <th>Số điện thoại</th>
                         <th>Vai trò</th>
-                        <th>Hành động</th>
+                        <th>Trạng thái</th>
+                        <th>
+                            <a href="<?= ADMIN_URL . 'user/creat-new-user-admin' ?>" class="btn btn-sm btn-success">Tạo tài khoản Admin</a>
+                        </th>
                     </thead>
                     <tbody>
                         <?php foreach ($user_index as $index => $item) : ?>
@@ -44,6 +47,13 @@
                                         echo "Khách hàng";
                                     }
                                     ?></td>
+                                <td><?php
+                                    if ($item['status'] == 1) {
+                                        echo "Lock";
+                                    } else {
+                                        echo "Unlock";
+                                    }
+                                    ?></td>
                                 <td>
                                     <?php
                                     if ($item['role'] == 1) {
@@ -53,7 +63,7 @@
                                     }
 
                                     ?>
-                                    <a href="javascript:;" onclick="confirm_lock('<?= ADMIN_URL . 'user/lock_user?user_id=' . $item['user_id'] ?>', '<?= $item['email'] ?>')" class="btn btn-sm btn-danger">
+                                    <a href="javascript:;" onclick="confirm_lock('<?= ADMIN_URL . 'user/lock-user?user_id=' . $item['user_id'] . '&status=' . $item['status'] ?>', '<?= $item['email'] ?>')" class="btn btn-sm btn-danger">
                                         <i class="fas fa-lock"></i>
                                     </a>
                                 </td>

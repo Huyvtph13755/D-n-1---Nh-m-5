@@ -5,8 +5,14 @@
                 <h3 class="card-title">Cập nhật sản phẩm</h3>
             </div>
             <div class="card-body">
-                <form action="<?= ADMIN_URL . 'danh-muc/luu-tao-moi' ?>" method="post">
+                <form action="<?= ADMIN_URL . 'product/save-update-product' ?>" method="post" enctype="multipart/form-data">
                     <div class="col-6 offset-3">
+                        <input type="hidden" value="<?= $_GET['product_id'] ?>" name="product_id">
+                        <?php if ($detail_pro['image_product'] != "") : ?>
+                            <div>
+                                <img style="width:120px; heigh:100px" src="<?= ADMIN . $detail_pro['image_product'] ?>" alt="">
+                            </div>
+                        <?php endif ?>
                         <div class="form-group">
                             <label for="">Tên danh mục: </label>
                             <select name="subcategory_id" id="" style="outline:none; width: 200px; border: 1px solid #AAAAAA; border-radius: 5px; margin-left: 10px; padding-left: 10px;">
@@ -24,6 +30,10 @@
                             <input type="file" name="image_product">
                         </div>
                         <div class="form-group">
+                            <label for="">Giá (đồng): </label>
+                            <input type="number" value="<?= $detail_pro['price_default'] ?>" name="price_default" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
                             <label for="">Thời gian bảo hành (tháng): </label>
                             <input type="number" value="<?= $detail_pro['warranty'] ?>" name="warranty" class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
@@ -39,7 +49,7 @@
                         <div class="d-flex justify-content-center">
                             <a href="<?= ADMIN_URL . 'product' ?> " class="btn btn-sm btn-danger" style="width: 50%; font-weight: bold;">Hủy</a>
                             &nbsp;
-                            <button type="submit" style="width: 50%; font-weight: bold;" class="btn btn-sm btn-primary">Lưu</button>
+                            <button name="update-product" type="submit" style="width: 50%; font-weight: bold;" class="btn btn-sm btn-primary">Lưu</button>
                         </div>
                     </div>
                 </form>
