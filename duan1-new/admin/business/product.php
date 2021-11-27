@@ -37,6 +37,11 @@ function update_product()
     $detail_pro = exeQuery($sql3, false);
     admin_render('product/update-product.php', compact('detail_pro', 'subcate'), 'admin-assets/custom/category_add.js');
 }
+function del_product(){
+    $product_id = $_GET['product_id'];
+    $sql3 = "DELETE FROM product WHERE product_id = '$product_id'";
+    admin_render('product/del-product.php', compact('product_id'), 'admin-assets/custom/category_index.js');
+}
 
 function detail_product()
 {
