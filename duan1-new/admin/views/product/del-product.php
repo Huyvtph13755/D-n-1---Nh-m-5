@@ -5,7 +5,7 @@
         <div class="swal2-header">
             <ul class="swal2-progress-steps" style="display: none;"></ul>
             <div class="swal2-icon" style="display: none;"></div><img class="swal2-image" style="display: none;">
-            <h2 class="swal2-title" id="swal2-title" style="display: flex;">Bạn có thực sự muốn xóa danh mục <?= $m['name_product']?>?</h2><button type="button" class="swal2-close" aria-label="Close this dialog" style="display: none;">×</button>
+            <h2 class="swal2-title" id="swal2-title" style="display: flex;">Bạn có thực sự muốn xóa sản phẩm <?= $m['name_product']?>?</h2><button type="button" class="swal2-close" aria-label="Close this dialog" style="display: none;">×</button>
         </div>
         <?php endforeach ?>
         <div class="swal2-content">
