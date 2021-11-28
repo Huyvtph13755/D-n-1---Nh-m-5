@@ -14,8 +14,10 @@ function product_index()
 
         // hiển thị view
         admin_render('product/index.php', compact('pro', 'keyword'), 'admin-assets/custom/category_index.js');
+    }else{
+        header("location: " . BASE_URL);
     }
-    header("location: " . BASE_URL);
+    
 }
 
 
