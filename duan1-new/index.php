@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 $url = isset($_GET['url']) ? rtrim($_GET['url'], '/') : "/";
 require_once './commons/utils.php';

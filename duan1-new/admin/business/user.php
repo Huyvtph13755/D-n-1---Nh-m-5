@@ -1,29 +1,41 @@
 <?php
 function user_index()
 {
-    $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : "";
-    // lấy danh sách danh mục
-    $sql = "SELECT * FROM user WHERE email like '%$keyword%'  ORDER BY role DESC";
-    // $sql = "select * from product where name_product like '%$keyword%'";
-    $user_index = exeQuery($sql, true);
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+        $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : "";
+        // lấy danh sách danh mục
+        $sql = "SELECT * FROM user WHERE email like '%$keyword%'  ORDER BY role DESC";
+        // $sql = "select * from product where name_product like '%$keyword%'";
+        $user_index = exeQuery($sql, true);
 
-    // hiển thị view
-    admin_render('user/index.php', compact('user_index', 'keyword'), 'admin-assets/custom/category_index.js');
+        // hiển thị view
+        admin_render('user/index.php', compact('user_index', 'keyword'), 'admin-assets/custom/category_index.js');
+    } else {
+        header("location: " . BASE_URL);
+    }
 }
 function update_user()
 {
-    if (isset($_GET['role'])) {
-        $user_id = $_GET['user_id'];
-        $sql = "SELECT * FROM user WHERE user_id= '$user_id' AND role = 1";
-        $detail_user = exeQuery($sql, false);
-        admin_render('user/update-user.php', compact('detail_user'), 'admin-assets/custom/category_index.js');
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+        if (isset($_GET['role'])) {
+            $user_id = $_GET['user_id'];
+            $sql = "SELECT * FROM user WHERE user_id= '$user_id' AND role = 1";
+            $detail_user = exeQuery($sql, false);
+            admin_render('user/update-user.php', compact('detail_user'), 'admin-assets/custom/category_index.js');
+        } else {
+            header('Location:cp-admin/user');
+        }
     } else {
-        header('Location:cp-admin/user');
+        header("location: " . BASE_URL);
     }
 }
 function creat_user_admin()
 {
-    admin_render('user/creat-new-user-admin.php', [], 'admin-assets/custom/category_add.js');
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+        admin_render('user/creat-new-user-admin.php', [], 'admin-assets/custom/category_add.js');
+    } else {
+        header("location: " . BASE_URL);
+    }
 }
 
 function save_creat_user_admin()
@@ -73,7 +85,8 @@ function save_creat_user_admin()
     header("location: " . ADMIN_URL . 'user?msg=Tạo mới thành công');
 }
 
-function save_update_user(){
+function save_update_user()
+{
     $user_id = $_POST["user_id"];
     $role = $_POST["role"];
     $fullname = $_POST["fullname"];
@@ -82,14 +95,15 @@ function save_update_user(){
     exeQuery($sql11);
     header("location: " . ADMIN_URL . 'user?msg=Cập nhật thành công');
 }
-function lock_user(){
+function lock_user()
+{
     $user_id = $_GET['user_id'];
     $status = $_GET['status'];
-    if($status == 1){
+    if ($status == 1) {
         $sql14 = "UPDATE user SET status = '0' WHERE user_id = '$user_id'";
         exeQuery($sql14);
         header("location:" . ADMIN_URL . 'user?msg=Cập nhật thành công');
-    }elseif($status == 0){
+    } elseif ($status == 0) {
         $sql15 = "UPDATE user SET status = '1' WHERE user_id = '$user_id'";
         exeQuery($sql15);
         header("location:" . ADMIN_URL . 'user?msg=Cập nhật thành công');
