@@ -58,3 +58,27 @@ function creat_new_subcategory()
 {
     admin_render('category/creat-new-subcategory.php', [], 'admin-assets/custom/category_add.js');
 }
+function save_creat_new_subcategory(){
+    $category_id = $_POST['category_id'];
+    $name_subcategory = $_POST['name_subcategory'];
+    $sql04 = "INSERT INTO subcategory (category_id,name_subcategory) values('$category_id','$name_subcategory')";
+    exeQuery($sql04);
+    header("location: " . ADMIN_URL . 'category/detail-category?category_id=' . $category_id);
+}
+function save_update_subcategory(){
+    $category_id = $_POST['category_id'];
+    $subcategory_id = $_POST['subcategory_id'];
+    $name_subcategory = $_POST['name_subcategory'];
+    $sql05 = "UPDATE subcategory
+                SET name_subcategory = '$name_subcategory'
+                WHERE subcategory_id = '$subcategory_id'";
+    exeQuery($sql05);
+    header("location:" . ADMIN_URL . 'category/detail-category?category_id=' . $category_id);
+}
+function del_subcategory(){
+    $category_id = $_GET['category_id'];
+    $subcategory_id = $_GET['subcategory_id'];
+    $sql3 = "DELETE FROM subcategory WHERE subcategory_id = '$subcategory_id'";
+    exeQuery($sql3);
+    header("location:" . ADMIN_URL .'category/del-category?category_id=' . $category_id);
+}

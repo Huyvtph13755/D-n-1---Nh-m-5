@@ -75,9 +75,21 @@ switch ($url) {
         require_once './admin/business/category.php';
         creat_new_subcategory();
         break;
+    case 'cp-admin/category/save-creat-new-subcategory':
+        require_once './admin/business/category.php';
+        save_creat_new_subcategory();
+        break;
     case 'cp-admin/category/update-subcategory':
         require_once './admin/business/category.php';
         update_subcategory();
+        break;
+    case 'cp-admin/category/save-update-subcategory':
+        require_once './admin/business/category.php';
+        save_update_subcategory();
+        break;
+    case 'cp-admin/category/del-subcategory':
+        require_once './admin/business/category.php';
+        del_subcategory();
         break;
     case 'cp-admin/warranty':
         require_once './admin/business/warranty.php';
