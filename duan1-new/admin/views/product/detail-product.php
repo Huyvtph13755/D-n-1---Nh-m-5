@@ -70,7 +70,7 @@
                                     <a name="update-color" href="<?= ADMIN_URL . 'product/update-color?color_id=' . $i['color_id'] . '&product_id=' . $i['product_id'] ?> " class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'product/del_color?color_id=' . $i['color_id'] ?>', '<?= $i['name_color'] ?>')" class="btn btn-sm btn-danger">
+                                    <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'product/del-color?color_id=' . $i['color_id'] . '&product_id=' . $_GET['product_id'] ?>', '<?= $i['name_color'] ?>')" class="btn btn-sm btn-danger">
                                         <i class="fas fa-trash"></i>
                                     </a>
                                 </td>

@@ -13,6 +13,7 @@
                                 <img style="width:120px; heigh:100px" src="<?= ADMIN . $detail_pro['image_product'] ?>" alt="">
                             </div>
                         <?php endif ?>
+                        <br>
                         <div class="form-group">
                             <label for="">Tên danh mục: </label>
                             <select name="subcategory_id" id="" style="outline:none; width: 200px; border: 1px solid #AAAAAA; border-radius: 5px; margin-left: 10px; padding-left: 10px;">
