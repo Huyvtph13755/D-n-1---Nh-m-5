@@ -75,6 +75,7 @@ function creat_new_subcategory()
 //    values ('$name_category')";
 //    exeQuery($sql54);
 //    header("location: " . ADMIN_URL . 'category');
+// rr
 // }
 function save_update_category(){
     $category_id = $_POST['category_id'];
