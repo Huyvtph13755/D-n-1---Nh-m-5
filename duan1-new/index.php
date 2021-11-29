@@ -180,18 +180,7 @@ switch ($url) {
         require_once './admin/business/user.php';
         lock_user();
         break;
-    case 'cp-admin/category/save-creat-new-category':
-        require_once './admin/business/category.php';
-        save_creat_new_category();
-        break;
-    case 'cp-admin/category/save-update-category':
-        require_once './admin/business/category.php';
-        save_update_category();
-        break;
-    case 'cp-admin/category/delete-category':
-        require_once './admin/business/category.php';
-        delete_category();
-        break;
+
     default:
         require_once './client/business/home.php';
         getProduct();
