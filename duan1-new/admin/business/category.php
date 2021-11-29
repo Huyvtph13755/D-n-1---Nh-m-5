@@ -96,3 +96,28 @@ function del_subcategory(){
     exeQuery($sql3);
     header("location:" . ADMIN_URL .'category/del-category?category_id=' . $category_id);
 }
+
+function save_update_category(){
+    $category_id = $_POST['category_id'];
+    $name_category = $_POST['name_category'];
+    $sql1101 = "UPDATE category 
+    SET name_category = '$name_category'
+    WHERE category_id = '$category_id'";
+    exeQuery($sql1101);
+    header("location:" . ADMIN_URL . 'category?msg=Cập nhật thành công');
+}
+function delete_category(){
+    $category_id = $_GET['category_id'];
+    $sql55= "DELETE FROM category WHERE category_id = '$category_id'";
+    exeQuery($sql55);
+    header("location:" . ADMIN_URL . 'category?msg=Xóa thành công');
+}
+function save_creat_new_category(){
+    $category_id = $_POST['category_id'];
+    $name_category = $_POST['name_category'];
+    $sql56 = "INSERT INTO category (category_id, name_category)
+            values('$category_id', '$name_category')";
+    exeQuery($sql56);
+    header("location:" . ADMIN_URL . 'category?msg=Cập nhật thành công');
+
+}
