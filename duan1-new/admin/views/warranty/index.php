@@ -35,8 +35,8 @@
                                         <i class="fas fa-edit"></i>
                                     </a>
                                     <?php
-                                    if ($_SESSION['email']['role'] == 2) {
-                                        echo "<a href='javascript:;' onclick='confirm_remove('" . ADMIN_URL . "warranty/del_warranty?warranty_id=" . $item['warranty_id'] . "', '" . $item['name_warranty'] . "')' class='btn btn-sm btn-danger'>
+                                    if ($_SESSION['email']['role'] == 1) {
+                                        echo "<a href='javascript:;' onclick='confirm_remove(".'"' .ADMIN_URL . "warranty/del_warranty?warranty_id=" . $item['warranty_id'] . '"'.", ". '"' . $item['name_warranty'] . '"' . ")' class='btn btn-sm btn-danger'>
                                         <i class='fas fa-trash'></i>
                                     </a>";
                                     }
