@@ -178,6 +178,7 @@ function save_update_color()
 
 
 
+
 // lưu tạo mới product
 function save_creat_new_product()
 {

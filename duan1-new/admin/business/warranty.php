@@ -33,3 +33,27 @@ function update_warranty()
         header("location: " . BASE_URL);
     }
 }
+function save_creat_new_warranty()
+{
+    $name_warranty = $_POST['name_warranty'];
+    $price = $_POST['price'];
+    $warranty_w = $_POST['warranty_w'];
+
+    // var_dump($image_product);
+    // die;
+    $sql01 = "INSERT INTO warranty (name_warranty, price, warranty_w)
+                        values('$name_warranty', '$price','$warranty_w')";
+    exeQuery($sql01, false);
+    header("location: " . ADMIN_URL . 'product');
+}
+function del_warranty()
+{
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+        $warranty_id = $_GET['warranty_id'];
+        $sql3 = "DELETE FROM warranty WHERE warranty_id = '$warranty_id'";
+        exeQuery($sql3);
+        header("location:" . ADMIN_URL . 'product?msg=Xóa thành công');
+    } else {
+        header("location: " . BASE_URL);
+    }
+}

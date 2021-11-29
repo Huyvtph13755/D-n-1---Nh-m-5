@@ -5,7 +5,7 @@
                 <h3 class="card-title">Thêm gói bảo hành</h3>
             </div>
             <div class="card-body">
-                <form action="<?= ADMIN_URL . 'danh-muc/luu-tao-moi' ?>" method="post">
+                <form action="<?= ADMIN_URL . 'warranty/save-creat-new-warranty' ?>" method="post">
                     <div class="col-6 offset-3">
                         <div class="form-group">
                             <label for="">Tên gói bảo hành: </label>
