@@ -33,9 +33,11 @@
                                     <a name="update-category" href="<?= ADMIN_URL . 'category/update-category?category_id=' . $item['category_id']  ?> " class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'category/del_category?category_id=' . $item['category_id'] ?>', '<?= $item['name_category'] ?>')" class="btn btn-sm btn-danger">
-                                        <i class="fas fa-trash"></i>
-                                    </a>
+                                    <?php if ($_SESSION['email']['role'] == 2) {
+                                        echo "<a href='javascript:;' onclick='confirm_remove(" . '"' . ADMIN_URL . "category/del-category?category_id=" . $item['category_id'] .  '"' . "," . '"' . $item['name_category'] . '"' . ")' class='btn btn-sm btn-danger'>
+                                        <i class='fas fa-trash'></i>
+                                    </a>";
+                                    } ?>
                                 </td>
                             </tr>
                         <?php endforeach?>

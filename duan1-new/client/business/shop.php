@@ -4,7 +4,7 @@ function shop()
 if(isset($_GET['category_id'])){
         $category_id = $_GET['category_id'];
         // lấy 8sp lượt xem nhiều nhất
-        $sql = "SELECT product.product_id, product.name_product, product.price_default
+        $sql = "SELECT product.product_id, product.name_product, product.price_default, product.image_product
         FROM (duan1.product
         INNER JOIN duan1.subcategory ON product.subcategory_id = subcategory.subcategory_id) WHERE subcategory.category_id = '$category_id' 
         ";

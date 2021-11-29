@@ -90,8 +90,9 @@ function save_update_user()
     $user_id = $_POST["user_id"];
     $role = $_POST["role"];
     $fullname = $_POST["fullname"];
+    $contract_number = $_POST["contract_number"];
     $address = $_POST["address"];
-    $sql11 = "UPDATE user SET fullname = '$fullname', address = '$address' WHERE user_id = '$user_id'";
+    $sql11 = "UPDATE user SET fullname = '$fullname', contract_number = '$contract_number', address = '$address' WHERE user_id = '$user_id'";
     exeQuery($sql11);
     header("location: " . ADMIN_URL . 'user?msg=Cập nhật thành công');
 }

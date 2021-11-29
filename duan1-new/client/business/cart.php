@@ -4,7 +4,7 @@ function cart(){
         $user_id = $_SESSION['email']['user_id'];
 
         // lấy dữ liệu từ giỏ hàng
-        $sql = "SELECT cart.cart_id, product.name_product, product.price_default, product.warranty, color.price_add, color.name_color, warranty.price, cart.quantity, cart.total_price, warranty.name_warranty, warranty.warranty_w
+        $sql = "SELECT cart.cart_id, product.name_product, product.image_product, product.price_default, product.warranty, color.price_add, color.name_color, warranty.price, cart.quantity, cart.total_price, warranty.name_warranty, warranty.warranty_w
         FROM (((duan1.cart
         INNER JOIN duan1.product ON cart.product_id = product.product_id)
         INNER JOIN duan1.color ON cart.color_id = color.color_id)

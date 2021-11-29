@@ -23,7 +23,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Số điện thoại</label>
-                            <input name="contract_number" disabled type="number" value="<?php if($detail_user['contract_number']>0){echo "0".$detail_user['contract_number'];}else{echo "";}  ?>" class="form-control" placeholder="" aria-describedby="helpId">
+                            <input name="contract_number" type="number" value="0<?= $detail_user['contract_number'] ?>" class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">

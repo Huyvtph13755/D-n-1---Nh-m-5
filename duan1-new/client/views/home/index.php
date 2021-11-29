@@ -95,7 +95,7 @@
                        <div class="product-item" style="margin-bottom: 50px">
                          <div class="product-image">
                            <a href="product_detail&product_id=<?= $f['product_id'] ?>">
-                             <img src="<?= CLIENT ?>images/1.jpg" alt="Streetwear" href="">
+                             <img src="<?= ADMIN . $f['image_product'] ?>" alt="Streetwear" href="">
                            </a>
                            <div class="product-detail-inner">
                              <div class="detail-inner-left align-center">
@@ -167,8 +167,8 @@
                <div class="item">
                  <div class="product-item">
                    <div class="product-image">
-                     <a href="product_detail&product_id=<?= $f['product_id'] ?>">
-                       <img src="<?= CLIENT ?>images/1.jpg" alt="Streetwear">
+                     <a href="product_detail&product_id=<?= $n['product_id'] ?>">
+                       <img src="<?= ADMIN . $n['image_product'] ?>" alt="Streetwear" href="">
                      </a>
                      <div class="product-detail-inner">
                        <div class="detail-inner-left align-center">

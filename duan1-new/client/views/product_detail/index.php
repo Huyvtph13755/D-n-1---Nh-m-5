@@ -31,15 +31,9 @@
             </div>
             <div class="col-md-5 col-sm-5 mb-xs-30">
                 <div class="fotorama" data-nav="thumbs" data-allowfullscreen="native">
-                    <a href="#"><img src="<?= CLIENT ?>images/1.jpg" alt="Streetwear"></a>
-                    <a href="#"><img src="<?= CLIENT ?>images/2.jpg" alt="Streetwear"></a>
-                    <a href="#"><img src="<?= CLIENT ?>images/3.jpg" alt="Streetwear"></a>
-                    <a href="#"><img src="<?= CLIENT ?>images/4.jpg" alt="Streetwear"></a>
-                    <a href="#"><img src="<?= CLIENT ?>images/5.jpg" alt="Streetwear"></a>
-                    <a href="#"><img src="<?= CLIENT ?>images/6.jpg" alt="Streetwear"></a>
-                    <a href="#"><img src="<?= CLIENT ?>images/4.jpg" alt="Streetwear"></a>
-                    <a href="#"><img src="<?= CLIENT ?>images/5.jpg" alt="Streetwear"></a>
-                    <a href="#"><img src="<?= CLIENT ?>images/6.jpg" alt="Streetwear"></a>
+                    <?php foreach ($b as $index => $c) : ?>
+                        <a href="#"><img src="<?= ADMIN .  $c['image_color'] ?>" alt="Streetwear"></a>
+                    <?php endforeach ?>
                 </div>
             </div>
             <div class="col-md-7 col-sm-7">
@@ -191,7 +185,7 @@
                                 <div class="product-item">
                                     <div class="product-image">
                                         <a href="product_detail&product_id=<?= $r['product_id'] ?>">
-                                            <img href="" src="<?= CLIENT ?>images/1.jpg" alt="Streetwear">
+                                            <img src="<?= ADMIN .  $r['image_product'] ?>" alt="Streetwear">
                                         </a>
                                         <div class="product-detail-inner">
                                             <div class="detail-inner-left align-center">

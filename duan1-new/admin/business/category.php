@@ -94,7 +94,7 @@ function del_subcategory(){
     $subcategory_id = $_GET['subcategory_id'];
     $sql3 = "DELETE FROM subcategory WHERE subcategory_id = '$subcategory_id'";
     exeQuery($sql3);
-    header("location:" . ADMIN_URL .'category/del-category?category_id=' . $category_id);
+    header("location:" . ADMIN_URL .'category/detail-category?category_id=' . $category_id);
 }
 
 function save_update_category(){
@@ -106,7 +106,7 @@ function save_update_category(){
     exeQuery($sql1101);
     header("location:" . ADMIN_URL . 'category?msg=Cập nhật thành công');
 }
-function delete_category(){
+function del_category(){
     $category_id = $_GET['category_id'];
     $sql55= "DELETE FROM category WHERE category_id = '$category_id'";
     exeQuery($sql55);

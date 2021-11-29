@@ -64,15 +64,17 @@
                                 <td><?= $index + 1 ?></td>
                                 <td><?= $i['name_color'] ?></td>
                                 <td><img style="width:120px; heigh:100px" src="<?= ADMIN . $i['image_color'] ?>" alt=""></td>
-                                <td><?= $i['price_add'] ?></td>
+                                <td><?= number_format($i['price_add']) ?></td>
                                 <td><?= $i['quantity'] ?></td>
                                 <td>
                                     <a name="update-color" href="<?= ADMIN_URL . 'product/update-color?color_id=' . $i['color_id'] . '&product_id=' . $i['product_id'] ?> " class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'product/del-color?color_id=' . $i['color_id'] . '&product_id=' . $_GET['product_id'] ?>', '<?= $i['name_color'] ?>')" class="btn btn-sm btn-danger">
-                                        <i class="fas fa-trash"></i>
-                                    </a>
+                                    <?php if ($_SESSION['email']['role'] == 2) {
+                                        echo "<a href='javascript:;' onclick='confirm_remove(" . '"' . ADMIN_URL . "product/del-color?color_id=" . $i['color_id'] . "&product_id=" . $_GET["product_id"] . '"' . "," . '"' . $i['name_color'] . '"' . ")' class='btn btn-sm btn-danger'>
+                                        <i class='fas fa-trash'></i>
+                                    </a>";
+                                    } ?>
                                 </td>
                             </tr>
                         <?php endforeach ?>

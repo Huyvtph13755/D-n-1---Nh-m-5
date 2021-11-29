@@ -1,6 +1,6 @@
 function confirm_remove(url, name){
     Swal.fire({
-        title: `Bạn có thực sự muốn xóa danh mục "${name}"?`,
+        title: `Bạn có thực sự muốn xóa "${name}"?`,
         // showDenyButton: true,
         showCancelButton: true,
         confirmButtonText: 'Đồng ý',

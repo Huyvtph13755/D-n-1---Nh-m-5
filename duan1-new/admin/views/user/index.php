@@ -22,9 +22,15 @@
                         <th>Số điện thoại</th>
                         <th>Vai trò</th>
                         <th>Trạng thái</th>
-                        <th>
-                            <a href="<?= ADMIN_URL . 'user/creat-new-user-admin' ?>" class="btn btn-sm btn-success">Tạo tài khoản Admin</a>
-                        </th>
+                        <?php
+                        if ($_SESSION['email']['role'] == 2) {
+                            echo "<th>
+                            <a href='" . ADMIN_URL . "user/creat-new-user-admin' class='btn btn-sm btn-success'>Tạo tài khoản Admin</a>
+                        </th>";
+                        } else {
+                            echo "";
+                        }
+                        ?>
                     </thead>
                     <tbody>
                         <?php foreach ($user_index as $index => $item) : ?>
@@ -41,8 +47,10 @@
                                     }
                                     ?></td>
                                 <td><?php
-                                    if ($item['role'] == 1) {
+                                    if ($item['role'] == 2) {
                                         echo "Admin";
+                                    } elseif ($item['role'] == 1) {
+                                        echo "Nhân viên";
                                     } else {
                                         echo "Khách hàng";
                                     }
@@ -54,19 +62,21 @@
                                         echo "Unlock";
                                     }
                                     ?></td>
-                                <td>
-                                    <?php
+                                <?php
+                                if ($_SESSION['email']['role'] == 2) {
+                                    echo "<td>";
                                     if ($item['role'] == 1) {
-                                        echo "<a name='update-user' href='" . ADMIN_URL . "user/update-user?user_id=" . $item['user_id'] . '&role=' . $item['role'] . "' class='btn btn-sm btn-info'>
+                                        echo "<a style='width:30.25px; margin-right: 4px;' name='update-user' href='" . ADMIN_URL . "user/update-user?user_id=" . $item['user_id'] . '&role=' . $item['role'] . "' class='btn btn-sm btn-info'>
                                         <i class='fas fa-edit'></i>
                                     </a>";
                                     }
+                                    echo "<a href='javascript:;' onclick='confirm_lock(" . '"' . ADMIN_URL . "user/lock-user?user_id=" . $item['user_id'] . "&status=" . $item['status'] . '"' . "," . '"' . $item['email'] . '"' . ")' class='btn btn-sm btn-danger'>
+                                    <i class='fas fa-lock'></i>
+                                    </a>";
+                                    echo "</td>";
+                                }
 
-                                    ?>
-                                    <a href="javascript:;" onclick="confirm_lock('<?= ADMIN_URL . 'user/lock-user?user_id=' . $item['user_id'] . '&status=' . $item['status'] ?>', '<?= $item['email'] ?>')" class="btn btn-sm btn-danger">
-                                        <i class="fas fa-lock"></i>
-                                    </a>
-                                </td>
+                                ?>
                             </tr>
                         <?php endforeach ?>
                     </tbody>

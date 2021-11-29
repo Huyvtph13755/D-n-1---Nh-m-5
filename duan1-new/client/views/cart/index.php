@@ -37,8 +37,8 @@
                                    <?php foreach ($a as $index => $c) : ?>
                                        <tr>
                                            <td>
-                                               <a href="product-page.html">
-                                                   <div class="product-image"><img alt="Streetwear" src="<?= CLIENT ?>images/1.jpg"></div>
+                                               <a href="#">
+                                                   <div class="product-image"><img alt="Streetwear" src="<?= ADMIN . $c['image_product'] ?>"></div>
                                                </a>
                                            </td>
                                            <td>

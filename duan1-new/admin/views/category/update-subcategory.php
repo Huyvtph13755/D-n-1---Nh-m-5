@@ -17,7 +17,7 @@
                         <div class="d-flex justify-content-center">
                             <a href="<?= ADMIN_URL . 'category/detail-category?category_id=' . $_GET['category_id'] ?> " class="btn btn-sm btn-danger" style="width: 50%; font-weight: bold;">Hủy</a>
                             &nbsp;
-                            <button type="submit" style="width: 50%; font-weight: bold;" class="btn btn-sm btn-primary">Tạo mới</button>
+                            <button type="submit" style="width: 50%; font-weight: bold;" class="btn btn-sm btn-primary">Lưu</button>
                         </div>
                     </div>
                 </form>

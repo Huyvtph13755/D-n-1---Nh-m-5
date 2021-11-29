@@ -49,13 +49,13 @@
         </div>
       </div>
       <div class="product-listing">
-        <div class="row mlr_-20">
+        <div class="row mlr_-20" style="text-align: center;">
           <?php foreach ($s as $index => $i) : ?>
             <div class="col-md-4 col-xs-6 plr-20">
               <div class="product-item">
                 <div class="product-image">
                   <a href="product_detail&product_id=<?= $i['product_id'] ?>">
-                    <img src="<?= CLIENT ?>images/1.jpg" alt="Streetwear">
+                    <img src="<?= ADMIN . $i['image_product'] ?>" alt="Streetwear" href="">
                   </a>
                   <div class="product-detail-inner">
                     <div class="detail-inner-left align-center">
@@ -71,7 +71,7 @@
                 </div>
                 <div class="product-item-details">
                   <div class="product-item-name">
-                  <a style="font-size: 18px;" href="product_detail&product_id=<?= $i['product_id'] ?>"><?= $i['name_product'] ?></a>
+                    <a style="font-size: 18px;" href="product_detail&product_id=<?= $i['product_id'] ?>"><?= $i['name_product'] ?></a>
                   </div>
                   <div class="price-box">
                     <span class="price" style="font-weight: bold;"><?= number_format($i['price_default']) ?> <u>đ</u></span>

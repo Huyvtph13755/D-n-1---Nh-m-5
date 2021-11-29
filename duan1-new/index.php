@@ -108,6 +108,14 @@ switch ($url) {
         require_once './admin/business/warranty.php';
         save_creat_new_warranty();
         break;
+    case 'cp-admin/warranty/save-update-warranty':
+        require_once './admin/business/warranty.php';
+        save_update_warranty();
+        break;
+    case 'cp-admin/warranty/del-warranty':
+        require_once './admin/business/warranty.php';
+        del_warranty();
+        break;
     case 'cp-admin/comment':
         require_once './admin/business/comment.php';
         comment_index();
@@ -204,9 +212,9 @@ switch ($url) {
         require_once './admin/business/category.php';
         save_update_category();
         break;
-    case 'cp-admin/category/delete-category':
+    case 'cp-admin/category/del-category':
         require_once './admin/business/category.php';
-        delete_category();
+        del_category();
         break;
     default:
         require_once './client/business/home.php';

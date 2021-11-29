@@ -39,11 +39,10 @@ function save_update_warranty()
     $name_warranty = $_POST['name_warranty'];
     $price = $_POST['price'];
     $warranty_w = $_POST['warranty_w'];
-
     $sql6 = "UPDATE warranty
     SET name_warranty = '$name_warranty',
         price = '$price',
-        warranty_w = '$warranty_w',
+        warranty_w = '$warranty_w'
         WHERE warranty_id = '$warranty_id'";
     exeQuery($sql6);
     header("location: " . ADMIN_URL . 'warranty?msg=Cập nhật thành công');
