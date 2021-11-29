@@ -76,9 +76,21 @@ switch ($url) {
         require_once './admin/business/category.php';
         creat_new_subcategory();
         break;
+    case 'cp-admin/category/save-creat-new-subcategory':
+        require_once './admin/business/category.php';
+        save_creat_new_subcategory();
+        break;
     case 'cp-admin/category/update-subcategory':
         require_once './admin/business/category.php';
         update_subcategory();
+        break;
+    case 'cp-admin/category/save-update-subcategory':
+        require_once './admin/business/category.php';
+        save_update_subcategory();
+        break;
+    case 'cp-admin/category/del-subcategory':
+        require_once './admin/business/category.php';
+        del_subcategory();
         break;
     case 'cp-admin/warranty':
         require_once './admin/business/warranty.php';
@@ -180,18 +192,7 @@ switch ($url) {
         require_once './admin/business/user.php';
         lock_user();
         break;
-    case 'cp-admin/category/save-creat-new-category':
-        require_once './admin/business/category.php';
-        save_creat_new_category();
-        break;
-    case 'cp-admin/category/save-update-category':
-        require_once './admin/business/category.php';
-        save_update_category();
-        break;
-    case 'cp-admin/category/delete-category':
-        require_once './admin/business/category.php';
-        delete_category();
-        break;
+
     default:
         require_once './client/business/home.php';
         getProduct();
