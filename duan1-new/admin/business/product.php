@@ -55,6 +55,10 @@ function del_product()
         header("location: " . BASE_URL);
     }
 }
+function del_product(){
+    $product_id = $_GET['product_id'];
+    $sql3 = "DELETE FROM product WHERE product_id = '$product_id'";
+    admin_render('product/del-product.php', compact('product_id'), 'admin-assets/custom/category_index.js');
 function save_update_product()
 {
 
@@ -143,6 +147,11 @@ function del_color()
     $sql3 = "DELETE FROM color WHERE color_id = '$color_id'";
     exeQuery($sql3);
     header("location:" . ADMIN_URL . 'product/detail-product?product_id=' . $product_id);
+}
+function del_color(){
+    $color_id = $_GET['color_id'];
+    $sql3 = "DELETE FROM color WHERE color_id = '$color_id'";
+    admin_render('product/del-color.php', compact('color_id'), 'admin-assets/custom/category_index.js');
 }
 function save_update_color()
 {
