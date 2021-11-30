@@ -129,9 +129,18 @@
         <li class="nav-item ">
           <!-- menu-open -->
           <a href="<?= ADMIN_URL . 'user' ?>" class="nav-link ">
-          <i class="nav-icon fas fa-users"></i>
+            <i class="nav-icon fas fa-users"></i>
             <p>
               Tài khoản
+            </p>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <!-- menu-open -->
+          <a href="<?= BASE_URL . 'logout' ?>" class="nav-link ">
+            <i class="nav-icon fas fa-sign-out-alt"></i>
+            <p>
+              Đăng xuất
             </p>
           </a>
         </li>

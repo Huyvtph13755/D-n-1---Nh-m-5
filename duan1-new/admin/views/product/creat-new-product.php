@@ -18,26 +18,44 @@
                         <div class="form-group">
                             <label for="">Tên sản phẩm: </label>
                             <input type="text" name="name_product" class="form-control" placeholder="" aria-describedby="helpId">
+                            <?php if (isset($_GET['name_product-err'])) : ?>
+                                <span style="font-size:12px ;color: red; padding-left: 10px;" class="name_product"><?= $_GET['name_product-err']; ?></span>
+                            <?php endif ?>
                         </div>
                         <div class="form-group">
                             <label for="">Ảnh: </label><br>
                             <input type="file" name="image_product">
+                            <?php if (isset($_GET['image_product-err'])) : ?>
+                                <span style="font-size:12px ;color: red; padding-left: 10px;" class="image_product"><?= $_GET['image_product-err']; ?></span>
+                            <?php endif ?>
                         </div>
                         <div class="form-group">
                             <label for="">Thời gian bảo hành (tháng): </label>
                             <input type="number" name="warranty" class="form-control" placeholder="" aria-describedby="helpId">
+                            <?php if (isset($_GET['warranty-err'])) : ?>
+                                <span style="font-size:12px ;color: red; padding-left: 10px;" class="warranty"><?= $_GET['warranty-err']; ?></span>
+                            <?php endif ?>
                         </div>
                         <div class="form-group">
                             <label for="">Giá (đồng): </label>
                             <input type="number" name="price_default" class="form-control" placeholder="" aria-describedby="helpId">
+                            <?php if (isset($_GET['price_default-err'])) : ?>
+                                <span style="font-size:12px ;color: red; padding-left: 10px;" class="price_default"><?= $_GET['price_default-err']; ?></span>
+                            <?php endif ?>
                         </div>
                         <div class="form-group">
                             <label for="">Mô tả ngắn sản phẩm: </label>
                             <textarea class="form-control" name="sub_decription" id="box_text" cols="50" rows="3"></textarea>
+                            <?php if (isset($_GET['sub_decription-err'])) : ?>
+                                <span style="font-size:12px ;color: red; padding-left: 10px;" class="sub_decription"><?= $_GET['sub_decription-err']; ?></span>
+                            <?php endif ?>
                         </div>
                         <div class="form-group">
                             <label for="">Mô tả chi tiết sản phẩm: </label>
                             <textarea class="form-control" name="decription" id="box_text" cols="50" rows="6"></textarea>
+                            <?php if (isset($_GET['decription-err'])) : ?>
+                                <span style="font-size:12px ;color: red; padding-left: 10px;" class="decription"><?= $_GET['decription-err']; ?></span>
+                            <?php endif ?>
                         </div>
 
                         <br>

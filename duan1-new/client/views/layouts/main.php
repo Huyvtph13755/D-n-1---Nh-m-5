@@ -136,11 +136,11 @@ $get_cate = exeQuery($sql13, true);
                                                     <?php
                                                     if (isset($_SESSION['email'])) {
                                                         if ($_SESSION['email']['role'] == 1) {
-                                                            echo "<li><a href='#'><span></span>Admin</a></li>";
+                                                            echo "<li><a href='" . ADMIN_URL . "'><span></span>Staff</a></li>";
                                                             echo "<li><a href='user_profile'><span></span>Thông tin</a></li>";
                                                             echo "<li><a href='logout'><span></span>Đăng xuất</a></li>";
                                                         } elseif ($_SESSION['email']['role'] == 2) {
-                                                            echo "<li><a href='#'><span></span>Super Admin</a></li>";
+                                                            echo "<li><a href='" . ADMIN_URL . "'><span></span>Admin</a></li>";
                                                             echo "<li><a href='user_profile'><span></span>Thông tin</a></li>";
                                                             echo "<li><a href='logout'><span></span>Đăng xuất</a></li>";
                                                         } else {

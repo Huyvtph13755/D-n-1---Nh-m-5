@@ -10,14 +10,23 @@
                         <div class="form-group">
                             <label for="">Tên gói bảo hành: </label>
                             <input type="text" name="name_warranty" class="form-control" placeholder="" aria-describedby="helpId">
+                            <?php if (isset($_GET['name_warranty-err'])) : ?>
+                                <span style="font-size:12px ;color: red; padding-left: 10px;" class="name_warranty"><?= $_GET['name_warranty-err']; ?></span>
+                            <?php endif ?>
                         </div>
                         <div class="form-group">
                             <label for="">Thời hạn bảo hành (tháng): </label>
                             <input type="number" name="warranty_w" class="form-control" placeholder="" aria-describedby="helpId">
+                            <?php if (isset($_GET['warranty_w-err'])) : ?>
+                                <span style="font-size:12px ;color: red; padding-left: 10px;" class="warranty_w"><?= $_GET['warranty_w-err']; ?></span>
+                            <?php endif ?>
                         </div>
                         <div class="form-group">
                             <label for="">Giá tiền (đồng): </label>
                             <input type="number" name="price" class="form-control" placeholder="" aria-describedby="helpId">
+                            <?php if (isset($_GET['price-err'])) : ?>
+                                <span style="font-size:12px ;color: red; padding-left: 10px;" class="price"><?= $_GET['price-err']; ?></span>
+                            <?php endif ?>
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">

@@ -14,10 +14,9 @@ function product_index()
 
         // hiển thị view
         admin_render('product/index.php', compact('pro', 'keyword'), 'admin-assets/custom/category_index.js');
-    }else{
+    } else {
         header("location: " . BASE_URL);
     }
-    
 }
 
 
@@ -193,6 +192,29 @@ function save_creat_new_product()
     $view = 0;
     // var_dump($image_product);
     // die;
+    $errors = "";
+    if (empty($name_product)) {
+        $errors .= "name_product-err=Không được bỏ trống&";
+    }
+    if ($image_product['size'] <= 0) {
+        $errors .= "image_product-err=Phải Upload ảnh&";
+    }
+    if (empty($warranty)) {
+        $errors .= "warranty-err=Không được bỏ trống&";
+    }
+    if (empty($price_default)) {
+        $errors .= "price_default-err=Không được bỏ trống&";
+    }
+    if (empty($sub_decription)) {
+        $errors .= "sub_decription-err=Không được bỏ trống&";
+    }
+    if (empty($decription)) {
+        $errors .= "decription-err=Không được bỏ trống&";
+    }
+    if (strlen($errors) > 0) {
+        header("location:" . ADMIN_URL . 'product/creat-new-product?' . $errors);
+        die;
+    }
     if ($image_product['size'] > 0) {
         $filename = uniqid() . '-' . $image_product['name'];
         move_uploaded_file($image_product['tmp_name'], './public/uploads/' . $filename);
@@ -212,6 +234,28 @@ function save_creat_new_color()
     $quantity = $_POST['quantity'];
     // var_dump($image_product);
     // die;
+    $errors = "";
+    $color = "SELECT * FROM color WHERE name_color = '$name_color'";
+    $l = exeQuery($color, false);
+    if (strcasecmp($l['name_color'], $name_color) == 0) {
+        $errors .= "name_color-err=Màu sắc đã tồn tại&";
+    }
+    if (empty($name_color)) {
+        $errors .= "name_color-err=Không được bỏ trống&";
+    }
+    if ($image_color['size'] <= 0) {
+        $errors .= "image_color-err=Phải Upload ảnh&";
+    }
+    if (empty($price_add)) {
+        $errors .= "price_add-err=Không được bỏ trống&";
+    }
+    if (empty($quantity)) {
+        $errors .= "quantity-err=Không được bỏ trống&";
+    }
+    if (strlen($errors) > 0) {
+        header("location:" . ADMIN_URL . 'product/creat-new-color?product_id=' . $product_id . '&' . $errors);
+        die;
+    }
     if ($image_color['size'] > 0) {
         $filename = uniqid() . '-' . $image_color['name'];
         move_uploaded_file($image_color['tmp_name'], './public/uploads/' . $filename);

@@ -135,7 +135,11 @@
                   </div>
                   <div class="col-sm-6">
                     <div class="input-box">
-                      <input type="text" required="" placeholder="Họ và tên" name="fullname" value="<?= $s['fullname'] ?>">
+                      <input type="text" required="" placeholder="Họ và tên" <?php if ($_SESSION['email']['role'] == 1 || $_SESSION['email']['role'] == 2) {
+                                                                                echo "disabled";
+                                                                              } else {
+                                                                                echo "";
+                                                                              } ?> name="fullname" value="<?= $s['fullname'] ?>">
                     </div>
                   </div>
                   <div class="col-sm-6">
@@ -145,14 +149,26 @@
                   </div>
                   <div class="col-sm-6">
                     <div class="input-box">
-                      <input type="text" required="" placeholder="Số điện thoại liên hệ" name="contract_number" value="0<?= $s['contract_number'] ?>">
+                      <input type="text" required="" placeholder="Số điện thoại liên hệ" <?php if ($_SESSION['email']['role'] == 1 || $_SESSION['email']['role'] == 2) {
+                                                                                echo "disabled";
+                                                                              } else {
+                                                                                echo "";
+                                                                              } ?> name="contract_number" value="<?php if ($s['contract_number'] == 0) {
+                                                                                                                          echo "";
+                                                                                                                        } else {
+                                                                                                                          echo  0 . $s['contract_number'];
+                                                                                                                        }  ?>">
                     </div>
                   </div>
                   <div class="col-sm-6">
                   </div>
                   <div class="col-sm-12">
                     <div class="input-box">
-                      <input type="text" required="" placeholder="Địa chỉ nhận hàng" name="address" value="<?= $s['address'] ?>">
+                      <input type="text" required="" placeholder="Địa chỉ nhận hàng" <?php if ($_SESSION['email']['role'] == 1 || $_SESSION['email']['role'] == 2) {
+                                                                                echo "disabled";
+                                                                              } else {
+                                                                                echo "";
+                                                                              } ?> name="address" value="<?= $s['address'] ?>">
                       <span>Vui lòng cung cấp địa chỉ chi tiết!</span>
                     </div>
                   </div>
@@ -161,7 +177,7 @@
               <div class="">
                 <div class="row">
                   <div class="col-sm-12">
-                  <input type="hidden" name="user_id" value="<?= $s['user_id'] ?>">
+                    <input type="hidden" name="user_id" value="<?= $s['user_id'] ?>">
                     <button class="btn btn-black right-side" name="user_profile" type="submit">Thay đổi</button>
                   </div>
                 </div>
@@ -207,7 +223,7 @@
                 </div>
               </div>
               <div class="col-xs-12">
-              <input type="hidden" name="user_id" value="<?= $s['user_id'] ?>">
+                <input type="hidden" name="user_id" value="<?= $s['user_id'] ?>">
                 <button class="btn-black" type="submit" name="change_password">Thay đổi</button>
               </div>
             </div>

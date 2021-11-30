@@ -55,6 +55,26 @@ function save_creat_new_warranty()
 
     // var_dump($image_product);
     // die;
+    $errors = "";
+    $warranty = "SELECT * FROM warranty WHERE name_warranty = '$name_warranty'";
+    $l = exeQuery($warranty, false);
+    if (strcasecmp($l['name_warranty'], $name_warranty) == 0) {
+        $errors .= "name_warranty-err=Gói bảo hành đã tồn tại&";
+    }
+    if (empty($name_warranty)) {
+        $errors .= "name_warranty-err=Không được bỏ trống&";
+    }
+
+    if (empty($price)) {
+        $errors .= "price-err=Không được bỏ trống&";
+    }
+    if (empty($warranty_w)) {
+        $errors .= "warranty_w-err=Không được bỏ trống&";
+    }
+    if (strlen($errors) > 0) {
+        header("location:" . ADMIN_URL . 'warranty/creat-new-warranty?' . $errors);
+        die;
+    }
     $sql01 = "INSERT INTO warranty (name_warranty, price, warranty_w)
                         values('$name_warranty', '$price','$warranty_w')";
     exeQuery($sql01, false);

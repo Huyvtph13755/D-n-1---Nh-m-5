@@ -46,6 +46,17 @@ switch ($url) {
         require_once './client/business/shop.php';
         shop();
         break;
+
+
+    case 'payment':
+        require_once './client/business/payment.php';
+        check();
+        break;
+    case 'order-view':
+        require_once './client/business/payment.php';
+        order();
+        break;
+
         // Vân anh
     case 'del_product_in_cart':
         require_once './client/business/cart.php';

@@ -10,6 +10,9 @@
                         <div class="form-group">
                             <label for="">Tên danh mục</label>
                             <input type="text" name="name_category" class="form-control" placeholder="" aria-describedby="helpId">
+                            <?php if (isset($_GET['name_category-err'])) : ?>
+                                <span style="font-size:12px ;color: red; padding-left: 10px;" class="name_category"><?= $_GET['name_category-err']; ?></span>
+                            <?php endif ?>
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">

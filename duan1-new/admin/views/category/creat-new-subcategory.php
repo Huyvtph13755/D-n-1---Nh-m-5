@@ -11,6 +11,9 @@
                         <div class="form-group">
                             <label for="">Tên danh mục con</label>
                             <input type="text" name="name_subcategory" class="form-control" placeholder="" aria-describedby="helpId">
+                            <?php if (isset($_GET['name_subcategory-err'])) : ?>
+                                <span style="font-size:12px ;color: red; padding-left: 10px;" class="name_subcategory"><?= $_GET['name_subcategory-err']; ?></span>
+                            <?php endif ?>
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">
