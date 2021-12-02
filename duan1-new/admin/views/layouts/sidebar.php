@@ -117,6 +117,29 @@
             </li>
           </ul>
         </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-images"></i>
+            <p>
+              Banner
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="<?= ADMIN_URL . 'banner' ?>" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Danh sách banner</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?= ADMIN_URL . 'banner/creat-new-banner' ?>" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Tạo mới banner</p>
+              </a>
+            </li>
+          </ul>
+        </li>
         <li class="nav-item ">
           <!-- menu-open -->
           <a href="<?= ADMIN_URL . 'comment' ?>" class="nav-link ">

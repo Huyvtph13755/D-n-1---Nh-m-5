@@ -235,7 +235,7 @@ function save_creat_new_color()
     // var_dump($image_product);
     // die;
     $errors = "";
-    $color = "SELECT * FROM color WHERE name_color = '$name_color'";
+    $color = "SELECT * FROM color WHERE name_color = '$name_color' AND product_id = '$product_id'";
     $l = exeQuery($color, false);
     if (strcasecmp($l['name_color'], $name_color) == 0) {
         $errors .= "name_color-err=Màu sắc đã tồn tại&";
@@ -245,9 +245,6 @@ function save_creat_new_color()
     }
     if ($image_color['size'] <= 0) {
         $errors .= "image_color-err=Phải Upload ảnh&";
-    }
-    if (empty($price_add)) {
-        $errors .= "price_add-err=Không được bỏ trống&";
     }
     if (empty($quantity)) {
         $errors .= "quantity-err=Không được bỏ trống&";

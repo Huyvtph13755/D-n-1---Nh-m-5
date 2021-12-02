@@ -2,70 +2,13 @@
  <section>
    <div class="banner">
      <div class="main-banner">
-       <div class="banner-1">
-         <img src="<?= CLIENT ?>images/banner1.jpg" alt="Streetwear">
-         <div class="banner-detail">
-           <div class="row">
-             <div class="col-md-6 col-sm-6 col-xs-6"></div>
-             <div class="col-md-6 col-sm-6 col-xs-6">
-               <div class="banner-detail-inner">
-                 <span class="offer">Hot Offer</span>
-                 <h1 class="banner-title">Introducing the new</h1>
-                 <h1 class="banner-subtitle">Motorola Moto X</h1>
-                 <a href="shop.html" class="btn btn-black">Shop Now</a>
-               </div>
-             </div>
+       <?php foreach ($b as $index => $m) : ?>
+         <a href="<?= $m['link'] ?>">
+           <div class="banner-1">
+             <img src="<?= ADMIN . $m['image_banner'] ?>" alt="Streetwear" href="">
            </div>
-         </div>
-       </div>
-       <div class="banner-2">
-         <img src="<?= CLIENT ?>images/banner2.jpg" alt="Streetwear">
-         <div class="banner-detail">
-           <div class="row">
-             <div class="col-md-1 col-sm-1 col-xs-1"></div>
-             <div class="col-md-6 col-sm-6 col-xs-6">
-               <div class="banner-detail-inner">
-                 <span class="offer">Hot Offer</span>
-                 <h1 class="banner-title">Samsung Galaxy Tab S2</h1>
-                 <h1 class="banner-subtitle">Easy on your eyes and comfortable <span>in your hand</span></h1>
-                 <a href="shop.html" class="btn btn-black">Shop Now</a>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-       <div class="banner-3">
-         <img src="<?= CLIENT ?>images/banner3.jpg" alt="Streetwear">
-         <div class="banner-detail">
-           <div class="row">
-             <div class="col-md-6 col-sm-6 col-xs-6"></div>
-             <div class="col-md-6 col-sm-6 col-xs-6">
-               <div class="banner-detail-inner">
-                 <span class="offer">How would you like our</span>
-                 <h1 class="banner-title">HUAWEI MediaPad M2</h1>
-                 <h1 class="banner-subtitle">while a high contrast ratio gives <span>you depth and details</span></h1>
-                 <a href="shop.html" class="btn btn-black">Shop Now</a>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-       <div class="banner-4">
-         <img src="<?= CLIENT ?>images/banner4.jpg" alt="Streetwear">
-         <div class="banner-detail">
-           <div class="row">
-             <div class="col-md-1 col-sm-1 col-xs-1"></div>
-             <div class="col-md-6 col-sm-6 col-xs-6">
-               <div class="banner-detail-inner">
-                 <span class="offer">Powered by the Internet of Things</span>
-                 <h1 class="banner-title">SMARTRON TITANIUM</h1>
-                 <h1 class="banner-subtitle">while a high contrast ratio gives you depth and details</h1>
-                 <a href="shop.html" class="btn btn-black">Shop Now</a>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
+         </a>
+       <?php endforeach ?>
      </div>
    </div>
  </section>

@@ -43,15 +43,16 @@
                             <div class="product-detail-main">
                                 <div class="product-item-details">
                                     <h1 class="product-item-name"><?= $s['name_product'] ?></h1>
+                                    <p><?= $s['sub_decription'] ?></p>
                                     <input type="hidden" name="product_id" value="<?= $_GET['product_id'] ?>">
                                     <div class="price-box">
                                         <br>
-                                        <input style="border: none; outline: none; background-color:white; font-size:2em; font-weight: bold; width: 170px" type="text" name="hp" id="hp" onchange="load(this)" disabled value="<?= number_format($s['price_default']) ?>">
+                                        <input style="border: none; outline: none; background-color:white; font-size:2em; font-weight: bold; width: 190px" type="text" name="hp" id="hp" onchange="load(this)" disabled value="<?= number_format($s['price_default']) ?>">
                                         <u>đ</u>
                                         <input type="hidden" name="ap" id="ap" value="<?= $s['price_default'] ?>">
                                     </div>
                                     <br>
-                                    <p><?= $s['sub_decription'] ?></p>
+
                                     <div class="product-size select-arrow mb-20 mt-30">
                                         <label>Màu sắc</label>
                                         <select class="selectpicker form-control" id="a" name="a" onchange="load(this)">

@@ -227,6 +227,30 @@ switch ($url) {
         require_once './admin/business/category.php';
         del_category();
         break;
+    case 'cp-admin/banner':
+        require_once './admin/business/banner.php';
+        banner_index();
+        break;
+    case 'cp-admin/banner/creat-new-banner':
+        require_once './admin/business/banner.php';
+        creat_new_banner();
+        break;
+    case 'cp-admin/banner/save-creat-new-banner':
+        require_once './admin/business/banner.php';
+        save_creat_new_banner();
+        break;
+    case 'cp-admin/banner/update-banner':
+        require_once './admin/business/banner.php';
+        update_banner();
+        break;
+    case 'cp-admin/banner/save-update-banner':
+        require_once './admin/business/banner.php';
+        save_update_banner();
+        break;
+    case 'cp-admin/banner/del-banner':
+        require_once './admin/business/banner.php';
+        del_banner();
+        break;
     default:
         require_once './client/business/home.php';
         getProduct();
