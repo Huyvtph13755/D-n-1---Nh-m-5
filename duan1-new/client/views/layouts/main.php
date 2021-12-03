@@ -18,7 +18,7 @@ $get_cate = exeQuery($sql13, true);
     <!-- Basic Page Needs
   ================================================== -->
     <meta charset="utf-8">
-    <title>Streetwear Index</title>
+    <title>Hi-Store</title>
     <!-- SEO Meta
   ================================================== -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
