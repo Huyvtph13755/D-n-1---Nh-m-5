@@ -160,6 +160,24 @@
         </li>
         <li class="nav-item ">
           <!-- menu-open -->
+          <a href="<?= ADMIN_URL . 'comment' ?>" class="nav-link ">
+          <i class="nav-icon fas fa-clipboard"></i>
+            <p>
+              Giới thiệu
+            </p>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <!-- menu-open -->
+          <a href="<?= ADMIN_URL . 'comment' ?>" class="nav-link ">
+          <i class="nav-icon fas fa-phone-square-alt"></i>
+            <p>
+              Liên hệ
+            </p>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <!-- menu-open -->
           <a href="<?= BASE_URL . 'logout' ?>" class="nav-link ">
             <i class="nav-icon fas fa-sign-out-alt"></i>
             <p>

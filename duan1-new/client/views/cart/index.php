@@ -51,7 +51,7 @@
                                                <ul>
                                                    <li>
                                                        <div class="base-price price-box">
-                                                           <span class="price" style="font-size: 14px; color: #878787;"><?= $c['price_default'] + $c['price_add'] ?> <u>đ</u></span>
+                                                           <span class="price" style="font-size: 14px; color: #878787;"><?= number_format($c['price_default'] + $c['price_add']) ?> <u>đ</u></span>
                                                        </div>
                                                    </li>
                                                </ul>
@@ -72,14 +72,12 @@
                                            </td>
                                            <td>
                                                <div class="input-box">
-                                                   <select data-id="100" class="quantity_cart" name="quantity_cart" disabled>
-                                                       <option selected="" value="<?= $c['quantity'] ?>"><?= $c['quantity'] ?></option>
-                                                   </select>
+                                                   <input type="text" style="width:30px; text-align: center" value="<?= $c['quantity'] ?>" disabled>
                                                </div>
                                            </td>
                                            <td>
                                                <div class="total-price price-box">
-                                                   <span class="price" style="font-size: 14px; color: #878787;"><?= $c['total_price'] ?> <u>đ</u></span>
+                                                   <span class="price" style="font-size: 14px; color: #878787;"><?= number_format($c['price_default'] + $c['price_add'] + $c['price']) ?> <u>đ</u></span>
                                                </div>
                                            </td>
                                            <td>
@@ -128,7 +126,7 @@
                                            <td><b>Số tiền phải trả:</b></td>
                                            <td>
                                                <div class="price-box">
-                                                   <span class="price"><b><?= $b['total'] ?> <u>đ</u></b></span>
+                                                   <span class="price"><b><?= number_format($total) ?> <u>đ</u></b></span>
                                                </div>
                                            </td>
                                        </tr>

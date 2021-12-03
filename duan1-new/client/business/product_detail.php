@@ -58,9 +58,25 @@ function product_detail()
                 $color_id = (int)$exp[1];
                 $exp2 = explode(' ', $b);
                 $warranty_id = (int)$exp2[1];
-                $price = ( (int)$ap + (int)$exp[0] + (int)$exp2[0])*$quantity;   
-                $sql = "INSERT INTO cart(user_id, product_id, color_id, warranty_id, quantity, total_price) VALUES('$user_id', '$product_id', '$color_id', '$warranty_id', '$quantity', '$price')";
-                exeQuery($sql, false);
+                $price = ((int)$ap + (int)$exp[0] + (int)$exp2[0]) * $quantity;
+                $cart = "SELECT * FROM cart WHERE user_id = '$user_id'";
+                $c = exeQuery($cart, true);
+                $existedIndex = -1;
+                foreach ($c as $index => $item) {
+                    if ($item['product_id'] == $product_id && $item['color_id'] == $color_id && $item['warranty_id'] == $warranty_id) {
+                        $existedIndex = $index;
+                        break;
+                    }
+                }
+                // var_dump($existedIndex);
+                // die;
+                if ($existedIndex != -1) {
+                    $sql9 = "UPDATE cart SET quantity = quantity + 1 WHERE product_id = '$product_id'";
+                    exeQuery($sql9);
+                } else {
+                    $sql = "INSERT INTO cart(user_id, product_id, color_id, warranty_id, quantity) VALUES('$user_id', '$product_id', '$color_id', '$warranty_id', '$quantity')";
+                    exeQuery($sql, false);
+                }
                 header('Location: ?msg=Sản phẩm đã được thêm vào giỏ hàng');
             } else {
                 header('Location: ?msg=Bạn chưa đăng nhập');

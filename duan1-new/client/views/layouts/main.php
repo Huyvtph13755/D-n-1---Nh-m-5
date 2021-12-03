@@ -1,7 +1,7 @@
 <?php
 if (isset($_SESSION['email'])) {
     $user_id = $_SESSION['email']['user_id'];
-    $sql112 = "SELECT COUNT(cart_id) AS sl, SUM(total_price) AS total2 FROM cart WHERE user_id = $user_id";
+    $sql112 = "SELECT COUNT(product_id) AS sl FROM cart WHERE user_id = $user_id";
     $x = exeQuery($sql112, false);
 }
 $sql13 = "SELECT * FROM category";
@@ -164,10 +164,6 @@ $get_cate = exeQuery($sql13, true);
                                                 <div class='header-right-text'>Giỏ hàng</div>    
                                             </a>
                                             <div class='cart-dropdown header-link-dropdown'>
-                                                <p class='cart-sub-totle'>
-                                                <span class='pull-left'>Tổng tiền:</span>
-                                                <span class='pull-right'><strong class='price-box'>" . $x['total2'] . " <u>đ</u></strong></span>
-                                                </p>
                                              <div class='clearfix'></div>
                                                 <div class='clearfix'></div>
                                                 <div class='mt-20'>
