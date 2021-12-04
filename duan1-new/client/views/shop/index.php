@@ -22,16 +22,42 @@
           <div class="main_title sidebar-title">
             <h3><span>Bộ</span> Lọc</h3>
           </div>
-          <form action="" method="get">
+          <form action="shop" method="get">
+            <?php if (isset($_GET['category_id']) && isset($_GET['subcategory_id'])) {
+              echo "<input type='hidden' value='" . $_GET['category_id'] . "' name='category_id'>
+              <input type='hidden' value='" . $_GET['subcategory_id'] . "' name='subcategory_id'>";
+            } else {
+              echo "<input type='hidden' value='" . $_GET['category_id'] . "' name='category_id'>";
+            } ?>
             <div class="sidebar-contant">
               <div class="price-range mb-30">
                 <div class="inner-title">Theo giá</div>
                 <select name="filter" id="" style="width:100%; outline:none;">
-                  <option value="1">Dưới 15 triệu</option>
-                  <option value="2">15 - 20 triệu</option>
-                  <option value="3">20 - 25 triệu</option>
-                  <option value="4">25 - 30 triệu</option>
-                  <option value="5">Trên 30 triệu</option>
+                  <option value="1" <?php if (isset($_GET['filter'])) {
+                                      if ($_GET['filter'] == 1) {
+                                        echo "selected";
+                                      }
+                                    } ?>>Dưới 15 triệu</option>
+                  <option value="2" <?php if (isset($_GET['filter'])) {
+                                      if ($_GET['filter'] == 2) {
+                                        echo "selected";
+                                      }
+                                    } ?>>15 - 20 triệu</option>
+                  <option value="3" <?php if (isset($_GET['filter'])) {
+                                      if ($_GET['filter'] == 3) {
+                                        echo "selected";
+                                      }
+                                    } ?>>20 - 25 triệu</option>
+                  <option value="4" <?php if (isset($_GET['filter'])) {
+                                      if ($_GET['filter'] == 4) {
+                                        echo "selected";
+                                      }
+                                    } ?>>25 - 30 triệu</option>
+                  <option value="5" <?php if (isset($_GET['filter'])) {
+                                      if ($_GET['filter'] == 5) {
+                                        echo "selected";
+                                      }
+                                    } ?>>Trên 30 triệu</option>
                 </select>
               </div>
               <button name="filter-pr" type="submit" class="btn btn-black">Lọc</button>
