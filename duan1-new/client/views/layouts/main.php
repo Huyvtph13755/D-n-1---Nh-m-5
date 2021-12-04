@@ -309,6 +309,8 @@ $get_cate = exeQuery($sql13, true);
                     <div class="container">
                         <div class="site-link align-center col-sm-12">
                             <ul>
+                            <li><a href="introduce">Giới thiệu</a></li>
+                            <li><a href="contact">Liên hệ</a></li>
                                 <?php foreach ($get_cate as $index => $j) : ?>
                                     <li><a href="shop?category_id=<?= $j['category_id'] ?>"><?= $j['name_category'] ?></a></li>
                                 <?php endforeach ?>

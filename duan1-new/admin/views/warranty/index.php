@@ -29,7 +29,7 @@
                                 <td><?= $index + 1 ?></td>
                                 <td><?= $item['name_warranty'] ?></td>
                                 <td><?= $item['warranty_w'] ?></td>
-                                <td><?= $item['price'] ?></td>
+                                <td><?= number_format($item['price']) ?></td>
                                 <td>
                                     <a name="update-warranty" href="<?= ADMIN_URL . 'warranty/update-warranty?warranty_id=' . $item['warranty_id']  ?> " class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>

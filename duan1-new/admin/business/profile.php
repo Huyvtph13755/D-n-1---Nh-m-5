@@ -24,7 +24,7 @@ function update_profile()
 {
     if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
         $profile_id = $_GET['profile_id'];
-        $sql5 = "SELECT * FROM profile_company WHERE color_id = '$profile_id'";
+        $sql5 = "SELECT * FROM profile_company WHERE profile_id = '$profile_id'";
         $pro = exeQuery($sql5, false);
         admin_render('profile/update-profile.php', compact('pro'), 'admin-assets/custom/category_add.js');
     } else {
@@ -49,7 +49,7 @@ function save_update_profile()
                             map = '$map'
                         WHERE profile_id= '$profile_id'";
         exeQuery($sql9);
-        header("location: " . ADMIN_URL . 'user?msg=Cập nhật thành công');
+        header("location: " . ADMIN_URL . 'profile?msg=Cập nhật thành công');
     
 }
 

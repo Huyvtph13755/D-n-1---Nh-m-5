@@ -34,6 +34,14 @@ switch ($url) {
         require_once './client/business/cart.php';
         cart();
         break;
+    case 'contact':
+        require_once './client/business/contact.php';
+        contact();
+        break;
+    case 'introduce':
+        require_once './client/business/introduce.php';
+        introduce();
+        break;
         // Hoàng
 
         // Vân Anh
@@ -46,10 +54,10 @@ switch ($url) {
         require_once './client/business/shop.php';
         shop();
         break;
-    // case 'filter':
-    //     require_once './client/business/shop.php';
-    //     filter();
-    //     break;
+        // case 'filter':
+        //     require_once './client/business/shop.php';
+        //     filter();
+        //     break;
 
     case 'payment':
         require_once './client/business/payment.php';
@@ -265,6 +273,18 @@ switch ($url) {
     case 'cp-admin/introduce/save-update-introduce':
         require_once './admin/business/introduce.php';
         save_update_introduce();
+        break;
+    case 'cp-admin/profile':
+        require_once './admin/business/profile.php';
+        profile_index();
+        break;
+    case 'cp-admin/profile/update-profile':
+        require_once './admin/business/profile.php';
+        update_profile();
+        break;
+    case 'cp-admin/profile/save-update-profile':
+        require_once './admin/business/profile.php';
+        save_update_profile();
         break;
     default:
         require_once './client/business/home.php';

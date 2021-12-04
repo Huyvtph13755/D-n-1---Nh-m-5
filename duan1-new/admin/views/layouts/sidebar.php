@@ -169,7 +169,7 @@
         </li>
         <li class="nav-item ">
           <!-- menu-open -->
-          <a href="<?= ADMIN_URL . 'comment' ?>" class="nav-link ">
+          <a href="<?= ADMIN_URL . 'profile' ?>" class="nav-link ">
           <i class="nav-icon fas fa-phone-square-alt"></i>
             <p>
               Liên hệ
