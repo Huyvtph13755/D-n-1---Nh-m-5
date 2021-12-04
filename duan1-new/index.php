@@ -47,7 +47,6 @@ switch ($url) {
         shop();
         break;
 
-
     case 'payment':
         require_once './client/business/payment.php';
         check();
@@ -250,6 +249,18 @@ switch ($url) {
     case 'cp-admin/banner/del-banner':
         require_once './admin/business/banner.php';
         del_banner();
+        break;
+    case 'cp-admin/introduce':
+        require_once './admin/business/introduce.php';
+        introduce_index();
+        break;
+    case 'cp-admin/introduce/update-introduce':
+        require_once './admin/business/introduce.php';
+        update_introduce();
+        break;
+    case 'cp-admin/introduce/save-update-introduce':
+        require_once './admin/business/introduce.php';
+        save_update_introduce();
         break;
     default:
         require_once './client/business/home.php';

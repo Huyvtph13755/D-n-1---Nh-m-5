@@ -160,7 +160,7 @@
         </li>
         <li class="nav-item ">
           <!-- menu-open -->
-          <a href="<?= ADMIN_URL . 'comment' ?>" class="nav-link ">
+          <a href="<?= ADMIN_URL . 'introduce' ?>" class="nav-link ">
           <i class="nav-icon fas fa-clipboard"></i>
             <p>
               Giới thiệu
