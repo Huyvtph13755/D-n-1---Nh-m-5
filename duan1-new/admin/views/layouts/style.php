@@ -20,3 +20,5 @@
 <link rel="stylesheet" href="<?= ADMIN_ASSET ?>plugins/daterangepicker/daterangepicker.css">
 <!-- summernote -->
 <link rel="stylesheet" href="<?= ADMIN_ASSET ?>plugins/summernote/summernote-bs4.min.css">
+
+<link rel="icon" href="https://img.icons8.com/color/48/000000/mac-os.png">

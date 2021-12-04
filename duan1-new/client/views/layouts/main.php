@@ -44,7 +44,7 @@ $get_cate = exeQuery($sql13, true);
     <link rel="stylesheet" type="text/css" href="<?= CLIENT ?>css/custom.css">
     <link rel="stylesheet" type="text/css" href="<?= CLIENT ?>css/responsive.css">
 
-    <link rel="shortcut icon" href="<?= CLIENT ?>images/favicon.html">
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/mac-os.png">
     <link rel="apple-touch-icon" href="<?= CLIENT ?>images/apple-touch-icon.html">
     <link rel="apple-touch-icon" sizes="72x72" href="<?= CLIENT ?>images/apple-touch-icon-72x72.html">
     <link rel="apple-touch-icon" sizes="114x114" href="<?= CLIENT ?>images/apple-touch-icon-114x114.html">
