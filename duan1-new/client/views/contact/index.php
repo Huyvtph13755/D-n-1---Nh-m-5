@@ -2,11 +2,11 @@
   <div class="banner inner-banner">
       <div class="container">
           <div class="bread-crumb mtb-60 center-xs">
-              <div class="page-title">Women</div>
+              <div class="page-title">Liên hệ</div>
               <div class="bread-crumb-inner right-side float-none-xs">
                   <ul>
-                      <li><a href="index.html">Home</a><i class="fa fa-angle-right"></i></li>
-                      <li><span>Women</span></li>
+                      <li><a href="home">Trang chủ</a><i class="fa fa-angle-right"></i></li>
+                      <li><span>Liên hệ</span></li>
                   </ul>
               </div>
           </div>
