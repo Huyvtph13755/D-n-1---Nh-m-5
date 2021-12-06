@@ -142,7 +142,7 @@
                <div class="row">
                    <div class="col-xs-12">
                        <div class="right-side float-none-xs">
-                           <a href="checkout.html" class="btn btn-black">Thanh toán<span><i class="fa fa-angle-right"></i></span></a>
+                           <a href="payment" class="btn btn-black">Thanh toán<span><i class="fa fa-angle-right"></i></span></a>
                        </div>
                    </div>
                </div>

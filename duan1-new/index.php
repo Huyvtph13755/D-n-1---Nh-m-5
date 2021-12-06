@@ -43,7 +43,11 @@ switch ($url) {
         introduce();
         break;
         // Hoàng
-
+        //duy 
+        // case 'invoice':
+        //     require_once './client/business/payment.php';
+        //    invoice();
+        //     break;
         // Vân Anh
     case 'change_password':
         require_once './client/business/change_password.php';
@@ -58,16 +62,19 @@ switch ($url) {
         //     require_once './client/business/shop.php';
         //     filter();
         //     break;
-
+        //duy
     case 'payment':
         require_once './client/business/payment.php';
         check();
         break;
     case 'order-view':
         require_once './client/business/payment.php';
-        order();
+        check_oder();
         break;
-
+    case 'invoice':
+        require_once './client/business/payment.php';
+        invoice();
+        break;
         // Vân anh
     case 'del_product_in_cart':
         require_once './client/business/cart.php';
