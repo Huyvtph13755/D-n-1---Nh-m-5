@@ -36,7 +36,7 @@ function check_mail()
         // $recciever = "sodeep.no1@gmail.com";
         $title = "Quên mật khẩu";
         $link_change = BASE_URL . "forgot_password?m_token=" . $m_token;
-        $content = "<a href='" . $link_change . "'>Bấm vào đây</a> để đổi mật khẩu. <br>Vui lòng không chia sẻ tin nhắn này cho bất kì ai!";
+        $content = "<a href='" . $link_change . "'>Bấm vào đây</a> để đổi mật khẩu (Đường link sẽ bị hết hạn sau 30 phút). <br>Vui lòng không chia sẻ tin nhắn này cho bất kì ai!";
         $mail = new PHPMailer(true);
 
         try {
