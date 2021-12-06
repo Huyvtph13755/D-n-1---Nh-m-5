@@ -4,6 +4,9 @@ session_start();
 $url = isset($_GET['url']) ? rtrim($_GET['url'], '/') : "/";
 require_once './commons/utils.php';
 require_once './dao/pdo.php';
+require_once './vendor/PHPMailer/src/Exception.php';
+require_once './vendor/PHPMailer/src/PHPMailer.php';
+require_once './vendor/PHPMailer/src/SMTP.php';
 switch ($url) {
     case 'home':
         require_once './client/business/home.php';
@@ -53,6 +56,18 @@ switch ($url) {
     case 'shop':
         require_once './client/business/shop.php';
         shop();
+        break;
+    case 'checkmail':
+        require_once './client/business/forgot_password.php';
+        check_mail();
+        break;
+    case 'forgot_password':
+        require_once './client/business/forgot_password.php';
+        forgot_pass();
+        break;
+    case 'save_forgot_pass':
+        require_once './client/business/forgot_password.php';
+        save_forgot_pass();
         break;
         // case 'filter':
         //     require_once './client/business/shop.php';
