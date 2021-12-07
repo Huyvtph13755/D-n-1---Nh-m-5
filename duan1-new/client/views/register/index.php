@@ -83,7 +83,7 @@
                                     <hr>
                                     <div class="new-account align-center mt-20">
                                         <span>Bạn đã có tài khoản</span>
-                                        <a class="link" title="Register with Streetwear" href="index.php?act=login">Đăng nhập</a>
+                                        <a class="link" title="Register with Streetwear" href="login">Đăng nhập</a>
                                     </div>
                                 </div>
                             </div>

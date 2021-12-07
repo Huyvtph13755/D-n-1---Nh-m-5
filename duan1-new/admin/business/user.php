@@ -1,7 +1,7 @@
 <?php
 function user_index()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : "";
         // lấy danh sách danh mục
         $sql = "SELECT * FROM user WHERE email like '%$keyword%'  ORDER BY role DESC";
@@ -16,7 +16,7 @@ function user_index()
 }
 function update_user()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         if (isset($_GET['role'])) {
             $user_id = $_GET['user_id'];
             $sql = "SELECT * FROM user WHERE user_id= '$user_id' AND role = 1";
@@ -31,7 +31,7 @@ function update_user()
 }
 function creat_user_admin()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         admin_render('user/creat-new-user-admin.php', [], 'admin-assets/custom/category_add.js');
     } else {
         header("location: " . BASE_URL);
@@ -100,13 +100,28 @@ function lock_user()
 {
     $user_id = $_GET['user_id'];
     $status = $_GET['status'];
-    if ($status == 1) {
-        $sql14 = "UPDATE user SET status = '0' WHERE user_id = '$user_id'";
-        exeQuery($sql14);
-        header("location:" . ADMIN_URL . 'user?msg=Cập nhật thành công');
-    } elseif ($status == 0) {
-        $sql15 = "UPDATE user SET status = '1' WHERE user_id = '$user_id'";
-        exeQuery($sql15);
-        header("location:" . ADMIN_URL . 'user?msg=Cập nhật thành công');
+    $role = $_GET['role'];
+    if ($role == 2) {
+        header("location:" . ADMIN_URL . 'user?msg=Bạn không thể khóa tài khoản Admin');
+    } elseif ($role == 1) {
+        if ($status == 1) {
+            $sql14 = "UPDATE user SET status = '0' WHERE user_id = '$user_id'";
+            exeQuery($sql14);
+            header("location:" . ADMIN_URL . 'user?msg=Cập nhật thành công');
+        } elseif ($status == 0) {
+            $sql15 = "UPDATE user SET status = '1' WHERE user_id = '$user_id'";
+            exeQuery($sql15);
+            header("location:" . ADMIN_URL . 'user?msg=Cập nhật thành công');
+        }
+    } else {
+        if ($status == 1) {
+            $sql14 = "UPDATE user SET status = '0' WHERE user_id = '$user_id'";
+            exeQuery($sql14);
+            header("location:" . ADMIN_URL . 'user?msg=Cập nhật thành công');
+        } elseif ($status == 0) {
+            $sql15 = "UPDATE user SET status = '1' WHERE user_id = '$user_id'";
+            exeQuery($sql15);
+            header("location:" . ADMIN_URL . 'user?msg=Cập nhật thành công');
+        }
     }
 }

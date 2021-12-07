@@ -25,7 +25,7 @@
                         <?php
                         if ($_SESSION['email']['role'] == 2) {
                             echo "<th>
-                            <a href='" . ADMIN_URL . "user/creat-new-user-admin' class='btn btn-sm btn-success'>Tạo tài khoản Admin</a>
+                            <a href='" . ADMIN_URL . "user/creat-new-user-admin' class='btn btn-sm btn-success'>Tạo tài khoản nhân viên</a>
                         </th>";
                         } else {
                             echo "";
@@ -70,7 +70,7 @@
                                         <i class='fas fa-edit'></i>
                                     </a>";
                                     }
-                                    echo "<a href='javascript:;' onclick='confirm_lock(" . '"' . ADMIN_URL . "user/lock-user?user_id=" . $item['user_id'] . "&status=" . $item['status'] . '"' . "," . '"' . $item['email'] . '"' . ")' class='btn btn-sm btn-danger'>
+                                    echo "<a href='javascript:;' onclick='confirm_lock(" . '"' . ADMIN_URL . "user/lock-user?user_id=" . $item['user_id'] . "&status=" . $item['status'] . "&role=". $item['role'] .'"' . "," . '"' . $item['email'] . '"' . ")' class='btn btn-sm btn-danger'>
                                     <i class='fas fa-lock'></i>
                                     </a>";
                                     echo "</td>";

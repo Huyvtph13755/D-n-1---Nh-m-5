@@ -7,9 +7,9 @@ function product_detail()
         // lấy chi tiết sản phẩm
         $sql = "SELECT * FROM product WHERE product_id = $product_id";
         $s = exeQuery($sql, false);
-
+        $get_subcategory = $s['subcategory_id'];
         // Lấy sản phẩm tương tự
-        $sql1 = "SELECT * FROM product ORDER BY RAND() LIMIT 6";
+        $sql1 = "SELECT * FROM product WHERE subcategory_id = '$get_subcategory' ORDER BY RAND() LIMIT 6";
         $a = exeQuery($sql1, true);
 
         // Lấy màu sắc của 1 sản phẩm
@@ -32,7 +32,7 @@ function product_detail()
         // $colors = "SELECT MIN(price) as pr FROM color WHERE product_id = $product_id";
         // $e = exeQuery($colors, false);
         if (isset($_POST['product_detail'])) {
-            if (isset($_SESSION['email'])) {
+            if (isset($_SESSION['email']) && $_SESSION['email']['status'] == 0) {
                 $user_id = $_SESSION['email']['user_id'];
                 $content = $_POST['content'];
                 date_default_timezone_set('Asia/Ho_Chi_Minh');
@@ -40,6 +40,8 @@ function product_detail()
                 $sql = "INSERT INTO comment(product_id, user_id, content, date_comment) VALUE('$product_id' , '$user_id', '$content', '$date')";
                 exeQuery($sql, false);
                 header('Location:?msg=Bình luận thành công!');
+            } elseif (isset($_SESSION['email']) && $_SESSION['email']['status'] == 1) {
+                header('Location:?msg=Tài khoản của bạn đã bị khóa!');
             } else {
                 header('Location:?msg=Bạn chưa đăng nhập nên chưa thể bình luận');
             }

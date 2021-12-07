@@ -1,7 +1,7 @@
 <?php
 function banner_index()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         $sql = "SELECT * FROM banner";
         $bn = exeQuery($sql, true);
         admin_render('banner/index.php', compact('bn'), 'admin-assets/custom/category_index.js');
@@ -11,7 +11,7 @@ function banner_index()
 }
 function creat_new_banner()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         admin_render('banner/creat-new-banner.php', [], 'admin-assets/custom/category_add.js');
     } else {
         header("location: " . BASE_URL);
@@ -45,7 +45,7 @@ function save_creat_new_banner()
 }
 function update_banner()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         $banner_id = $_GET['banner_id'];
         $sql = "SELECT * FROM banner WHERE banner_id = '$banner_id'";
         $upbanner = exeQuery($sql, false);

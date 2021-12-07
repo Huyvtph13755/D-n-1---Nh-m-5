@@ -23,7 +23,7 @@
        <div class="row">
          <div class="col-xs-12">
            <div class="heading-part align-center mb-40">
-             <h2 class="main_title">Sản phẩm tiêu biểu</h2>
+             <h2 class="main_title">Sản phẩm được xem nhiều nhất</h2>
            </div>
          </div>
        </div>
@@ -81,9 +81,9 @@
        <div class="row">
          <div class="col-sm-12">
            <div class="perellex-delail ptb-150">
-             <div class="perellex-title">Các mẫu iPhone, MacBook mới được cập nhật liên tục</div>
+             <div class="perellex-title">Các mẫu MacBook, iPad và iMac mới được cập nhật liên tục</div>
              <div class="perellex-subtitle mtb-20s">Hi-Store - Uy tín trong từng sản phẩm</div>
-             <span><a href="index.php" class="btn sub-btn">Xem shop</a></span>
+             <span><a href="home" class="btn sub-btn">Xem shop</a></span>
            </div>
          </div>
        </div>

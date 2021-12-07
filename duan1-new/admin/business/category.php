@@ -2,7 +2,7 @@
 
 function cate_index()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : "";
         // lấy danh sách danh mục
         $sql = "select * from category where name_category like '%$keyword%'";
@@ -15,7 +15,7 @@ function cate_index()
 }
 function creat_new_category()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         admin_render('category/creat-new-category.php', [], 'admin-assets/custom/category_add.js');
     } else {
         header("location: " . BASE_URL);
@@ -25,7 +25,7 @@ function creat_new_category()
 
 function update_category()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         $category_id = $_GET['category_id'];
         $sql3 = "SELECT * FROM category WHERE category_id = '$category_id'";
         $detail_cate = exeQuery($sql3, false);
@@ -36,7 +36,7 @@ function update_category()
 }
 function update_subcategory()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         $subcategory_id = $_GET['subcategory_id'];
         $sql3 = "SELECT * FROM subcategory WHERE subcategory_id = '$subcategory_id'";
         $detail_subcate = exeQuery($sql3, false);
@@ -47,7 +47,7 @@ function update_subcategory()
 }
 function detail_category()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         // lấy danh sách danh mục
         $category_id = $_GET['category_id'];
         $sql = "SELECT * FROM category WHERE category_id = '$category_id'";
@@ -62,7 +62,7 @@ function detail_category()
 }
 function creat_new_subcategory()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         admin_render('category/creat-new-subcategory.php', [], 'admin-assets/custom/category_add.js');
     } else {
         header("location: " . BASE_URL);
@@ -78,7 +78,7 @@ function save_creat_new_subcategory()
     if (strcasecmp($l['name_subcategory'], $name_subcategory) == 0) {
         $errors .= "name_subcategory-err=Tên danh mục con đã tồn tại&";
     }
-    if(empty($name_subcategory)){
+    if (empty($name_subcategory)) {
         $errors .= "name_subcategory-err=Không được bỏ trống&";
     }
     if (strlen($errors) > 0) {
@@ -136,7 +136,7 @@ function save_creat_new_category()
     if (strcasecmp($l['name_category'], $name_category) == 0) {
         $errors .= "name_category-err=Tên danh mục đã tồn tại&";
     }
-    if(empty($name_category)){
+    if (empty($name_category)) {
         $errors .= "name_category-err=Không được bỏ trống&";
     }
     if (strlen($errors) > 0) {

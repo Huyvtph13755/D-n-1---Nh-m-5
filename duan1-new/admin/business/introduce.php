@@ -1,7 +1,7 @@
 <?php
 function introduce_index()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         $sql = "SELECT * FROM introduce";
         $introduce = exeQuery($sql, true);
         admin_render('introduce/index.php', compact('introduce'), 'admin-assets/custom/category_index.js');
@@ -11,7 +11,7 @@ function introduce_index()
 }
 function update_introduce()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         $introduce_id = $_GET['introduce_id'];
         $sql3 = "SELECT * FROM introduce WHERE introduce_id = '$introduce_id'";
         $detail_introduce = exeQuery($sql3, false);

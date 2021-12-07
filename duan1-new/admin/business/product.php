@@ -2,7 +2,7 @@
 
 function product_index()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : "";
         // lấy danh sách danh mục
         $sql = "SELECT product.product_id, product.name_product, product.price_default, product.image_product, subcategory.name_subcategory, subcategory.subcategory_id
@@ -22,7 +22,7 @@ function product_index()
 
 function creat_new_product()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         $sql2 = "SELECT * FROM subcategory";
         $subcate = exeQuery($sql2, true);
         admin_render('product/creat-new-product.php', compact('subcate'), 'admin-assets/custom/category_add.js');
@@ -32,7 +32,7 @@ function creat_new_product()
 }
 function update_product()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         $sql2 = "SELECT * FROM subcategory";
         $subcate = exeQuery($sql2, true);
         $product_id = $_GET['product_id'];
@@ -45,7 +45,7 @@ function update_product()
 }
 function del_product()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         $product_id = $_GET['product_id'];
         $sql3 = "DELETE FROM product WHERE product_id = '$product_id'";
         exeQuery($sql3);
@@ -97,7 +97,7 @@ function save_update_product()
 
 function detail_product()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : "";
         // lấy danh sách danh mục
         $product_id = $_GET['product_id'];
@@ -118,7 +118,7 @@ function detail_product()
 
 function creat_new_color()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         admin_render('product/creat-new-color.php', [], 'admin-assets/custom/category_add.js');
     } else {
         header("location: " . BASE_URL);
@@ -126,7 +126,7 @@ function creat_new_color()
 }
 function update_color()
 {
-    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1) {
+    if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         $color_id = $_GET['color_id'];
         $sql5 = "SELECT * FROM color WHERE color_id = '$color_id'";
         $upc = exeQuery($sql5, false);
