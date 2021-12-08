@@ -106,7 +106,7 @@ function save_forgot_pass()
     // var_dump($a);
     // die();
     if ($a > 1800) {
-        header('Location:' . BASE_URL . 'checkmail?msg= Vui lòng gửi lại mail!');
+        header('Location:' . BASE_URL . 'checkmail?msg= Token đã hết hạn, vui lòng gửi lại mail!');
     }else {
         $password = md5($_POST['password']);
         $insert_pass = "UPDATE user SET password = '$password' WHERE m_token = '$m_token'";

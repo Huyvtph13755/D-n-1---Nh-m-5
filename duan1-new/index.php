@@ -37,6 +37,10 @@ switch ($url) {
         require_once './client/business/cart.php';
         cart();
         break;
+    case 'search':
+        require_once './client/business/search.php';
+        search();
+        break;
     case 'contact':
         require_once './client/business/contact.php';
         contact();

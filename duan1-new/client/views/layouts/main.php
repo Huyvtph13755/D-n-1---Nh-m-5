@@ -6,6 +6,7 @@ if (isset($_SESSION['email'])) {
 }
 $sql13 = "SELECT * FROM category";
 $get_cate = exeQuery($sql13, true);
+
 ?>
 <!DOCTYPE html>
 <!--[if (gte IE 9)|!(IE)]><!-->
@@ -95,10 +96,16 @@ $get_cate = exeQuery($sql13, true);
                                     <ul>
                                         <li class="mobile-view-search">
                                             <div class="header_search_toggle mobile-view">
-                                                <form>
+                                                <form action="search" method="get">
                                                     <div class="search-box">
-                                                        <input type="text" placeholder="Search" class="input-text">
-                                                        <button class="search-btn"></button>
+                                                        <input type="text" name="keyword" value="<?php
+                                                                                                    if (isset($_GET['keyword'])) {
+                                                                                                        echo $_GET['keyword'];
+                                                                                                    } else {
+                                                                                                        echo "";
+                                                                                                    }
+                                                                                                    ?>" placeholder="Search" class="input-text">
+                                                        <button type="submit" class="search-btn"></button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -309,8 +316,8 @@ $get_cate = exeQuery($sql13, true);
                     <div class="container">
                         <div class="site-link align-center col-sm-12">
                             <ul>
-                            <li><a href="introduce">Giới thiệu</a></li>
-                            <li><a href="contact">Liên hệ</a></li>
+                                <li><a href="introduce">Giới thiệu</a></li>
+                                <li><a href="contact">Liên hệ</a></li>
                                 <?php foreach ($get_cate as $index => $j) : ?>
                                     <li><a href="shop?category_id=<?= $j['category_id'] ?>"><?= $j['name_category'] ?></a></li>
                                 <?php endforeach ?>
