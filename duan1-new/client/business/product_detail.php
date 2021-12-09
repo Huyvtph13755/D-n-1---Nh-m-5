@@ -73,7 +73,7 @@ function product_detail()
                 // var_dump($existedIndex);
                 // die;
                 if ($existedIndex != -1) {
-                    $sql9 = "UPDATE cart SET quantity = quantity + 1 WHERE product_id = '$product_id' AND color_id = '$color_id' AND warranty_id = '$warranty_id'";
+                    $sql9 = "UPDATE cart SET quantity = quantity + '$quantity' WHERE product_id = '$product_id' AND color_id = '$color_id' AND warranty_id = '$warranty_id'";
                     exeQuery($sql9);
                 } else {
                     $sql = "INSERT INTO cart(user_id, product_id, color_id, warranty_id, quantity) VALUES('$user_id', '$product_id', '$color_id', '$warranty_id', '$quantity')";

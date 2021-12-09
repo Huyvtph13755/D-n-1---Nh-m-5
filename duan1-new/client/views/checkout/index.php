@@ -23,7 +23,7 @@
                         <div class="checkout-step mb-40">
                             <ul>
                                 <li class="active">
-                                    <a href="checkout.html">
+                                    <a href="payment">
                                         <div class="step">
                                             <div class="line"></div>
                                             <div class="circle">1</div>
@@ -32,7 +32,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="order-overview.html">
+                                    <a href="#">
                                         <div class="step">
                                             <div class="line"></div>
                                             <div class="circle">2</div>
@@ -41,7 +41,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="payment.html">
+                                    <a href="#">
                                         <div class="step">
                                             <div class="line"></div>
                                             <div class="circle">3</div>
@@ -73,17 +73,17 @@
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="input-box">
-                                                        <input type="text" required="" value="<?= $u['fullname'] ?>" placeholder="Họ và tên">
+                                                        <input type="text" name="fullname" required="" value="<?= $u['fullname'] ?>" placeholder="Họ và tên">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="input-box">
-                                                        <input type="email" required="" value="<?= $u['email'] ?>" placeholder="Email" disabled>
+                                                        <input type="email" name="email" required="" value="<?= $u['email'] ?>" placeholder="Email" disabled>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="input-box">
-                                                        <input type="number" required="" value="<?php if ($u['contract_number'] == 0) {
+                                                        <input type="number" name="contract_number" required="" value="<?php if ($u['contract_number'] == 0) {
                                                                                                     echo "";
                                                                                                 } else {
                                                                                                     echo  0 . $u['contract_number'];
@@ -94,7 +94,7 @@
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <div class="input-box">
-                                                        <input type="text" required="" value="<?= $u['address'] ?>" placeholder="Địa chỉ nhận hàng">
+                                                        <input type="text" required="" name="address" value="<?= $u['address'] ?>" placeholder="Địa chỉ nhận hàng">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-12">
