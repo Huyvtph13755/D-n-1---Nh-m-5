@@ -23,11 +23,12 @@ function invoice()
 {
     if (isset($_SESSION['email'])) {
         $user_id = $_SESSION['email']['user_id'];
-        $fullname = $_SESSION['email']['fullname'];
+        $fullname = $_POST['fullname'];
         $code = rand(0, 9999);
         $email = $_SESSION['email']['email'];
-        $address = $_SESSION['email']['address'];
-        $number = $_SESSION['email']['contract_number'];
+        $address = $_POST['address'];
+        $number = $_POST['contract_number'];
+        date_default_timezone_set('Asia/Ho_Chi_Minh');
         $date = date('Y-m-d H:i:sa', time());
         $sql1 = "SELECT cart.cart_id, product.name_product, product.image_product,product.product_id,color.color_id,warranty.warranty_id, product.price_default, product.warranty, color.price_add, color.name_color, warranty.price, cart.quantity, warranty.name_warranty, warranty.warranty_w
         FROM (((duan1.cart
@@ -59,10 +60,12 @@ function invoice()
                 $total = $value['quantity'] * $value['price_default'] + $value['quantity'] * $value['price_add'] + $value['quantity'] * $value['price'];
                 $insert_invoice_details = "INSERT INTO invoice_detail(invoice_id,product_id,color_id,warranty_id,quantity,unit_price,code) values ('$invoice_id','$product_id','$color','$baohanh','$soluong','$total','$code')";
                 $v = exeQuery($insert_invoice_details, false);
+                $update_quantity = "UPDATE color SET quantity = quantity - '$soluong' WHERE color_id = '$color'";
+                exeQuery($update_quantity);
             }
             $delete_cart = "DELETE FROM cart WHERE user_id='$user_id'";
             exeQuery($delete_cart);
-            header('Location: invoice-camon?msg=cảm ơn bạn đã đạt hàng');
+            header('Location: invoice-camon?msg=Bạn đã đặt hàng thành công, đơn hàng của bạn đang chờ chủ shop xác nhận');
         }
         client_render('checkout/order-view.php', compact('total','total1'));
     } else {
@@ -73,8 +76,12 @@ function check_oder()
 {
     if (isset($_SESSION['email'])) {
         $user_id = $_SESSION['email']['user_id'];
-        $sql111 = "SELECT * FROM user WHERE user_id = '$user_id'";
-        $u = exeQuery($sql111, false);
+        // $sql111 = "SELECT * FROM user WHERE user_id = '$user_id'";
+        // $u = exeQuery($sql111, false);
+        $email = $_SESSION['email']['email'];
+        $fullname = $_POST['fullname'];
+        $contract_number = $_POST['contract_number'];
+        $address = $_POST['address'];
         // lấy dữ liệu từ giỏ hàng
         $sql = "SELECT cart.cart_id, product.name_product, product.image_product, product.price_default, product.warranty, color.price_add, color.name_color, warranty.price, cart.quantity, warranty.name_warranty, warranty.warranty_w
         FROM (((duan1.cart
@@ -92,7 +99,7 @@ function check_oder()
         // lấy tổng giá của toàn bộ giỏ hàng
         // $sql1 = "SELECT SUM(total_price) as total FROM cart WHERE user_id = '$user_id'";
         // $b = exeQuery($sql1, false);
-        client_render('checkout/order-view.php', compact('a', 'total', 'u'));
+        client_render('checkout/order-view.php', compact('a', 'total', 'email', 'fullname', 'contract_number', 'address'));
 
         // xóa sản phẩm trong giỏ hàng
         /*code*/

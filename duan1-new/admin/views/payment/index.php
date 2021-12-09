@@ -23,22 +23,25 @@
                                 <td><?= $index + 1 ?></td>
                                 <td><?= $item['code'] ?></td>
                                 <td><?= $item['fullname'] ?></td>
-                                <td><?= $item['contract_number'] ?></td>
+                                <td><?php
+                                    if ($item['contract_number'] > 0) {
+                                        echo "0" . $item['contract_number'];
+                                    } else {
+                                        echo "";
+                                    }
+                                    ?></td>
                                 <td><?= $item['address'] ?></td>
                                 <td><?= $item['email'] ?></td>
                                 <td><?= $item['create_at'] ?></td>
                                 <td>
                                     <form action="<?= ADMIN_URL . 'status_invoice?invoice_id=' . $item['invoice_id'] ?>" method="post">
-                                        <select name="status" id="">
+                                        <select style="color: #303030; border: 1px solid #869099; outline: none; border-radius:5px; margin-bottom:5px;" name="status" id="">
                                             <option value="1" <?= $item['status'] == 1 ? 'selected' : ''; ?>>Chờ xác nhận</option>
                                             <option value="2" <?= $item['status'] == 2 ? 'selected' : ''; ?>>Đã xác nhận</option>
                                             <option value="3" <?= $item['status'] == 3 ? 'selected' : ''; ?>>Đang giao hàng</option>
                                             <option value="4" <?= $item['status'] == 4 ? 'selected' : ''; ?>>Giao hàng thành công</option>
-                                           
-                                            
                                         </select>
-
-                                        <button type="submit" class="btn btn-sm btn-success">Thay đổi</button>
+                                        <button type="submit" class="btn btn-sm btn-primary">Thay đổi</button>
                                     </form>
                                 </td>
 
