@@ -14,10 +14,13 @@
 </div>
 <!-- BANNER END -->
 
+   
+
 <!-- CONTAIN START -->
 <section class="container">
     <div class="checkout-section pb-85 pt-55">
         <div class="row">
+
             <div class="col-xs-12">
                 <div class="checkout-step mb-40">
                     <ul>
@@ -30,7 +33,7 @@
                                 <span>Thông tin</span>
                             </a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="order-overview.html">
                                 <div class="step">
                                     <div class="line"></div>
