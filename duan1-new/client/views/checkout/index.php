@@ -62,7 +62,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 col-md-8 col-sm-8 col-lg-offset-3 col-sm-offset-2">
-                                    <form action="order-view" method="get" class="main-form full">
+                                    <form action="order-view" method="post" class="main-form full">
                                         <div class="mb-20">
                                             <div class="row">
                                                 <div class="col-xs-12 mb-20">

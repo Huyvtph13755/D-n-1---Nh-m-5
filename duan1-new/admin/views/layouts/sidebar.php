@@ -176,6 +176,15 @@
             </p>
           </a>
         </li>
+         <li class="nav-item ">
+          <!-- menu-open -->
+          <a href="<?= ADMIN_URL . 'donhang' ?>" class="nav-link ">
+          <i class="nav-icon far fa-file-alt"></i>
+            <p>
+              Đơn hàng
+            </p>
+          </a>
+        </li>
         <li class="nav-item ">
           <!-- menu-open -->
           <a href="<?= BASE_URL . 'logout' ?>" class="nav-link ">
@@ -185,6 +194,7 @@
             </p>
           </a>
         </li>
+       
       </ul>
     </nav>
     <!-- /.sidebar-menu -->

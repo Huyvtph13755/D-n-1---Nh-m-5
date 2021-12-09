@@ -13,7 +13,17 @@
        </div>
    </div>
    <!-- BANNER END -->
-
+   <div>
+       <p class="notification" style="text-align: center; color: #005DA5; font-weight: bold;">
+           <?php
+            if (isset($_GET['msg'])) {
+                $msg = $_GET['msg'];
+                echo $msg;
+            }
+            ?>
+       </p>
+       <br>
+   </div>
    <!-- CONTAIN START -->
    <section class="container">
        <div class="pb-85 pt-55">
@@ -77,7 +87,7 @@
                                            </td>
                                            <td>
                                                <div class="total-price price-box">
-                                                   <span class="price" style="font-size: 14px; color: #878787;"><?= number_format($c['price_default'] + $c['price_add'] + $c['price']) ?> <u>đ</u></span>
+                                                   <span class="price" style="font-size: 14px; color: #878787;"><?= number_format($c['price_default']*$c['quantity'] + $c['price_add']*$c['quantity'] + $c['price']*$c['quantity']) ?> <u>đ</u></span>
                                                </div>
                                            </td>
                                            <td>
@@ -142,7 +152,7 @@
                <div class="row">
                    <div class="col-xs-12">
                        <div class="right-side float-none-xs">
-                           <a href="checkout.html" class="btn btn-black">Thanh toán<span><i class="fa fa-angle-right"></i></span></a>
+                           <a href="payment" class="btn btn-black">Thanh toán<span><i class="fa fa-angle-right"></i></span></a>
                        </div>
                    </div>
                </div>

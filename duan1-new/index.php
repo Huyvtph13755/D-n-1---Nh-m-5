@@ -50,7 +50,11 @@ switch ($url) {
         introduce();
         break;
         // Hoàng
-
+        //duy 
+        // case 'invoice':
+        //     require_once './client/business/payment.php';
+        //    invoice();
+        //     break;
         // Vân Anh
     case 'change_password':
         require_once './client/business/change_password.php';
@@ -77,16 +81,19 @@ switch ($url) {
         //     require_once './client/business/shop.php';
         //     filter();
         //     break;
-
+        //duy
     case 'payment':
         require_once './client/business/payment.php';
         check();
         break;
     case 'order-view':
         require_once './client/business/payment.php';
-        order();
+        check_oder();
         break;
-
+    case 'invoice':
+        require_once './client/business/payment.php';
+        invoice();
+        break;
         // Vân anh
     case 'del_product_in_cart':
         require_once './client/business/cart.php';
@@ -304,6 +311,22 @@ switch ($url) {
     case 'cp-admin/profile/save-update-profile':
         require_once './admin/business/profile.php';
         save_update_profile();
+        break;
+    case 'cp-admin/donhang':
+        require_once './admin/business/payment.php';
+        donhang();
+        break;
+    case 'cp-admin/donhang-chitiet':
+        require_once './admin/business/payment.php';
+        detail_invoice();
+        break;
+    case 'invoice-camon':
+        require_once './client/business/payment.php';
+        invoice_index();
+        break;
+    case 'cp-admin/status_invoice':
+        require_once './admin/business/payment.php';
+        status_invoice();
         break;
     default:
         require_once './client/business/home.php';
