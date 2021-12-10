@@ -124,7 +124,10 @@
             </div>
           </div>
           <div class="m-0">
-            <form class="main-form full" action="<?= BASE_URL ?>user_profile" method="POST">
+            <form class="main-form full" action="user_profile" method="POST">
+              <input type="hidden" value="<?= $s['fullname']?>" name="fullname">
+              <input type="hidden" value="<?= $s['contract_number']?>" name="contract_number">
+              <input type="hidden" value="<?= $s['address']?>" name="address">
               <div class="mb-20">
                 <div class="row">
                   <div class="col-xs-12 mb-20">
