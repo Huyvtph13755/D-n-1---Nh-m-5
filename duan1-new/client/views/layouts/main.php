@@ -175,7 +175,7 @@ $get_cate = exeQuery($sql13, true);
                                                 <div class='clearfix'></div>
                                                 <div class='mt-20'>
                                                     <a href='cart' class='btn-color btn'>Giỏ hàng</a>
-                                                    <a href='status' class='btn-color btn right-side'>Trạng thái</a>
+                                                    <a href='view-invoice' class='btn-color btn right-side'>Trạng thái</a>
                                                 </div>
                                             </div>
                                         </li>";

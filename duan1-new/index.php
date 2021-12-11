@@ -328,6 +328,14 @@ switch ($url) {
         require_once './admin/business/payment.php';
         status_invoice();
         break;
+    case 'view-invoice';
+        require_once './client/business/payment.php';
+        view_invoice();
+        break;
+    case 'view-invoice-detail';
+        require_once './client/business/payment.php';
+        view_invoice_detail();
+        break;
     default:
         require_once './client/business/home.php';
         getProduct();

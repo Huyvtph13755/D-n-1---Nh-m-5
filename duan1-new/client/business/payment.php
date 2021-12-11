@@ -67,7 +67,7 @@ function invoice()
             exeQuery($delete_cart);
             header('Location: invoice-camon?msg=Bạn đã đặt hàng thành công, đơn hàng của bạn đang chờ chủ shop xác nhận');
         }
-        client_render('checkout/order-view.php', compact('total','total1'));
+        client_render('checkout/order-view.php', compact('total', 'total1'));
     } else {
         // header('Location:home');
     }
@@ -106,4 +106,38 @@ function check_oder()
     } else {
         header('Location:home');
     }
+}
+function view_invoice()
+{
+    $user_id = $_SESSION['email']['user_id'];
+    $sql02 = "SELECT * from invoice where user_id='$user_id' order by invoice_id desc";
+    $w = exeQuery($sql02,true);
+    //  var_dump($x);
+    //  die();
+    client_render('invoice/index.php',compact('w'));
+}
+function view_invoice_detail()
+{
+  //  $sql="SELECT * from invoice,user where invoice.user_id=user.user_id order by invoice.invoice_id";
+  // $x=exeQuery($sql,true);
+
+  $invoice_id = $_GET['invoice_id'];
+  $invoice = "SELECT * FROM invoice where invoice_id='$invoice_id'";
+  $g = exeQuery($invoice, false);
+  $sql00 = "SELECT invoice_detail.invoice_id,invoice_detail.unit_price, product.name_product, product.image_product, product.price_default, product.warranty, color.price_add, color.name_color, warranty.price, invoice_detail.quantity, warranty.name_warranty, warranty.warranty_w
+    FROM ((((duan1.invoice_detail
+    INNER JOIN duan1.product ON invoice_detail.product_id = product.product_id)
+    INNER JOIN duan1.color ON invoice_detail.color_id = color.color_id)
+    INNER JOIN duan1.warranty ON invoice_detail.warranty_id = warranty.warranty_id) 
+    INNER JOIN duan1.invoice ON invoice_detail.invoice_id = invoice.invoice_id) WHERE invoice_detail.invoice_id = '$invoice_id' ORDER BY invoice_id DESC
+    ";
+  $h = exeQuery($sql00, true);
+  //var_dump($a);
+  //die();
+  // var_dump($total);
+  // die;
+  // lấy tổng giá của toàn bộ giỏ hàng
+  // $sql1 = "SELECT SUM(total_price) as total FROM cart WHERE user_id = '$user_id'";
+  // $b = exeQuery($sql1, false);
+  client_render('invoice/detail.php', compact('g', 'h'));
 }
