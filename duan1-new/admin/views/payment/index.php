@@ -36,10 +36,10 @@
                                 <td>
                                     <form action="<?= ADMIN_URL . 'status_invoice?invoice_id=' . $item['invoice_id'] ?>" method="post">
                                         <select style="color: #303030; border: 1px solid #869099; outline: none; border-radius:5px; margin-bottom:5px;" name="status" id="">
-                                            <option value="1" <?= $item['status'] == 1 ? 'selected' : ''; ?>>Chờ xác nhận</option>
-                                            <option value="2" <?= $item['status'] == 2 ? 'selected' : ''; ?>>Đã xác nhận</option>
-                                            <option value="3" <?= $item['status'] == 3 ? 'selected' : ''; ?>>Đang giao hàng</option>
-                                            <option value="4" <?= $item['status'] == 4 ? 'selected' : ''; ?>>Giao hàng thành công</option>
+                                            <option value="0" <?= $item['status'] == 0 ? 'selected' : ''; ?>>Chờ xác nhận</option>
+                                            <option value="1" <?= $item['status'] == 1 ? 'selected' : ''; ?>>Đã xác nhận</option>
+                                            <option value="2" <?= $item['status'] == 2 ? 'selected' : ''; ?>>Đang giao hàng</option>
+                                            <option value="3" <?= $item['status'] == 3 ? 'selected' : ''; ?>>Giao hàng thành công</option>
                                         </select>
                                         <button type="submit" class="btn btn-sm btn-primary">Thay đổi</button>
                                     </form>

@@ -3,17 +3,16 @@ function donhang()
 {
   $sql = "SELECT * from invoice order by invoice_id desc";
   $x = exeQuery($sql, true);
- // var_dump($x);
-//die();
+  // var_dump($x);
+  //die();
   admin_render('payment/index.php', compact('x'));
-
 }
 function status_invoice()
 {
   if (isset($_POST['status'])) {
     $sql = "UPDATE invoice SET status=" . $_POST['status'] . " WHERE invoice_id=" . $_GET['invoice_id'] . "";
-     exeQuery($sql);
-  header("location: donhang");
+    exeQuery($sql);
+    header("location: donhang");
   }
 }
 function detail_invoice()
