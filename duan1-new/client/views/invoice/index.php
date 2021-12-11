@@ -42,11 +42,15 @@
                                                 if ($q['status'] == 0) {
                                                     echo "Chờ xác nhận";
                                                 } else if ($q['status'] == 1) {
-                                                    echo "Đã xác nhận";
+                                                    echo "Hủy đơn";
                                                 } else if ($q['status'] == 2) {
-                                                    echo "Đang giao hàng";
+                                                    echo "Đã xác nhận";
                                                 } else if ($q['status'] == 3) {
+                                                    echo "Đang giao hàng";
+                                                } else if ($q['status'] == 4) {
                                                     echo "Giao hàng thành công";
+                                                } else if ($q['status'] == 5) {
+                                                    echo "Giao hàng thất bại";
                                                 } else {
                                                     echo "";
                                                 }

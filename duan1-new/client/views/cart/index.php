@@ -111,7 +111,7 @@
                    </div>
                    <div class="col-sm-6">
                        <div class="mt-30 right-side float-none-xs">
-                           <a class="btn btn-black">Trạng thái</a>
+                           <a href="view-invoice" class="btn btn-black">Trạng thái</a>
                        </div>
                    </div>
                </div>
