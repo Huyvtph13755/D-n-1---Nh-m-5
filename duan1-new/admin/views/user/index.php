@@ -32,11 +32,12 @@
                         }
                         ?>
                     </thead>
+                    
                     <tbody>
                         <?php foreach ($user_index as $index => $item) : ?>
                             <tr>
                                 <td><?= $index + 1 ?></td>
-                                <td><?= $item['fullname'] ?></td>
+                                <td><?= $item['fullname'] ?> <br> <?php if($item['user_id'] == $_SESSION['email']['user_id']){echo "<p style='font-size:10px; color: #17A2B8'>(Tài khoản của bạn)</p>";}?></td>
                                 <td><?= $item['email'] ?></td>
                                 <td><?= $item['address'] ?></td>
                                 <td><?php
@@ -65,7 +66,7 @@
                                 <?php
                                 if ($_SESSION['email']['role'] == 2) {
                                     echo "<td>";
-                                    if ($item['role'] == 1) {
+                                    if ($item['role'] == 1  || $_SESSION['email']['user_id'] == $item['user_id']) {
                                         echo "<a style='width:30.25px; margin-right: 4px;' name='update-user' href='" . ADMIN_URL . "user/update-user?user_id=" . $item['user_id'] . '&role=' . $item['role'] . "' class='btn btn-sm btn-info'>
                                         <i class='fas fa-edit'></i>
                                     </a>";

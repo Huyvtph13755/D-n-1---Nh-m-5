@@ -19,7 +19,7 @@ function update_user()
     if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         if (isset($_GET['role'])) {
             $user_id = $_GET['user_id'];
-            $sql = "SELECT * FROM user WHERE user_id= '$user_id' AND role = 1";
+            $sql = "SELECT * FROM user WHERE user_id= '$user_id'";
             $detail_user = exeQuery($sql, false);
             admin_render('user/update-user.php', compact('detail_user'), 'admin-assets/custom/category_index.js');
         } else {
