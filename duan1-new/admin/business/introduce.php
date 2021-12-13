@@ -15,7 +15,7 @@ function update_introduce()
         $introduce_id = $_GET['introduce_id'];
         $sql3 = "SELECT * FROM introduce WHERE introduce_id = '$introduce_id'";
         $detail_introduce = exeQuery($sql3, false);
-        admin_render('introduce/update-introduce.php', compact('detail_introduce'), 'admin-assets/custom/category_add.js');
+        admin_render('introduce/update-introduce.php', compact('detail_introduce'), 'admin-assets/ckeditor/ckeditor.js');
     } else {
         header("location: " . BASE_URL);
     }

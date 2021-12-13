@@ -44,7 +44,10 @@
                         </div>
                         <div class="form-group">
                             <label for="">Mô tả chi tiết sản phẩm: </label>
-                            <textarea class="form-control" name="decription" id="box_text" cols="50" rows="6"><?= $detail_pro['decription'] ?></textarea>
+                            <textarea name="decription" id="decription"><?= $detail_pro['decription'] ?></textarea>
+                            <script>
+                                CKEDITOR.replace('decription');
+                            </script>
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">

@@ -5,7 +5,7 @@
                 <h3 class="card-title">Tạo mới sản phẩm</h3>
             </div>
             <div class="card-body">
-                <form action="<?= ADMIN_URL . 'product/save-creat-new-product' ?>" method="post" enctype="multipart/form-data" >
+                <form action="<?= ADMIN_URL . 'product/save-creat-new-product' ?>" method="post" enctype="multipart/form-data">
                     <div class="col-6 offset-3">
                         <div class="form-group">
                             <label for="">Tên danh mục: </label>
@@ -52,7 +52,10 @@
                         </div>
                         <div class="form-group">
                             <label for="">Mô tả chi tiết sản phẩm: </label>
-                            <textarea class="form-control" name="decription" id="box_text" cols="50" rows="6"></textarea>
+                            <textarea name="decription" id="decription"></textarea>
+                            <script>
+                                CKEDITOR.replace('decription');
+                            </script>
                             <?php if (isset($_GET['decription-err'])) : ?>
                                 <span style="font-size:12px ;color: red; padding-left: 10px;" class="decription"><?= $_GET['decription-err']; ?></span>
                             <?php endif ?>

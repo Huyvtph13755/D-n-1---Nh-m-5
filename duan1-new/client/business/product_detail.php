@@ -22,7 +22,7 @@ function product_detail()
 
 
         // Lấy 5 cmt mới nhất
-        $sql4 = "SELECT comment.comment_id, comment.product_id, comment.user_id, comment.content, comment.date_comment, user.user_id, user.fullname, user.email FROM duan1.comment, duan1.user WHERE comment.user_id = user.user_id AND comment.product_id = '$product_id' ORDER BY comment.date_comment DESC limit 5";
+        $sql4 = "SELECT comment.comment_id, comment.product_id, comment.user_id, comment.content, comment.date_comment, user.user_id, user.fullname, user.email FROM duan1.comment, duan1.user WHERE comment.user_id = user.user_id AND comment.product_id = '$product_id' AND comment.status = '0' ORDER BY comment.date_comment DESC limit 5";
         $d = exeQuery($sql4, true);
 
         // update view

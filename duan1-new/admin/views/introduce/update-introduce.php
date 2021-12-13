@@ -20,7 +20,10 @@
                         </div>
                         <div class="form-group">
                             <label for="">Nội dung: </label>
-                            <textarea class="form-control" name="content" id="box_text" cols="50" rows="6"><?= $detail_introduce['content'] ?></textarea>
+                            <textarea name="content" id="content"><?= $detail_introduce['content'] ?></textarea>
+                            <script>
+                                CKEDITOR.replace('content');
+                            </script>
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">

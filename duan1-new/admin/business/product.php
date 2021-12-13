@@ -25,7 +25,7 @@ function creat_new_product()
     if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
         $sql2 = "SELECT * FROM subcategory";
         $subcate = exeQuery($sql2, true);
-        admin_render('product/creat-new-product.php', compact('subcate'), 'admin-assets/custom/category_add.js');
+        admin_render('product/creat-new-product.php', compact('subcate'), 'admin-assets/ckeditor/ckeditor.js');
     } else {
         header("location: " . BASE_URL);
     }
