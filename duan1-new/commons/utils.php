@@ -1,5 +1,4 @@
 <?php
-
 const BASE_URL = "http://localhost:81/Duan1-Nhom5/DuAn1-Nhom5/duan1-new/";
 const ADMIN_URL = BASE_URL . 'cp-admin/';
 const ADMIN_ASSET = BASE_URL . 'public/admin-assets/';

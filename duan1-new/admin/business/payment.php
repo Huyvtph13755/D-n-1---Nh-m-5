@@ -1,11 +1,15 @@
 <?php
 function donhang()
 {
-  $sql = "SELECT * from invoice order by invoice_id desc";
-  $x = exeQuery($sql, true);
-  // var_dump($x);
-  //die();
-  admin_render('payment/index.php', compact('x'));
+  if (isset($_SESSION['email']) && $_SESSION['email']['role'] >= 1 && $_SESSION['email']['status'] == 0) {
+    $sql = "SELECT * from invoice order by invoice_id desc";
+    $x = exeQuery($sql, true);
+    // var_dump($x);
+    //die();
+    admin_render('payment/index.php', compact('x'));
+} else {
+    header("location: " . BASE_URL);
+}
 }
 function status_invoice()
 {
